@@ -1,1 +1,0 @@
-bigbang.gif - over 25 MB
