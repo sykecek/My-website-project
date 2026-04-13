@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galaxies</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <!-- CANVAS POZADÍ (hvězdy + padající hvězdy) -->
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">GALAXIES</h1>
+
+      <div class="origin-media origin-media--small fly-in">
+        <img class="origin-gif" src="../gif/rotatinggalaxy.gif" alt="Galaxy animation" />
+      </div>
+
+      <p class="origin-intro fly-in">
+        A galaxy is a vast gravitational system composed of billions to trillions of stars, along with gas, dust, and dark matter, all bound together by gravity and evolving over billions of years. These enormous cosmic structures vary widely in size, shape, and activity—from elegant spiral formations like the Milky Way to smooth elliptical systems and irregular, chaotic clusters. Galaxies are the fundamental building blocks of the universe, often forming groups, clusters, and even larger superclusters that create a vast cosmic web stretching across space. At their centers, many galaxies harbor supermassive black holes, influencing their structure and evolution. Our own solar system resides within the Milky Way galaxy, just one of potentially hundreds of billions of galaxies that populate the observable universe, highlighting the immense scale and complexity of the cosmos.
+      </p>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/potm2208a.jpg" alt="A galaxy" />
+        </div>
+        <div class="figure-caption">Spiral galaxy Messier 74 often called Tentacle galaxy or Phantom galaxy photographed by James webb space telscope</div>
+        <div class="origin-text fly-in">
+          <p>At the simplest level, a galaxy is a huge collection of matter held together by gravity. It contains stars (from newborn clusters to ancient populations), interstellar gas and dust (the raw material for new stars), and a much larger invisible component called dark matter. Dark matter does not emit light, but its gravity shapes how galaxies form and how they rotate. Galaxies range from small dwarf galaxies with only a few million stars to giant ellipticals with trillions of stars.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Main galaxy types</h2>
+
+          <p class="origin-subtitle"><strong>Galaxies are commonly grouped by shape and structure.</strong></p>
+
+          <ul class="origin-list galaxy-types">
+            <li><a class="type-link" href="galaxy-spiral.html"><strong>Spiral galaxies</strong></a></li>
+            <li><a class="type-link" href="galaxy-elliptical.html"><strong>Elliptical galaxies</strong></a></li>
+            <li><a class="type-link" href="galaxy-irregular.html"><strong>Irregular galaxies</strong></a></li>
+            <li><a class="type-link" href="galaxy-dwarf.html"><strong>Dwarf galaxies</strong></a></li>
+            <li><a class="type-link" href="galaxy-lenticular.html"><strong>Lenticular galaxies</strong></a></li>
+            <li><a class="type-link" href="galaxy-blazars.html"><strong>Blazars</strong></a></li>
+            <li><a class="type-link" href="galaxy-quasars.html"><strong>Quasars</strong></a></li>
+            <li><strong>Active galaxies</strong> - Around 10% of known galaxies are active, which means their centers appear more than 100 times brighter than the combined light of their stars. They can be spiral, elliptical, or irregular.</li>
+            <li><strong>Seyfert galaxies</strong> - Are the most common active galaxies and also exhibit the lowest energies. All Seyferts look like normal galaxies in visible light, but they emit considerable infrared radiation. </li>
+          </ul>
+
+          <p>These categories are a helpful starting point, but real galaxies can be messy. Many show bars, rings, warps, or tidal tails, and their appearance can change over cosmic time through interactions and mergers.</p>
+        </div>
+
+        <div class="origin-img origin-img-stack fly-in">
+          <img class="stack-img" src="../Obrázky/sections/green.jpg" alt="Galaxy types illustration" />
+          <img class="stack-img" src="../Obrázky/sections/galaxyyyyy.jpg" alt="Merging galaxies" />
+          <img class="stack-img" src="../Obrázky/sections/sombrero.png" alt="Andromeda galaxy" />
+          <img class="stack-img" src="../Obrázky/sections/cigar.jpg" alt="Andromeda galaxy" />
+          <img class="stack-img" src="../Obrázky/sections/M27.jpg" alt="Andromeda galaxy" />
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Galaxy evolution</h2>
+
+          <p>Galaxies are not static objects. Over billions of years they grow, transform, and sometimes shut down their star formation. In modern cosmology (often called the “hierarchical” picture), small structures form first and then build up into larger ones through continuous gas accretion and repeated mergers.</p>
+
+          <p><strong>Timeline (approx.):</strong> the first stars formed within the first few hundred million years after the Big Bang, and the first small galaxies are thought to appear within the <strong>first billion years</strong> (some evidence points to galaxies already present a few hundred million years after the Big Bang). Over the next billions of years, galaxies assembled into larger systems, and the cosmic star-formation rate peaked roughly <strong>~10 billion years ago</strong> before declining to the quieter universe we see today.</p>
+
+          <p>Feedback from supernovae and from supermassive black holes (active galactic nuclei) can heat or expel gas, regulating how quickly a galaxy makes new stars. This helps explain why many massive galaxies become “quenched” (forming few new stars) at late times.</p>
+
+          <h3 class="question-title">Collisions, interactions, and mergers</h3>
+          <p>Galaxy collisions are common because galaxies live in groups and clusters. Most of the time, stars do not directly crash into each other (space between stars is enormous), but gravity strongly reshapes the galaxies. Tidal forces can pull out long tails, trigger starbursts, feed central black holes, and disturb disks.</p>
+
+          <ul class="origin-list">
+            <li><strong>Interaction:</strong> a close pass can distort shapes and ignite new star formation.</li>
+            <li><strong>Minor merger:</strong> a large galaxy absorbs a smaller one, gradually building its stellar halo and thickening the disk.</li>
+            <li><strong>Major merger:</strong> two similar-mass galaxies merge; disks can be destroyed and the remnant often becomes more elliptical.</li>
+            <li><strong>Milky Way × Andromeda:</strong> the two galaxies are expected to have their first close encounter in roughly <strong>~4–5 billion years</strong>, with a longer merger process continuing for several billion years after.</li>
+          </ul>
+
+          <p>Because mergers were more frequent in the early universe, many galaxies we see today carry “fossil” evidence of past collisions in their stellar streams, bulge structure, and the motions of their stars and gas.</p>
+        </div>
+        <div class="origin-img image full fly-in">
+          <img src="../Obrázky/sections/meginggalaxies.jpg" alt="Merging galaxies" />
+        </div>
+        <div class="figure-caption">Two merging galaxies: IC 2163 and NGC 2207</div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img class="img-narrow img-narrow--sm" src="../Obrázky/sections/milkyway.jpg" alt="Milky Way (illustration)" />
+        </div>
+        <div class="figure-caption">Map of Milky Way — our home galaxy</div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Milky Way</h2>
+
+          <p>The Milky Way is a <strong>barred spiral galaxy</strong> that contains our Solar System. It has a rotating disk with spiral arms, a central bulge/bar, and an extended halo dominated by dark matter. From our position inside the disk, we see it as a bright band across the night sky.</p>
+
+          <ul class="origin-list">
+            <li><strong>Size:</strong> about <strong>~100,000</strong> light-years across (order of magnitude).</li>
+            <li><strong>Stars:</strong> roughly <strong>hundreds of billions</strong> of stars.</li>
+            <li><strong>Central black hole:</strong> Sagittarius A*, about <strong>~4 million</strong> solar masses.</li>
+            <li><strong>Sun’s location:</strong> about <strong>~26,000</strong> light-years from the galactic center.</li>
+            <li><strong>Time:</strong> the oldest stars are > <strong>13 billion</strong> years old; the Sun formed about <strong>4.6 billion</strong> years ago.</li>
+          </ul>
+
+          <p>The Milky Way has grown through a long history of accretion and minor mergers. Streams of stars around the galaxy are evidence of smaller galaxies being torn apart and absorbed over time.</p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/andromeda.png" alt="Andromeda (illustration)" />
+        </div>
+        <div class="figure-caption">Andromeda (M31) — the nearest major spiral galaxy to the Milky Way (illustrative image)</div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Andromeda (M31)</h2>
+
+          <p>Andromeda (Messier 31) is the nearest large spiral galaxy to the Milky Way and the biggest member of the Local Group. It is visible to the naked eye from dark skies and has long been a key target for understanding how spiral galaxies form and evolve.</p>
+
+          <ul class="origin-list">
+            <li><strong>Distance:</strong> about <strong>~2.5 million</strong> light-years away.</li>
+            <li><strong>Size:</strong> larger than the Milky Way (roughly <strong>~200,000+</strong> light-years across, order of magnitude).</li>
+            <li><strong>Motion:</strong> it is approaching the Milky Way at about <strong>~100 km/s</strong> (radial component).</li>
+            <li><strong>Future:</strong> likely close encounter/merger with the Milky Way in <strong>~4–5 billion years</strong> (approx.).</li>
+          </ul>
+
+          <p>Like the Milky Way, Andromeda shows evidence of past mergers and interactions. Studying its stars, gas, and satellite galaxies helps reconstruct the assembly history of our local cosmic neighborhood.</p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">The Observable Universe and its cosmic web</h2>
+        </div>
+        <div class="origin-img">
+          <img src="../Obrázky/observablesphere.png" alt="Observable universe illustration" />
+        </div>
+        <div class="origin-text fly-in">
+          <p>Galaxies are not spread evenly. On the largest scales, gravity arranges them into a cosmic web: filaments, walls, and clusters separated by enormous voids. Groups and clusters of galaxies are held together by a shared dark matter halo, and galaxies within them interact over billions of years.</p>
+          <p>The cosmic web is the largest known structure in the universe, a vast network of interconnected filaments composed of galaxies, galaxy clusters, and dark matter, stretching across billions of light-years. Rather than being distributed randomly, galaxies are arranged along these immense threads, forming dense nodes where clusters and superclusters meet, while enormous voids—regions with very few galaxies—exist in between. This web-like pattern emerged from tiny fluctuations in the early universe, gradually shaped by gravity over billions of years. Dark matter plays a crucial role in this structure, acting as an invisible framework that guides the formation and distribution of galaxies. The cosmic web reveals that the universe has a complex, large-scale architecture, where galaxies are not isolated systems but part of an intricate and evolving cosmic network.</p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img class="img-narrow" src="../Obrázky/sections/cosmicweb.jpg" alt="Cosmic Web" />
+        </div>
+        <div class="figure-caption">From site ZME SCIENCE. Panoramic view of the entire near-infrared sky reveals the distribution of galaxies beyond the Milky Way. The image is derived from the 2MASS Extended Source Catalog (XSC)</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    // Force GIF to start from the beginning when the page loads or when revisited
+    (function(){
+      const img = document.querySelector('.origin-gif');
+      if (!img) return;
+      const src = img.getAttribute('src');
+      function restart(){
+        img.src = src.split('?')[0] + '?_=' + Date.now();
+      }
+      restart();
+
+      // Some GIF files are saved with a finite loop count.
+      // This timer forces a repeat by restarting the resource periodically.
+      // Adjust the duration to match the GIF length if needed.
+      const LOOP_MS = 5900;
+      setInterval(restart, LOOP_MS);
+
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible') restart();
+      });
+    })();
+  </script>
+  <script>
+    // IntersectionObserver + chained reveal (same behavior as other universe subpages)
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+
+          const heroParent = entry.target.closest('.origin-hero');
+          if (heroParent) {
+            let delay = 120;
+            if (entry.target.matches('.universe-title')) delay = 100;
+            else if (entry.target.closest('.origin-media') || entry.target.matches('.origin-media')) delay = 220;
+            else if (entry.target.matches('.origin-intro')) delay = 340;
+
+            setTimeout(()=>{ entry.target.classList.add('in-view'); }, delay);
+            observer.unobserve(entry.target);
+            return;
+          }
+
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+
+          entry.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      items.forEach(i=>obs.observe(i));
+
+      function revealIfVisible(el, delay=0){
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) {
+          setTimeout(()=>{
+            const parentText = el.closest('.origin-text');
+            if (parentText) revealParagraphs(parentText);
+            else { el.classList.add('in-view'); }
+          }, delay);
+        }
+      }
+
+      const heroTitle = document.querySelector('.origin-hero .universe-title');
+      const heroMedia = document.querySelector('.origin-media');
+      const heroIntro = document.querySelector('.origin-intro');
+      if (heroTitle) revealIfVisible(heroTitle, 500);
+      if (heroMedia) revealIfVisible(heroMedia, 1200);
+      if (heroIntro) revealIfVisible(heroIntro, 2000);
+
+      items.forEach(i=>{ if (i.closest('.origin-hero')) return; revealIfVisible(i, 0); });
+
+      const textBlocks = Array.from(document.querySelectorAll('.origin-text'));
+      if (textBlocks.length) {
+        const textObs = new IntersectionObserver((entries, tObserver)=>{
+          entries.forEach(en=>{
+            if (!en.isIntersecting) return;
+            revealParagraphs(en.target);
+            tObserver.unobserve(en.target);
+          });
+        }, {threshold: 0.15});
+        textBlocks.forEach(tb => textObs.observe(tb));
+        textBlocks.forEach(tb => revealIfVisible(tb, 0));
+      }
+
+      function revealParagraphs(parent){
+        if (!parent) return;
+        if (parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+
+        let idx = 0;
+        const gap = 0;
+        const safetyTimeout = 2500;
+
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+
+          let called = false;
+          const onEnd = function(e){
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            setTimeout(showNext, gap);
+          };
+
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+
+        parent.classList.add('in-view');
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

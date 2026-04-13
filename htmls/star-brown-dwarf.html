@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brown dwarfs</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="universe-stars.html" class="nav-link">STARS</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_" target="_blank" rel="noopener noreferrer" class="instagram-icon" aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">BROWN DWARFS</h1>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/browndwarf2.png" alt="Brown dwarf" />
+        </div>
+        <div class="origin-text fly-in">
+          <p><strong>Brown dwarfs</strong> are objects between planets and stars. They form like stars (from collapsing gas) but they don’t have enough mass to sustain long-term hydrogen fusion in their cores.</p>
+          <p>Some brown dwarfs can briefly fuse deuterium or lithium depending on their mass, but they gradually cool and fade over time.</p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Why they’re hard to see</h2>
+          <p>Because brown dwarfs are cool and dim, they’re often found using infrared surveys rather than visible light.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        });
+      }, {threshold: 0.15});
+      items.forEach(i=>obs.observe(i));
+
+      function revealParagraphs(parent){
+        if (!parent || parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+        let idx = 0;
+        const safetyTimeout = 2500;
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+          let called = false;
+          const onEnd = (e)=>{
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            showNext();
+          };
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+        parent.classList.add('in-view');
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

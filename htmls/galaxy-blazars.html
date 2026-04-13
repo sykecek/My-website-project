@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blazars</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="universe-galaxies.html" class="nav-link">GALAXIES</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">BLAZARS</h1>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/blazar.png" alt="Bright sources" />
+        </div>
+        <div class="origin-text fly-in">
+          <p>Many galaxies host a supermassive black hole at the center. When enough gas falls toward that black hole, the region can become extremely luminous. In some cases, the system launches narrow, relativistic jets. If one of those jets points close to our line of sight, we observe a blazar.</p>
+
+          <p>Because of this geometry, blazars can appear extraordinarily bright and variable. Their radiation spans a wide range of wavelengths, from radio to gamma rays, and can change rapidly compared to normal galaxies.</p>
+
+          <p>Most blazars are located very far away from us. Because of this strong beaming effect, we can detect blazars from billions of light-years away, and many of the ones we observe lie at high redshifts (meaning they are seen as they were in the early universe).</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What makes blazars special</h2>
+          <ul class="origin-list">
+            <li><strong>Jet pointed at us:</strong> the emission is “boosted” by relativistic effects.</li>
+            <li><strong>Strong variability:</strong> brightness can change on short timescales.</li>
+            <li><strong>Broad spectrum:</strong> emission can cover radio, optical, X-ray, and gamma-ray bands.</li>
+            <li><strong>Black hole physics:</strong> they reveal how accretion disks and jets work.</li>
+          </ul>
+
+          <p>Studying blazars helps astronomers understand the most energetic processes powered by supermassive black holes and how these processes can influence their host galaxies.</p>
+        </div>
+
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/blazae2.jpg" alt="Universe" />
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">How blazars change over time</h2>
+          <p>Blazars can vary dramatically because their jet emission is strongly beamed toward us. Changes in the accretion flow or in the jet can produce flares across many wavelengths, making blazars some of the most variable and energetic sources in the sky.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    (function(){
+      const img = document.querySelector('.origin-gif');
+      if (!img) return;
+      const src = img.getAttribute('src');
+      function restart(){ img.src = src.split('?')[0] + '?_=' + Date.now(); }
+      restart();
+      const LOOP_MS = 5900;
+      setInterval(restart, LOOP_MS);
+      document.addEventListener('visibilitychange', ()=>{ if (document.visibilityState === 'visible') restart(); });
+    })();
+  </script>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+
+          const heroParent = entry.target.closest('.origin-hero');
+          if (heroParent) {
+            let delay = 120;
+            if (entry.target.matches('.universe-title')) delay = 100;
+            else if (entry.target.closest('.origin-media') || entry.target.matches('.origin-media')) delay = 220;
+            else if (entry.target.matches('.origin-intro')) delay = 340;
+            setTimeout(()=>{ entry.target.classList.add('in-view'); }, delay);
+            observer.unobserve(entry.target);
+            return;
+          }
+
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+
+          entry.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      items.forEach(i=>obs.observe(i));
+
+      function revealIfVisible(el, delay=0){
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) {
+          setTimeout(()=>{
+            const parentText = el.closest('.origin-text');
+            if (parentText) revealParagraphs(parentText);
+            else { el.classList.add('in-view'); }
+          }, delay);
+        }
+      }
+
+      const heroTitle = document.querySelector('.origin-hero .universe-title');
+      const heroMedia = document.querySelector('.origin-media');
+      const heroIntro = document.querySelector('.origin-intro');
+      if (heroTitle) revealIfVisible(heroTitle, 500);
+      if (heroMedia) revealIfVisible(heroMedia, 1200);
+      if (heroIntro) revealIfVisible(heroIntro, 2000);
+
+      items.forEach(i=>{ if (i.closest('.origin-hero')) return; revealIfVisible(i, 0); });
+
+      const textBlocks = Array.from(document.querySelectorAll('.origin-text'));
+      if (textBlocks.length) {
+        const textObs = new IntersectionObserver((entries, tObserver)=>{
+          entries.forEach(en=>{
+            if (!en.isIntersecting) return;
+            revealParagraphs(en.target);
+            tObserver.unobserve(en.target);
+          });
+        }, {threshold: 0.15});
+        textBlocks.forEach(tb => textObs.observe(tb));
+        textBlocks.forEach(tb => revealIfVisible(tb, 0));
+      }
+
+      function revealParagraphs(parent){
+        if (!parent) return;
+        if (parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+
+        let idx = 0;
+        const gap = 0;
+        const safetyTimeout = 2500;
+
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+
+          let called = false;
+          const onEnd = function(e){
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            setTimeout(showNext, gap);
+          };
+
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+
+        parent.classList.add('in-view');
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

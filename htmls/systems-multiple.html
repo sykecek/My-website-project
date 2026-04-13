@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multiple-star planetary systems</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="universe-systems.html" class="nav-link">PLANETARY SYSTEMS</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_" target="_blank" rel="noopener noreferrer" class="instagram-icon" aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">MULTIPLE-STAR PLANETARY SYSTEMS</h1>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/multiple1.webp" alt="Multiple star system" />
+        </div>
+        <div class="origin-text fly-in">
+          <p>Multiple-star planetary systems are hosted by three or more stars bound together by gravity. Many are “hierarchical”: for example, a close binary plus a third star orbiting farther out, which can remain stable for long times.</p>
+          <p>The nearest star system, <strong>Alpha Centauri</strong>, is a well-known triple system: a close pair (A and B) and a distant companion (Proxima Centauri).</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Dynamics</h2>
+          <ul class="origin-list">
+            <li><strong>Hierarchical structure:</strong> stability is more likely when orbits are well-separated.</li>
+            <li><strong>Perturbations:</strong> long-term gravitational tugs can change planetary inclinations and eccentricities.</li>
+            <li><strong>Planet formation:</strong> disks can be truncated or warped, affecting where planets can form.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/Sextuple_System-1.jpeg" alt="Nebula" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        });
+      }, {threshold: 0.15});
+      items.forEach(i=>obs.observe(i));
+
+      function revealParagraphs(parent){
+        if (!parent || parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+        let idx = 0;
+        const safetyTimeout = 2500;
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+          let called = false;
+          const onEnd = (e)=>{
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            showNext();
+          };
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+        parent.classList.add('in-view');
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

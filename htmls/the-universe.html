@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Universe</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <!-- CANVAS POZADÍ (hvězdy + padající hvězdy) -->
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="universe-hero">
+      <h1 class="universe-title">ALL YOU NEED TO KNOW</h1>
+    </section>
+
+    <section class="universe-grid">
+      <!-- 1. sekce – začátek vesmíru -->
+      <a href="universe-origin.html" class="universe-card card-delay-1">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <!-- velký poster image (použijeme jako "frozen" první snímek) -->
+            <img class="big-poster" src="../Obrázky/sections/bigbang.png" alt="The Beginning of the Universe" data-gif="../gif/bigbang.gif" />
+            <!-- dedicated GIF layer: JS will set background-image and toggle visibility -->
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <!-- visible title for accessibility and clarity -->
+          <h2 class="universe-card-title">THE ORIGIN OF THE UNIVERSE</h2>
+        </div>
+      </a>
+
+      <!-- 2. sekce – Shape of Universe -->
+      <a href="shape-universe.html" class="universe-card card-delay-2">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/shapeofu.png" alt="Shape of Universe" data-gif="../gif/shapeofu.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">SHAPE OF THE UNIVERSE</h2>
+        </div>
+      </a>
+
+      <!-- 3. sekce – Galaxie -->
+      <a href="universe-galaxies.html" class="universe-card card-delay-3">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/galaxy.png" alt="Galaxies" data-gif="../gif/galaxy.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">GALAXIES</h2>
+        </div>
+      </a>
+
+      <!-- 4. sekce – Soustavy -->
+      <a href="universe-systems.html" class="universe-card card-delay-4">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/ssystem.png" alt="Soustavy" data-gif="../gif/ssystem.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">PLANETARY SYSTEMS</h2>
+        </div>
+      </a>
+
+      <!-- 5. sekce – Hvězdy -->
+      <a href="universe-stars.html" class="universe-card card-delay-5">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/star.png" alt="Hvězdy" data-gif="../gif/star.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">STARS</h2>
+        </div>
+      </a>
+
+      <!-- 6. sekce – Planety -->
+      <a href="universe-planets.html" class="universe-card card-delay-6">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/planet.png" alt="Planety" data-gif="../gif/planet.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">PLANETS</h2>
+        </div>
+      </a>
+
+      <!-- 7. sekce – Černé díry -->
+      <a href="universe-blackholes.html" class="universe-card card-delay-7">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/bhole.png" alt="Černé díry" data-gif="../gif/bhole.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">BLACK HOLES</h2>
+        </div>
+      </a>
+
+      <!-- 8. sekce – Neutronové hvězdy -->
+      <a href="universe-neutron.html" class="universe-card card-delay-8">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/neustar.png" alt="Neutronové hvězdy" data-gif="../gif/neustar.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">NEUTRON STARS</h2>
+        </div>
+      </a>
+
+      <!-- 9. sekce – Černá hmota a energie -->
+      <a href="universe-dark.html" class="universe-card card-delay-9">
+        <div class="universe-card-inner">
+          <div class="universe-card-image">
+            <img src="../Obrázky/sections/dmat.png" alt="Černá hmota a energie" data-gif="../gif/dmat.gif">
+            <div class="gif-bg" aria-hidden="true"></div>
+          </div>
+          <h2 class="universe-card-title">DARK MATTER & ENERGY</h2>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    // Generic GIF handler: attach to every .universe-card that has an image with data-gif
+    (function(){
+      const cards = Array.from(document.querySelectorAll('.universe-card'));
+      if (!cards.length) return;
+
+      cards.forEach(card => {
+        const img = card.querySelector('.universe-card-image img');
+        if (!img) return;
+        const gifSrc = img.dataset.gif;
+        if (!gifSrc) return; // no gif for this card
+
+        // ensure gif-bg exists
+        let gifBg = card.querySelector('.gif-bg');
+        if (!gifBg) {
+          const wrap = card.querySelector('.universe-card-image');
+          gifBg = document.createElement('div');
+          gifBg.className = 'gif-bg';
+          gifBg.setAttribute('aria-hidden','true');
+          wrap.appendChild(gifBg);
+        }
+
+        let playing = false;
+        let preloadImg = null;
+
+        function preload(url){
+          preloadImg = new Image();
+          preloadImg.src = url;
+        }
+
+        function play(){
+          const active = gifSrc + '?_=' + Date.now();
+          preload(active);
+          gifBg.style.backgroundImage = `url('${active}')`;
+          card.classList.add('gif-playing');
+          playing = true;
+        }
+
+        function stop(){
+          card.classList.remove('gif-playing');
+          playing = false;
+          if (gifBg) gifBg.style.backgroundImage = '';
+        }
+
+        // events
+        card.addEventListener('mouseenter', play);
+        card.addEventListener('mouseleave', stop);
+
+        const link = card.closest('a');
+        if (link) {
+          link.addEventListener('focus', play, true);
+          link.addEventListener('blur', stop, true);
+        }
+
+        card.addEventListener('touchstart', function onTouch(e){
+          if (!playing) {
+            play();
+            setTimeout(stop, 4000);
+          }
+        }, {passive: true});
+      });
+
+    })();
+  </script>
+</body>
+</html>

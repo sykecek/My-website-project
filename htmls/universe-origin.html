@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Big Bang</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <!-- same canvas background as the-universe page -->
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">THE BIG BANG</h1>
+
+      <div class="origin-media fly-in">
+        <!-- Use a looping GIF that autoplays from load; cache-busted on load to ensure it starts at frame 0 -->
+        <img class="origin-gif" src="../gif/bigbangtitle.gif" alt="Big Bang animation" />
+      </div>
+
+      <p class="origin-intro fly-in">„The origin, evolution, and nature of the universe have fascinated and confounded humankind for centuries. New ideas and major discoveries made during the 20th century transformed cosmology, the term for the way we conceptualize and study the universe, although much remains unknown.“
+        <span class="origin-attrib fly-in">NASA</span>
+      </p>
+    </section>
+
+    <!-- Placeholder content sections with varied layouts; each element has .fly-in to animate on scroll -->
+    <section class="origin-content">       
+        <!-- Full-width image + text section -->
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/unhistory.png" alt="history image" />
+        </div>
+        <div class="origin-text fly-in">
+          <p>About 13.8 billion years ago, the universe underwent an extremely rapid expansion known as cosmic inflation, during which space itself expanded faster than the speed of light. Scientists are still unsure what existed before inflation or what powered it, but the energy driving this process may have been part of the very fabric of space-time. Inflation helps explain essential features of today’s universe—its large-scale flatness, uniformity, and the way tiny quantum fluctuations were stretched into the initial density variations that later grew into galaxies and cosmic structures.</p>
+
+          <p>When inflation ended, its driving energy transformed into matter and radiation—marking the beginning of the Big Bang. About one second after this event, the universe was incredibly hot, around 10 billion °C (18 billion °F), forming a dense “primordial soup” of particles and light. In the minutes that followed, during a period called nucleosynthesis, protons and neutrons collided to form the first elements: hydrogen, helium, and trace amounts of lithium and beryllium. After roughly five minutes, most of today’s helium had formed, and the universe had cooled enough for further element formation to stop. However, it remained far too hot for atomic nuclei to capture electrons, leaving the cosmos filled with a dense fog of free electrons that scattered light and made the universe opaque.</p>
+
+          <p>The Big Bang theory describes how the universe expanded from an initial state of extremely high density and temperature. Cosmological models based on this theory successfully explain phenomena such as the abundance of light elements, the cosmic microwave background (CMB) radiation, and the universe’s large-scale structure. The horizon and flatness problems are addressed by cosmic inflation. Precise measurements of the universe’s expansion rate place its age at 13.787 ± 0.02 billion years. Yet no widely accepted physical theory currently describes the earliest instants of the Big Bang.</p>
+
+          <p>As the universe expanded, it cooled, allowing subatomic particles—and eventually atoms—to form. These primordial elements, mostly hydrogen with some helium and trace lithium, later clumped together under gravity with the help of dark matter, forming the first stars and galaxies. Observations of distant supernovae show that the expansion of the universe is accelerating, a discovery attributed to dark energy.</p>
+
+          <p>The concept of an expanding universe was introduced in 1922 by Alexander Friedmann, who derived the equations describing cosmic expansion. Independently, Edwin Hubble observed in 1929 that galaxies are moving away from us at speeds proportional to their distance. In 1931, Georges Lemaître proposed that the universe originated from a “primeval atom,” introducing the modern idea of the Big Bang. The discovery of the CMB in 1964, and subsequent measurements confirming its uniformity, strongly supported the Big Bang model. By the late 1960s, the competing steady-state model had been largely abandoned.</p>
+
+          <p>Despite its success, the Big Bang model still faces open questions, including the matter–antimatter asymmetry, the true nature of dark matter, and the origin of dark energy.</p>
+        </div>
+        </div>
+
+        <!-- New full-width CMB image and descriptive paragraph -->
+        <div class="origin-section image-full fly-in">
+          <div class="origin-img">
+            <img src="../Obrázky/NASASWMAP.png" alt="CMB all-sky image" />
+          </div>
+          <div class="origin-text fly-in">
+            <p>Scientists used nine years of data from NASA’s Wilkinson Microwave Anisotropy Probe to create this detailed, all-sky image of the cosmic microwave background. The image reveals 13.8-billion-year-old temperature fluctuations (shown as different colors) – seeds that grew into the galaxies we see today.</p>
+          </div>
+        </div>
+
+        <!-- Question block + optional grid of FAQ-style items -->
+        <div class="origin-section image-full fly-in">
+          <div class="origin-text">
+            <h2 class="universe-title origin-question fly-in centered-question">Do you rack your brains over these things?</h2>
+          </div>
+        </div>
+
+        <div class="origin-section grid-2 fly-in">
+          <div class="origin-text">
+            <h3 class="question-title">💥Did the Big Bang happen even though time didn’t exist yet?</h3>
+
+            <p class="origin-subtitle"><strong>Yes — time came into existence together with space.</strong></p>
+
+            <ul class="origin-list">
+              <li>The Big Bang is not an explosion in time.</li>
+              <li>It is the zero moment — the birth of time itself.</li>
+              <li>There is no “before,” because time had not yet begun to flow.</li>
+              <li>In other words: “Time began with the first tick of the universe’s clock.” Before that, there was nothing that could measure time — because time itself didn’t exist.</li>
+            </ul>
+          </div>
+
+          <div class="origin-text">
+            <h3 class="question-title">🌀 “Did space suddenly expand after a tiny fraction of a second?”</h3>
+
+            <p class="origin-subtitle"><strong>Yes — this is the inflationary phase.</strong></p>
+
+            <ul class="origin-list">
+              <li>Around 10<sup>-35</sup> seconds after space appeared, cosmic inflation began.</li>
+              <li>In an incredibly brief moment, space expanded far more than during the entire rest of cosmic history.</li>
+              <li>It wasn’t an explosion like dynamite — it was the expansion of space itself, everywhere at once.</li>
+              <li>Think of it as the universe being “super-inflated,” not particles exploding into empty space.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Second FAQ grid: items 3 & 4 (inflation aftermath + particles expanding with space) -->
+        <div class="origin-section grid-2 fly-in">
+          <div class="origin-text">
+            <h3 class="question-title">⚛️ “And particles formed only afterward?”</h3>
+
+            <p class="origin-subtitle"><strong>Correct — matter appeared after inflation.</strong></p>
+
+            <ul class="origin-list">
+              <li>When inflation ended (around 10<sup>-32</sup> seconds), space began to heat up — this period is called reheating.</li>
+              <li>The energy of space transformed into particles: quarks, gluons, electrons…</li>
+              <li>These formed the first elemental soup — the quark–gluon plasma.</li>
+            </ul>
+          </div>
+
+          <div class="origin-text">
+            <h3 class="question-title">🌌 “Once particles formed, did they expand along with space?”</h3>
+
+            <p class="origin-subtitle"><strong>Exactly.</strong></p>
+
+            <ul class="origin-list">
+              <li>The particles didn’t shoot outward — they existed inside the expanding space and stretched with it.</li>
+              <li>Matter formed within a universe that was already rapidly growing.</li>
+              <li>Over time, atoms, stars, and galaxies formed — everything “floats” in a space that keeps growing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Centered conclusion block (no list) -->
+        <div class="origin-section text-only fly-in">
+          <div class="origin-text conclusion">
+            <h3 class="question-title">🧠 Conclusion</h3>
+            <p class="conclusion-text">“In one moment, space and time came into existence. Immediately after (within a fraction of a second), the universe underwent inflation, a phase where space itself expanded extremely rapidly. Afterward, energy transformed into matter — and that matter has been expanding together with space ever since.”</p>
+          </div>
+        </div>
+
+        <!-- New subsection: What was before the Big Bang? -->
+        <div class="origin-section image-full fly-in">
+          <div class="origin-text">
+            <h2 class="what-before-title universe-title centered-question">What was before the Big Bang?</h2>
+
+            <p class="short-answer"><strong>Short answer:</strong><br>❗ According to modern physics, nothing at all — neither time nor space. The Big Bang was the beginning of time itself.</p>
+
+            <p class="longer-answer"><strong>Longer answer:</strong><br>There are hypotheses about what might have existed “before,” but we currently have no experiments to confirm or reject them.</p>
+          </div>
+        </div>
+
+        <!-- Four-item grid (two columns, two items each) about 'before' hypotheses -->
+        <div class="origin-section grid-2 fly-in">
+          <div class="origin-text">
+            <h3 class="question-title">🧪 Standard cosmology — time begins at the Big Bang</h3>
+            <ul class="origin-list">
+              <li>According to Einstein, time is part of space — a unified spacetime.</li>
+              <li>If space appeared at the Big Bang, time appeared with it.</li>
+              <li>Therefore, asking “before” is not physically meaningful.</li>
+              <li>It’s like asking what is north of the North Pole.</li>
+            </ul>
+
+            <h3 class="question-title">🌀 Cyclic universe / Big Bounce theory</h3>
+            <ul class="origin-list">
+              <li>The universe may repeatedly expand and collapse.</li>
+              <li>Before our Big Bang, a previous universe may have collapsed.</li>
+              <li>After this “big crunch,” a new Big Bang occurred.</li>
+              <li>Some versions say this cycle can continue forever.</li>
+              <li class="origin-subtitle">🔁 Bang → expansion → collapse → bang → ...</li>
+            </ul>
+          </div>
+
+          <div class="origin-text">
+            <h3 class="question-title">🌌 Multiverse / Quantum fluctuation / Vacuum models</h3>
+            <ul class="origin-list">
+              <li>In some models, our universe emerged from a quantum fluctuation in a “vacuum state.”</li>
+              <li>There could be infinitely many universes, each with different physical laws.</li>
+              <li>Our universe is just one bubble among countless others.</li>
+            </ul>
+
+            <h3 class="question-title">🧊 Eternal inflation</h3>
+            <ul class="origin-list">
+              <li>Inflation (rapid expansion of space) may run endlessly.</li>
+              <li>In different regions, it stops at different times, creating new universes.</li>
+              <li>New universes are constantly being born — like bubbles in an infinite foam.</li>
+              <li>Our universe is just one bubble.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Centered cyclic image and caption -->
+        <div class="origin-section image-full fly-in">
+          <div class="origin-img center-figure">
+            <img src="../Obrázky/cyclicu.png" alt="Cyclic universe diagram" />
+          </div>
+          <div class="origin-text">
+            <p class="figure-caption">Cyclic universe concept</p>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    // Force GIF to start from the beginning when the page loads or when revisited
+    (function(){
+      const img = document.querySelector('.origin-gif');
+      if (!img) return;
+      const src = img.getAttribute('src');
+      function restart(){
+        // add cache-busting query to force a fresh resource
+        img.src = src + '?_=' + Date.now();
+      }
+      // restart immediately on load
+      restart();
+      // also restart when the page becomes visible again
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible') restart();
+      });
+    })();
+  </script>
+  <script>
+    // Enhanced IntersectionObserver: group paragraph animations, reveal items already in view,
+    // and stagger the hero (title -> media -> intro) similar to universe cards.
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+
+          // If the observed element is inside the hero, schedule a delayed reveal
+          const heroParent = entry.target.closest('.origin-hero');
+          if (heroParent) {
+            // determine which hero piece this is and use the same stagger delays
+            let delay = 120; // fallback
+            if (entry.target.matches('.universe-title')) delay = 100;
+            else if (entry.target.closest('.origin-media') || entry.target.matches('.origin-media')) delay = 220;
+            else if (entry.target.matches('.origin-intro')) delay = 340;
+
+            setTimeout(()=>{
+              entry.target.classList.add('in-view');
+            }, delay);
+            observer.unobserve(entry.target);
+            return;
+          }
+
+          // If the observed element is (or is inside) an .origin-text, reveal the parent as a group
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            // stop observing children inside the same origin-text
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+
+          // For normal elements (non-hero), reveal them immediately when observed
+          entry.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      items.forEach(i=>obs.observe(i));
+
+      // Helper: reveal if already visible on load (used to make direct-load behave like card entrance)
+      function revealIfVisible(el, delay=0){
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) {
+          setTimeout(()=>{
+            const parentText = el.closest('.origin-text');
+            if (parentText) revealParagraphs(parentText);
+            else {
+              el.classList.add('in-view');
+            }
+          }, delay);
+        }
+      }
+
+          // Stagger hero entrance (title -> media -> intro) with slower delays so entrance feels paced
+          const heroTitle = document.querySelector('.origin-hero .universe-title');
+          const heroMedia = document.querySelector('.origin-media');
+          const heroIntro = document.querySelector('.origin-intro');
+          // increased delays for a slower, more readable entrance
+          if (heroTitle) revealIfVisible(heroTitle, 500);
+          if (heroMedia) revealIfVisible(heroMedia, 1200);
+          if (heroIntro) revealIfVisible(heroIntro, 2000);
+
+      // Reveal other visible fly-in items immediately on load (not part of hero)
+      items.forEach(i=>{
+        if (i.closest('.origin-hero')) return;
+        revealIfVisible(i, 0);
+      });
+      
+      // Dedicated observer for .origin-text blocks to ensure paragraph staggering works
+      const textBlocks = Array.from(document.querySelectorAll('.origin-text'));
+      if (textBlocks.length) {
+        const textObs = new IntersectionObserver((entries, tObserver)=>{
+          entries.forEach(en=>{
+            if (!en.isIntersecting) return;
+            revealParagraphs(en.target);
+            tObserver.unobserve(en.target);
+          });
+        }, {threshold: 0.15});
+        textBlocks.forEach(tb => textObs.observe(tb));
+        // also reveal those already visible on load
+        textBlocks.forEach(tb => revealIfVisible(tb, 0));
+      }
+      // Helper to stagger paragraph reveals inside an .origin-text element
+      function revealParagraphs(parent){
+        if (!parent) return;
+        // avoid running twice
+        if (parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+
+        const ps = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!ps.length) {
+          parent.classList.add('in-view');
+          return;
+        }
+
+        let idx = 0;
+        const gap = 0; // extra pause after each paragraph (ms)
+        const safetyTimeout = 2500; // fallback if transitionend doesn't fire
+
+        function showNext(){
+          if (idx >= ps.length) return;
+          const p = ps[idx++];
+          // add visible class
+          p.classList.add('p-in');
+
+          let called = false;
+          const onEnd = function(e){
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            p.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            setTimeout(showNext, gap);
+          };
+
+          p.addEventListener('transitionend', onEnd);
+
+          // safety fallback: if transitionend doesn't fire, proceed after safetyTimeout
+          const safety = setTimeout(()=>{
+            try { p.removeEventListener('transitionend', onEnd); } catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+
+        parent.classList.add('in-view');
+        // start chain
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

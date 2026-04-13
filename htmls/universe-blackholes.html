@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Black Holes</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">BLACK HOLES</h1>
+
+      <div class="origin-media origin-media--small fly-in">
+        <img class="origin-gif" src="../gif/bhole.gif" alt="Black hole animation" />
+      </div>
+
+      <p class="origin-intro fly-in">
+        A <strong>black hole</strong> is not a cosmic vacuum cleaner—it’s a region of spacetime where gravity is so strong that, past a certain boundary, even light can’t escape.
+        In other words: black holes are so massive and compact that they <strong>dramatically curve spacetime</strong>, which leads to extreme effects like strong <strong>time dilation</strong> and light bending near them.
+        Black holes are predicted by <strong>Einstein’s general relativity</strong> and are now observed indirectly through their effects on nearby matter, stars, and light.
+      </p>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/bh1.jpg" alt="Black hole" />
+        </div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What is a black hole?</h2>
+          <p>A black hole is defined by an <strong>event horizon</strong>: a one-way boundary. If you cross it, there is no path back out—not because something is “pulling harder than light speed”, but because all future-directed paths (even for light) lead deeper inward.</p>
+
+          <h3 class="question-title">Event horizon, singularity, and “what’s inside”</h3>
+          <p><strong>Event horizon:</strong> the surface where escape becomes impossible. From far away, it looks like a sphere around the black hole.</p>
+          <p><strong>Singularity (classical GR):</strong> a place where curvature becomes infinite in the equations. Most physicists treat this as a sign that the classical theory is incomplete and that quantum gravity must take over at extremely small scales.</p>
+          <p><strong>What’s beyond the horizon?</strong> We can’t receive information from inside, so we cannot directly observe it. General relativity gives a mathematical description of the interior, but what truly happens at the very center is still an open problem in fundamental physics.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Where do black holes appear, and what do they do?</h2>
+          <p>Black holes show up in many environments: in <strong>binary star systems</strong>, in <strong>dense star clusters</strong>, and at the <strong>centers of galaxies</strong>. They influence their surroundings mainly through gravity:</p>
+          <ul class="origin-list">
+            <li><strong>They bend light</strong> (gravitational lensing) and can distort the appearance of background objects.</li>
+            <li><strong>They heat up infalling gas</strong>: an accretion disk can glow brightly in X-rays and UV.</li>
+            <li><strong>They launch jets</strong> in some systems, sending high-energy particles far into interstellar and intergalactic space.</li>
+            <li><strong>They merge</strong> and produce <strong>gravitational waves</strong>—ripples in spacetime that we can now detect.</li>
+          </ul>
+        </div>
+
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/bhshceme.jpg" alt="Milky Way" />
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">How black holes form (types)</h2>
+          <p><strong>Stellar-mass black holes</strong> can form when a very massive star runs out of fuel and its core collapses. Often this happens in a <strong>core-collapse supernova</strong> (a “massive star explosion”), but in some cases the collapse can be so direct that the star produces a weak or failed supernova and falls inward with little light.</p>
+
+          <p>Other formation channels exist:</p>
+          <ul class="origin-list">
+            <li><strong>Black hole mergers:</strong> two compact objects merge and leave a larger remnant.</li>
+            <li><strong>Direct collapse:</strong> very massive gas clouds (especially in the early universe) may collapse into a “seed” black hole without first making normal stars.</li>
+            <li><strong>Supermassive black holes:</strong> likely grow over time via accretion and mergers, starting from smaller seeds.</li>
+            <li><strong>Primordial black holes (hypothetical):</strong> could form from overdensities in the very early universe (not confirmed).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/bh2.webp" alt="Quasar" />
+          <img src="../Obrázky/sections/Black-Hole-Orbited-by-Cracked-Neutron-Star.jpg" alt="Quasar" />
+          <div class="figure-caption">A black hole devauring a neutron star</div>
+        </div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Spin, time, and extreme physics</h2>
+          <p>Real black holes are rarely “still”. Many rotate, and their <strong>spin</strong> changes the geometry of spacetime around them (Kerr black holes). Rotation can drag spacetime itself (frame-dragging) and affects where stable orbits and the inner edge of the accretion disk can exist.</p>
+
+          <h3 class="question-title">Spaghettification (tidal forces)</h3>
+          <p>Near a compact object, gravity changes significantly over short distances. This difference is a <strong>tidal force</strong>. If you fell toward a black hole, your feet would feel a stronger pull than your head, stretching you into a long shape: <strong>spaghettification</strong>.</p>
+          <p>For <strong>stellar-mass</strong> black holes, tidal forces near the horizon can be enormous. For <strong>supermassive</strong> black holes, the horizon is much larger, so you could cross the horizon before tides become lethal (though you still can’t escape afterward).</p>
+
+          <h3 class="question-title">Black holes as particle accelerators</h3>
+          <p>Accretion disks, magnetic fields, and relativistic jets can accelerate particles to extreme energies. In that sense, some active black holes act like natural <strong>particle accelerators</strong>, producing high-energy radiation and cosmic rays.</p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Black holes and general relativity (key equations)</h2>
+          <p>General relativity connects mass-energy to spacetime curvature. In compact form:</p>
+          <p><code>G<sub>μν</sub> = (8πG / c<sup>4</sup>) T<sub>μν</sub></code></p>
+
+          <p><strong>Meaning (in plain words):</strong> the left side describes the geometry/curvature of spacetime; the right side describes energy and momentum of matter and radiation. When the right side is extremely concentrated, spacetime can form an event horizon.</p>
+
+          <p>For a non-rotating black hole, the size scale of the event horizon is set by the <strong>Schwarzschild radius</strong>:</p>
+          <p><code>R<sub>s</sub> = 2GM / c<sup>2</sup></code></p>
+
+          <p>This formula explains why black holes are “compact”: if an object of mass <strong>M</strong> is compressed inside a radius smaller than <strong>R<sub>s</sub></strong>, an event horizon forms. (Rotation changes the detailed geometry, but the mass–size idea is the same.)</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">The black hole at the center of our galaxy</h2>
+          <p>The Milky Way has a supermassive black hole in its center called <strong>Sagittarius A*</strong>. Our Sun (and the whole galaxy disk) orbits the galaxy’s center of mass. The central black hole is a key part of that central region, but the gravity in the inner galaxy also comes from many stars, gas, and dark matter.</p>
+          <p>We infer Sagittarius A* from the fast orbits of stars near the galactic center and from radio/infrared observations of the region. It is currently relatively “quiet” compared to bright quasars, meaning it’s not actively accreting huge amounts of gas.</p>
+        </div>
+
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/sagirius A.jpg" alt="Galactic center illustration" />
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Closest, farthest, biggest, smallest (named examples)</h2>
+          <p>Exact “records” can change as new data arrives (and some nearby finds start as <strong>candidates</strong> before they’re fully confirmed). But these are widely discussed, well-known examples with clear names:</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/a0620.jpg" alt="Binary system" />
+          <div class="figure-caption">Many nearby black holes are found in binary systems by tracking the companion star.</div>
+        </div>
+        <div class="origin-text fly-in">
+          <h3 class="question-title">Closest (nearby Milky Way examples)</h3>
+          <ul class="origin-list">
+            <li><strong>Gaia BH1</strong> (candidate/then-studied object): found via the motion of a Sun-like star measured by the Gaia mission.</li>
+            <li><strong>Gaia BH2</strong> and <strong>Gaia BH3</strong> (Gaia-discovered systems): additional named Gaia candidates/objects discussed as relatively nearby black holes.</li>
+            <li><strong>A0620−00</strong> (V616 Mon): a classic nearby black-hole X-ray binary often cited in textbooks and introductions.</li>
+          </ul>
+          <p><strong>Idea:</strong> in “quiet” systems you might not see the black hole itself, but you can see its gravity in how the visible star moves.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/supesupermassive-black-hole-quasar-JO313-1806-artist.png" alt="Distant quasar" />
+          <div class="figure-caption">Very distant black holes are observed as quasars in the early universe.</div>
+        </div>
+        <div class="origin-text fly-in">
+          <h3 class="question-title">Farthest (early-universe quasars)</h3>
+          <ul class="origin-list">
+            <li><strong>J0313−1806</strong>: a famous high-redshift quasar with a supermassive black hole in the first billion years after the Big Bang.</li>
+            <li><strong>J1342+0928</strong>: another widely cited extremely distant quasar-era supermassive black hole.</li>
+          </ul>
+          <p>These objects show that supermassive black holes can grow very quickly in the early universe, which is still an active research topic.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/ton618.png" alt="Quasar illustration" />
+          <div class="figure-caption">TON 618 is one of the best-known “ultra-massive” black hole candidates, observed as a quasar.</div>
+        </div>
+        <div class="origin-text fly-in">
+          <h3 class="question-title">Biggest (ultra-massive candidates)</h3>
+          <ul class="origin-list">
+            <li><strong>TON 618</strong>: often listed among the most massive black hole candidates (tens of billions of solar masses, depending on measurement method).</li>
+            <li><strong>Phoenix A*</strong> (in the Phoenix Cluster): a famous candidate associated with an extremely massive central black hole in a galaxy cluster.</li>
+          </ul>
+          <p>Mass estimates at the very top end are uncertain because they depend on how we interpret quasar light, gas motions, and the host environment.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/tiny bh.jpg" alt="Accretion in a binary system" />
+          <div class="figure-caption">The lightest confirmed black holes overlap with the heaviest neutron stars—this boundary is still studied.</div>
+        </div>
+        <div class="origin-text fly-in">
+          <h3 class="question-title">Smallest (stellar-mass black holes)</h3>
+          <p>The smallest confirmed black holes are only a few times the Sun’s mass. This is close to the maximum possible mass of a neutron star, so classification can be tricky.</p>
+          <ul class="origin-list">
+            <li><strong>GRO J0422+32</strong>: frequently mentioned as a low-mass black hole candidate/measurement case in the literature.</li>
+            <li><strong>A0620−00</strong> again is a well-known stellar-mass example (not necessarily the smallest, but a classic reference system).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/ton6.webp" alt="Galaxy cluster" />
+          <div class="figure-caption">TON 618 in comparison with our Sun.</div>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What if we replaced the Sun with a black hole?</h2>
+          <p>If you replaced the Sun with a black hole of the <strong>same mass</strong> (no extra mass added), the planets’ orbits would remain almost the same, because gravity far away depends mainly on total mass, not on whether it is a star or a black hole.</p>
+          <p>What would change dramatically is <strong>light and heat</strong>: Earth would freeze without sunlight. Also, without the Sun’s solar wind and radiation pressure, the space environment would be different. The situation becomes more violent only if the black hole were actively feeding: an accretion disk could emit intense radiation that would be extremely harmful.</p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in conclusion">
+          <p class="conclusion-text">Black holes connect the biggest scales (galaxies and cosmic evolution) with the smallest (extreme gravity and quantum questions). They are laboratories where general relativity is not just a theory—it’s the main rulebook.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    // Force GIF to start from the beginning when the page loads or when revisited
+    (function(){
+      const img = document.querySelector('.origin-gif');
+      if (!img) return;
+      const src = img.getAttribute('src');
+      function restart(){
+        img.src = src.split('?')[0] + '?_=' + Date.now();
+      }
+      restart();
+      const LOOP_MS = 6400;
+      setInterval(restart, LOOP_MS);
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible') restart();
+      });
+    })();
+  </script>
+  <script>
+    // IntersectionObserver + chained reveal
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+
+          const heroParent = entry.target.closest('.origin-hero');
+          if (heroParent) {
+            let delay = 120;
+            if (entry.target.matches('.universe-title')) delay = 100;
+            else if (entry.target.closest('.origin-media') || entry.target.matches('.origin-media')) delay = 220;
+            else if (entry.target.matches('.origin-intro')) delay = 340;
+            setTimeout(()=>{ entry.target.classList.add('in-view'); }, delay);
+            observer.unobserve(entry.target);
+            return;
+          }
+
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+
+          entry.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      items.forEach(i=>obs.observe(i));
+
+      function revealIfVisible(el, delay=0){
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) {
+          setTimeout(()=>{
+            const parentText = el.closest('.origin-text');
+            if (parentText) revealParagraphs(parentText);
+            else { el.classList.add('in-view'); }
+          }, delay);
+        }
+      }
+
+      const heroTitle = document.querySelector('.origin-hero .universe-title');
+      const heroMedia = document.querySelector('.origin-media');
+      const heroIntro = document.querySelector('.origin-intro');
+      if (heroTitle) revealIfVisible(heroTitle, 500);
+      if (heroMedia) revealIfVisible(heroMedia, 1200);
+      if (heroIntro) revealIfVisible(heroIntro, 2000);
+
+      items.forEach(i=>{ if (i.closest('.origin-hero')) return; revealIfVisible(i, 0); });
+
+      const textBlocks = Array.from(document.querySelectorAll('.origin-text'));
+      if (textBlocks.length) {
+        const textObs = new IntersectionObserver((entries, tObserver)=>{
+          entries.forEach(en=>{
+            if (!en.isIntersecting) return;
+            revealParagraphs(en.target);
+            tObserver.unobserve(en.target);
+          });
+        }, {threshold: 0.15});
+        textBlocks.forEach(tb => textObs.observe(tb));
+        textBlocks.forEach(tb => revealIfVisible(tb, 0));
+      }
+
+      function revealParagraphs(parent){
+        if (!parent) return;
+        if (parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+
+        let idx = 0;
+        const gap = 0;
+        const safetyTimeout = 2500;
+
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+
+          let called = false;
+          const onEnd = function(e){
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            setTimeout(showNext, gap);
+          };
+
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+
+        parent.classList.add('in-view');
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

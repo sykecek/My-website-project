@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dark Matter &amp; Dark Energy</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body class="universe-dark">
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">DARK MATTER &amp; DARK ENERGY</h1>
+
+      <div class="origin-media origin-media--small fly-in">
+        <img class="origin-gif" src="../gif/Rotating_Galaxies.gif" alt="Dark matter animation" />
+        <div class="figure-caption">Right: A rotating spiral galaxy, which we thought would spin like simply beacause of the gravity</div>
+        <div class="figure-caption">Left: The same rotating spiral galaxy, but with a dark matter that provides the extra gravity to keep the outer stars moving fast and round</div>
+      </div>
+
+      <p class="origin-intro fly-in">
+        A surprising fact about the universe: most of it doesn’t shine.
+        When astronomers add up the matter we can see (stars, gas, dust) and compare it with what <strong>gravity</strong> says must be there,
+        the numbers don’t match.
+        Two names cover this mystery: <strong>dark matter</strong> (extra gravity that clumps) and <strong>dark energy</strong> (a smooth component that makes cosmic expansion speed up).
+      </p>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Dark matter vs. dark energy (quick difference)</h2>
+          <p>
+            <strong>Dark matter</strong> is the “missing mass” that behaves like matter: it <strong>clumps</strong>, forms halos around galaxies,
+            and pulls things together through gravity.
+            It doesn’t need to glow to be real—astronomers infer it from motion and from how it bends light.
+          </p>
+          <p>
+            <strong>Dark energy</strong> is almost the opposite: it appears to be <strong>smoothly distributed</strong> and becomes important only on very large scales.
+            Its main signature is that the universe’s expansion is not just continuing—it’s <strong>accelerating</strong>.
+          </p>
+          <p>
+            In the standard picture of cosmology, ordinary atoms are only a small slice of the cosmic “budget”, while dark matter and dark energy dominate.
+            (The exact percentages depend on the dataset, but the rough story is stable: a few percent normal matter, about a quarter dark matter, and the rest dark energy.)
+          </p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/Universe_Pie_Chart.jpeg" alt="Universe composition pie chart" />
+          <div class="figure-caption">The universe is made up of three components: normal or visible matter (5%), dark matter (27%), and dark energy (68%). <strong>NASA's Goddard Space Flight Center</strong></div>
+        </div>
+      </div>
+    
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What is dark matter?</h2>
+          <p>
+            Dark matter is matter we don’t see directly because it doesn’t emit, absorb, or reflect light the way ordinary matter does.
+            What we do see is its <strong>gravity</strong>—it acts like extra mass in and around galaxies and galaxy clusters.
+            The simplest idea is that it’s made of new particles we haven’t detected in the lab yet.
+          </p>
+
+          <h3 class="question-title">What does “missing mass” actually mean?</h3>
+          <p>
+            Scientists can estimate how much mass is present in two independent ways:
+            (1) by counting light (stars) and measuring gas (for example with radio and X‑ray telescopes), and
+            (2) by measuring gravity (how fast objects orbit, or how strongly spacetime bends light).
+            When method (2) says “there should be much more mass here” than method (1) can account for, that gap is the dark matter problem.
+          </p>
+
+          <h3 class="question-title">How do we know it exists?</h3>
+          <ul class="origin-list">
+            <li><strong>Galaxy rotation curves (Vera Rubin &amp; others):</strong> stars far from the galactic center orbit faster than the visible matter distribution predicts. The simplest fix is a massive, extended halo.</li>
+            <li><strong>Galaxy clusters (Fritz Zwicky’s “missing mass”):</strong> galaxies in clusters move so fast that, using the virial theorem, the cluster should fly apart unless there is far more mass than we see in stars.</li>
+            <li><strong>Gravitational lensing:</strong> clusters and galaxies bend the light of background objects. The measured bending often requires more mass than the luminous matter provides.</li>
+            <li><strong>The Bullet Cluster and similar collisions:</strong> hot gas (seen in X‑rays) gets slowed by pressure, while most of the lensing mass is offset—suggesting most mass behaves like a collisionless component (dark matter).</li>
+            <li><strong>Cosmic microwave background &amp; large‑scale structure:</strong> the pattern of early-universe fluctuations and today’s galaxy distribution fit best when most matter is dark and “cold” (moves slowly, so it can clump early).</li>
+          </ul>
+
+          <h3 class="question-title">What is gravitational lensing (and how do we “do” it)?</h3>
+          <p>
+            In general relativity, mass curves spacetime, and light follows the curved paths. A massive object between us and a distant galaxy therefore works like a lens.
+            Astronomers use images of many background galaxies and look for tiny, coherent distortions in their shapes.
+          </p>
+          <ul class="origin-list">
+            <li><strong>Strong lensing:</strong> obvious arcs, multiple images, or even Einstein rings. The geometry lets us reconstruct a detailed mass model of the lens.</li>
+            <li><strong>Weak lensing:</strong> each background galaxy is only slightly stretched (“shear”), so scientists average over thousands/millions of galaxies to build a statistical <strong>mass map</strong>.</li>
+            <li><strong>Microlensing:</strong> temporary brightening when a compact object passes in front of a star. This method tested (and strongly limited) many “dark” ordinary-matter candidates in the Milky Way halo.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/A_Horseshoe_Einstein_Ring_from_Hubble.JPG" alt="Cosmic web" />
+          <div class="figure-caption">A Horseshoe Einstein Ring from Hubble</div>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What could dark matter be made of?</h2>
+          <p>
+            We don’t know yet—and the constraints are part of the story.
+            Dark matter must be abundant, long‑lived, and (mostly) <strong>collisionless</strong> so it can pass through itself and ordinary matter without much drag.
+            It also has to clump in the right way to match galaxy and cluster observations.
+          </p>
+          <ul class="origin-list">
+            <li><strong>WIMPs (hypothetical):</strong> a classic idea—new particles with weak-scale interactions. Searches look for rare scatters in underground detectors, signals from annihilation, or production at colliders.</li>
+            <li><strong>Axions (hypothetical):</strong> ultra-light particles originally proposed to solve a problem in particle physics; in the right range they behave like cold dark matter. Experiments try to convert axions into photons in strong magnetic fields.</li>
+            <li><strong>Sterile neutrinos / dark-sector particles:</strong> models where dark matter has its own interactions, but remains hard to see directly.</li>
+            <li><strong>Not (mostly) ordinary “dark” objects:</strong> things like faint stars or planets (“MACHOs”) were tested via microlensing and can’t make up most of the halo, though small fractions are still possible.</li>
+          </ul>
+          <p>
+            There are also alternative ideas (for example modifying gravity), but they have to match <em>all</em> the evidence at once:
+            rotation curves, lensing, cluster collisions, and the early-universe fingerprints in the cosmic microwave background.
+          </p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 grid-center fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/¨darkenergyconcept.jpg" alt="Early universe" />
+          <div class="figure-caption">Dark energy concept art</div>
+        </div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What is dark energy?</h2>
+          <p>
+            Dark energy is the name for whatever causes the universe’s expansion to <strong>accelerate</strong> at late times.
+            The simplest explanation is a <strong>cosmological constant</strong> (often written as $\Lambda$): a constant energy density associated with empty space.
+            Another possibility is that it’s dynamical (sometimes called <em>quintessence</em>), meaning it could change slowly over cosmic time.
+          </p>
+
+          <h3 class="question-title">How do we know the expansion accelerates?</h3>
+          <ul class="origin-list">
+            <li><strong>Type Ia supernovae (late 1990s):</strong> used as “standard candles”. By comparing their intrinsic brightness to their observed dimness, astronomers build a distance–redshift (Hubble) diagram that points to acceleration.</li>
+            <li><strong>CMB + baryon acoustic oscillations:</strong> the early-universe sound-wave scale acts like a ruler. Measuring it at different epochs reveals the expansion history and supports dark-energy–dominated late times.</li>
+            <li><strong>Growth of structure:</strong> acceleration changes how quickly galaxies and clusters form. Surveys compare the predicted growth to observed clustering and lensing.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">How dark matter and dark energy connect to everything</h2>
+          <p>
+            Cosmology is partly a timeline.
+            Early on, matter (mostly dark matter) dominated: gravity amplified tiny fluctuations into the cosmic web.
+            Much later, dark energy began to dominate the large-scale dynamics and the expansion started to accelerate.
+          </p>
+          <ul class="origin-list">
+            <li><strong>Galaxies:</strong> halos of dark matter set the gravitational potential; gas falls in, cools, and forms stars inside that scaffold.</li>
+            <li><strong>Clusters:</strong> they are the biggest bound objects, so they’re great laboratories—lensing, X‑ray gas, and galaxy motions all cross-check the mass.</li>
+            <li><strong>Cosmic maps:</strong> weak-lensing surveys literally draw the large-scale distribution of mass, letting us compare “where the mass is” to “where the light is”.</li>
+            <li><strong>Fate of the universe:</strong> the properties of dark energy determine whether acceleration stays constant, increases, or possibly changes in the far future.</li>
+          </ul>
+          <p>
+            On everyday scales, dark energy is far too diffuse to notice.
+            Dark matter, meanwhile, is already “here” in the sense that the Milky Way sits inside a dark halo—yet it passes through us without obvious interaction.
+            Together, these two components shape both the <strong>structure</strong> of the universe and its <strong>expansion history</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in conclusion">
+          <p class="conclusion-text">
+            Dark matter is the invisible mass behind galaxies, clusters, and the cosmic web.
+            Dark energy is the component behind the universe’s late-time accelerated expansion.
+            We measure them not by seeing them directly, but by carefully comparing light, motion, and spacetime bending—turning the whole universe into a physics experiment.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    // Force GIF to start from the beginning when the page loads or when revisited
+    (function(){
+      const img = document.querySelector('.origin-gif');
+      if (!img) return;
+      const src = img.getAttribute('src');
+      function restart(){
+        img.src = src.split('?')[0] + '?_=' + Date.now();
+      }
+      restart();
+      const LOOP_MS = 5400;
+      setInterval(restart, LOOP_MS);
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible') restart();
+      });
+    })();
+  </script>
+  <script>
+    // IntersectionObserver + chained reveal
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+
+          const heroParent = entry.target.closest('.origin-hero');
+          if (heroParent) {
+            let delay = 120;
+            if (entry.target.matches('.universe-title')) delay = 100;
+            else if (entry.target.closest('.origin-media') || entry.target.matches('.origin-media')) delay = 220;
+            else if (entry.target.matches('.origin-intro')) delay = 340;
+            setTimeout(()=>{ entry.target.classList.add('in-view'); }, delay);
+            observer.unobserve(entry.target);
+            return;
+          }
+
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+
+          entry.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      items.forEach(i=>obs.observe(i));
+
+      function revealIfVisible(el, delay=0){
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) {
+          setTimeout(()=>{
+            const parentText = el.closest('.origin-text');
+            if (parentText) revealParagraphs(parentText);
+            else { el.classList.add('in-view'); }
+          }, delay);
+        }
+      }
+
+      const heroTitle = document.querySelector('.origin-hero .universe-title');
+      const heroMedia = document.querySelector('.origin-media');
+      const heroIntro = document.querySelector('.origin-intro');
+      if (heroTitle) revealIfVisible(heroTitle, 500);
+      if (heroMedia) revealIfVisible(heroMedia, 1200);
+      if (heroIntro) revealIfVisible(heroIntro, 2000);
+
+      items.forEach(i=>{ if (i.closest('.origin-hero')) return; revealIfVisible(i, 0); });
+
+      const textBlocks = Array.from(document.querySelectorAll('.origin-text'));
+      if (textBlocks.length) {
+        const textObs = new IntersectionObserver((entries, tObserver)=>{
+          entries.forEach(en=>{
+            if (!en.isIntersecting) return;
+            revealParagraphs(en.target);
+            tObserver.unobserve(en.target);
+          });
+        }, {threshold: 0.15});
+        textBlocks.forEach(tb => textObs.observe(tb));
+        textBlocks.forEach(tb => revealIfVisible(tb, 0));
+      }
+
+      function revealParagraphs(parent){
+        if (!parent) return;
+        if (parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+
+        let idx = 0;
+        const gap = 0;
+        const safetyTimeout = 2500;
+
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+
+          let called = false;
+          const onEnd = function(e){
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            setTimeout(showNext, gap);
+          };
+
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, safetyTimeout);
+        }
+
+        parent.classList.add('in-view');
+        showNext();
+      }
+    })();
+  </script>
+</body>
+</html>

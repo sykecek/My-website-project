@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Planets</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
+        <a href="index.html#projects" class="nav-link">My Projects</a>
+      </nav>
+      <a href="https://www.instagram.com/sykycek_"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="instagram-icon"
+         aria-label="Instagram">
+        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
+      </a>
+    </div>
+  </header>
+
+  <canvas id="universe-bg"></canvas>
+
+  <main class="universe-main universe-main-root">
+    <section class="origin-hero">
+      <h1 class="universe-title fly-in">PLANETS</h1>
+
+      <div class="origin-media origin-media--small fly-in">
+        <img class="origin-gif" src="../gif/planetka.gif" alt="Planet animation" />
+      </div>
+
+      <p class="origin-intro fly-in">
+        A <strong>planet</strong> is a large, rounded world shaped mainly by its own gravity. Planets form from the leftover material around young stars and end up on stable orbits.
+        They can be <strong>rocky</strong>, <strong>icy</strong>, or dominated by <strong>gas</strong>—and the same basic physics can produce very different outcomes: scorching lava worlds, frozen giants, and potentially habitable Earth-like planets.
+      </p>
+    </section>
+
+    <section class="origin-content">
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/planet1.jpg" alt="Planet" />
+        </div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">What makes a planet a planet?</h2>
+          <p>In everyday astronomy, a planet is a body that <strong>orbits a star</strong> and is <strong>large enough to be rounded</strong> by gravity. In our Solar System, the official (IAU) definition adds a third idea: the object must have <strong>cleared its orbital neighborhood</strong> of other similar-sized bodies.</p>
+          <p>That last criterion is why Pluto is called a <strong>dwarf planet</strong>: it shares its region with many Kuiper Belt objects. For exoplanets around other stars, astronomers usually focus on the practical parts—<strong>orbit + size/mass</strong>—because “clearing the neighborhood” is harder to prove far away.</p>
+
+          <h3 class="question-title">Where do planets come from?</h3>
+          <p>Planets grow inside a <strong>protoplanetary disk</strong>: a rotating, flattened disk of gas and dust around a newborn star. Dust grains stick together, forming pebbles, then planetesimals, and eventually planets. In the colder outer disk, ices can survive and allow planets to grow bigger, faster.</p>
+          <p>Many planets don’t stay where they form. Interactions with the disk and with other planets can cause <strong>migration</strong>, reshaping the whole system. That’s one reason exoplanet systems can look very different from our Solar System.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Planet types</h2>
+          <p class="origin-subtitle"><strong>These are broad composition/size categories commonly used by NASA in exoplanet overviews.</strong></p>
+
+          <ul class="origin-list">
+            <li><strong>Terrestrial:</strong> small, dense, mostly rocky worlds with solid surfaces (like Mercury, Venus, Earth, Mars).</li>
+            <li><strong>Super-Earth:</strong> larger than Earth but smaller than Neptune. They might be rocky, water-rich, or have thick atmospheres—“super-Earth” describes size more than composition.</li>
+            <li><strong>Neptune-like:</strong> medium-to-large planets with thick atmospheres and lots of volatiles (ices) such as water, methane, and ammonia. They are often called <strong>ice giants</strong> in the Solar System context.</li>
+            <li><strong>Gas giant:</strong> very large planets dominated by hydrogen and helium, usually with no solid surface you can stand on (Jupiter and Saturn are the local examples).</li>
+          </ul>
+
+          <p>In real systems, boundaries blur. For example, a “super-Earth” could be a scaled-up rocky planet—or a small Neptune with a deep atmosphere. That’s why mass, radius, and atmospheric measurements are all important.</p>
+        </div>
+
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/Exoplanet_types-2.jpeg" alt="Solar System" />
+          <div class="figure-caption">Exoplanet types according to NASA, image from the NASA Exoplanet website</div>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-img">
+          <img src="../Obrázky/sections/sunsystem.jpg" alt="Planets of the Solar System" />
+        </div>
+        <div class="origin-text fly-in">
+          <h2 class="question-title">All planets in the Solar System</h2>
+          <p>The Solar System has <strong>eight</strong> planets. A simple way to remember them is “rocky inner worlds” and “giant outer worlds”.</p>
+
+          <p><strong>Note:</strong> there are also <strong>dwarf planets</strong> (Pluto, Ceres, Eris, Haumea, Makemake) and many smaller bodies, but they are not counted among the eight major planets.</p>
+          <p><strong>Moon counts</strong> below are the <strong>currently known</strong> numbers and can change as new moons are discovered.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Mercury</h2>
+          <p><strong>Type:</strong> terrestrial (rocky). <strong>Moons:</strong> <strong>0</strong>.</p>
+          <p>Mercury is the <strong>closest planet to the Sun</strong> and the <strong>smallest</strong> of the eight. Because it has almost no atmosphere, it can’t keep heat: daytime can be scorching, while nighttime becomes extremely cold.</p>
+          <ul class="origin-list">
+            <li><strong>Fast year:</strong> Mercury completes an orbit in only about <strong>88 Earth days</strong>.</li>
+            <li><strong>Long day:</strong> one solar day (sunrise to sunrise) lasts about <strong>176 Earth days</strong>.</li>
+            <li><strong>Surface:</strong> heavily cratered like the Moon, with giant scarps (cliffs) from the planet shrinking as it cooled.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/mercury.jpg" alt="Mercury (illustration)" />
+          <div class="figure-caption">Mercury — small, airless, and cratered.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Venus</h2>
+          <p><strong>Type:</strong> terrestrial (rocky). <strong>Moons:</strong> <strong>0</strong>.</p>
+          <p>Venus is Earth’s “twin” by size, but its climate is the opposite: a thick CO₂ atmosphere drives a <strong>runaway greenhouse effect</strong>, making Venus the <strong>hottest</strong> planet in the Solar System.</p>
+          <ul class="origin-list">
+            <li><strong>Pressure:</strong> the surface pressure is about <strong>90× Earth’s</strong> (like being ~1 km underwater).</li>
+            <li><strong>Rotation:</strong> Venus rotates <strong>very slowly</strong> and <strong>retrograde</strong> (opposite direction compared to most planets).</li>
+            <li><strong>Clouds:</strong> reflective clouds (with sulfuric acid) make it extremely bright in our sky.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/venus.webp" alt="Venus (illustration)" />
+          <div class="figure-caption">Venus — thick clouds and extreme greenhouse heating.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Earth</h2>
+          <p><strong>Type:</strong> terrestrial (rocky). <strong>Moons:</strong> <strong>1</strong> (the Moon).</p>
+          <p>Earth is the only known world with life. Liquid water is stable on the surface, and Earth’s magnetic field helps shield the atmosphere from the solar wind.</p>
+          <ul class="origin-list">
+            <li><strong>Oceans:</strong> cover ~71% of the surface and store heat, stabilizing climate.</li>
+            <li><strong>Plate tectonics:</strong> recycles carbon and helps regulate long-term climate.</li>
+            <li><strong>Atmosphere:</strong> nitrogen–oxygen mix with an ozone layer that reduces harmful UV.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/earth.jpg" alt="Earth (illustration)" />
+          <div class="figure-caption">Earth — oceans, continents, and a protective atmosphere.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Mars</h2>
+          <p><strong>Type:</strong> terrestrial (rocky). <strong>Moons:</strong> <strong>2</strong> (Phobos, Deimos).</p>
+          <p>Mars is a cold desert planet with a thin atmosphere. It’s one of the best places to search for signs of past life because it likely had <strong>liquid water</strong> on the surface long ago.</p>
+          <ul class="origin-list">
+            <li><strong>Olympus Mons:</strong> the largest volcano in the Solar System.</li>
+            <li><strong>Valles Marineris:</strong> a canyon system stretching thousands of kilometers.</li>
+            <li><strong>Water today:</strong> mostly as ice at the poles and underground; occasional seasonal flows are still debated.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/mars.png" alt="Mars (illustration)" />
+          <div class="figure-caption">Mars — dusty, cold, and once wetter.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Jupiter</h2>
+          <p><strong>Type:</strong> gas giant. <strong>Moons:</strong> <strong>95</strong> (currently known).</p>
+          <p>Jupiter is the Solar System’s giant: it’s more massive than all other planets combined. Its powerful gravity helps shape asteroid and comet orbits, and it hosts the largest family of moons.</p>
+          <ul class="origin-list">
+            <li><strong>Great Red Spot:</strong> a long-lived storm larger than Earth.</li>
+            <li><strong>Rings:</strong> Jupiter has rings too, but they’re faint and dusty compared to Saturn’s.</li>
+            <li><strong>Magnetosphere:</strong> the strongest planetary magnetic field in the Solar System.</li>
+          </ul>
+          <p><strong>Most famous / largest moons (Galilean moons):</strong> <strong>Ganymede</strong> (largest moon in the Solar System), <strong>Callisto</strong>, <strong>Io</strong> (extreme volcanism), <strong>Europa</strong> (ice shell + likely subsurface ocean).</p>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/jupiter.webp" alt="Jupiter (illustration)" />
+          <div class="figure-caption">Jupiter — bands, storms, and the Great Red Spot.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Saturn</h2>
+          <p><strong>Type:</strong> gas giant. <strong>Moons:</strong> <strong>146</strong> (currently known).</p>
+          <p>Saturn is famous for its spectacular ring system, made mostly of water-ice particles. It’s also a moon-rich world with several scientifically exciting moons.</p>
+          <ul class="origin-list">
+            <li><strong>Rings:</strong> thin, wide, and dynamic; shaped by moon interactions.</li>
+            <li><strong>Low density:</strong> Saturn is so “light” (average density) that it would float in a huge enough ocean.</li>
+            <li><strong>Weather:</strong> includes giant storms and a hexagon-shaped jet stream near the north pole.</li>
+          </ul>
+          <p><strong>Most famous / largest moons:</strong> <strong>Titan</strong> (largest; thick atmosphere + methane lakes), <strong>Rhea</strong>, <strong>Iapetus</strong>, <strong>Dione</strong>, <strong>Enceladus</strong> (ice geysers + ocean), <strong>Mimas</strong>.</p>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/saturn.jpg" alt="Saturn (illustration)" />
+          <div class="figure-caption">Saturn — rings and a huge moon system.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Uranus</h2>
+          <p><strong>Type:</strong> Neptune-like / ice giant. <strong>Moons:</strong> <strong>27</strong>.</p>
+          <p>Uranus is an ice giant with a methane-rich atmosphere that gives it a blue-green color. Its most famous feature is its <strong>extreme axial tilt</strong>: it spins almost on its side.</p>
+          <ul class="origin-list">
+            <li><strong>Tilt:</strong> seasons can be extreme because the poles take turns facing the Sun.</li>
+            <li><strong>Rings:</strong> Uranus has a system of dark, narrow rings.</li>
+            <li><strong>Exploration:</strong> only one spacecraft has visited up close: <strong>Voyager 2</strong>.</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/uran.jpg" alt="Uranus (illustration)" />
+          <div class="figure-caption">Uranus — an ice giant with an extreme tilt.</div>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Neptune</h2>
+          <p><strong>Type:</strong> Neptune-like / ice giant. <strong>Moons:</strong> <strong>14</strong>.</p>
+          <p>Neptune is the most distant planet and one of the windiest places in the Solar System. It was famously found because astronomers noticed Uranus’ orbit didn’t match predictions and inferred another planet’s gravity.</p>
+          <ul class="origin-list">
+            <li><strong>Winds:</strong> can exceed <strong>2000 km/h</strong> in the upper atmosphere.</li>
+            <li><strong>Storms:</strong> dark spots can appear and disappear (giant weather systems).</li>
+            <li><strong>Main moon:</strong> <strong>Triton</strong> (captured object; retrograde orbit; icy geysers).</li>
+          </ul>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/neptun.jpg" alt="Neptune (illustration)" />
+          <div class="figure-caption">Neptune — deep blue, stormy, and far away.</div>
+        </div>
+      </div>
+
+      <div class="origin-section image-full fly-in">
+        <div class="origin-text fly-in">
+          <h2 class="question-title">Exoplanets: famous examples</h2>
+          <p>Exoplanets are planets orbiting other stars. We’ve found thousands of them, and many are unlike anything in our Solar System—super-Earths, mini-Neptunes, and planets orbiting two stars at once.</p>
+
+          <h3 class="question-title">Kepler-16b — “the land of two suns”</h3>
+          <p><strong>Kepler-16b</strong> is a circumbinary planet: it orbits <strong>two stars</strong> (a bit like Tatooine from Star Wars). It’s more like a cold gas giant than an Earth-like world, but it’s famous because it proves that stable planets can exist in binary-star systems.</p>
+          <p><strong>Distance:</strong> roughly <strong>~245 light-years</strong> away (order of magnitude).</p>
+          <p><strong>How long would it take to get there?</strong> At the speed of light (not achievable for spacecraft today) it would take about <strong>245 years</strong>. At a “Voyager-like” speed (~17 km/s), it would take on the order of <strong>millions of years</strong> (roughly a few million).</p>
+
+          <h3 class="question-title">Kepler-22b — Earth-like, with a big “maybe”</h3>
+          <p><strong>Kepler-22b</strong> orbits in the <strong>habitable zone</strong> of its star, meaning temperatures could allow liquid water under the right atmospheric conditions. But “habitable zone” doesn’t guarantee habitability: the planet could be a super-Earth with a surface ocean—or a mini-Neptune with a deep, thick atmosphere and no solid surface.</p>
+          <p><strong>Distance:</strong> roughly <strong>~600 light-years</strong> away (order of magnitude).</p>
+          <p><strong>How long would it take to get there?</strong> At light speed: about <strong>600 years</strong>. At current spacecraft speeds: on the order of <strong>~10 million years</strong> (very roughly), which shows why we study these worlds with telescopes, not travel.</p>
+        </div>
+      </div>
+
+      <div class="origin-section grid-2 fly-in">
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/Kepler-16b.jpg" alt="Kepler-16b (illustration)" />
+          <div class="figure-caption">Kepler-16b — a planet orbiting two suns (stylized).</div>
+        </div>
+        <div class="origin-img origin-img--side">
+          <img src="../Obrázky/sections/Kepler22b-artwork.jpg" alt="Kepler-22b (illustration)" />
+          <div class="figure-caption">Kepler-22b — a habitable-zone candidate (stylized).</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/universe.js"></script>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('.fly-in'));
+      if (!items.length) return;
+
+      const obs = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+          if (!entry.isIntersecting) return;
+
+          const heroParent = entry.target.closest('.origin-hero');
+          if (heroParent) {
+            let delay = 120;
+            if (entry.target.matches('.universe-title')) delay = 100;
+            else if (entry.target.closest('.origin-media') || entry.target.matches('.origin-media')) delay = 220;
+            else if (entry.target.matches('.origin-intro')) delay = 340;
+            setTimeout(()=>{ entry.target.classList.add('in-view'); }, delay);
+            observer.unobserve(entry.target);
+            return;
+          }
+
+          const parentText = entry.target.closest('.origin-text');
+          if (parentText) {
+            revealParagraphs(parentText);
+            parentText.querySelectorAll('.fly-in').forEach(ch => observer.unobserve(ch));
+            return;
+          }
+
+          entry.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      items.forEach(i=>obs.observe(i));
+
+      function revealIfVisible(el, delay=0){
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) {
+          setTimeout(()=>{
+            const parentText = el.closest('.origin-text');
+            if (parentText) revealParagraphs(parentText);
+            else { el.classList.add('in-view'); }
+          }, delay);
+        }
+      }
+
+      const heroTitle = document.querySelector('.origin-hero .universe-title');
+      const heroMedia = document.querySelector('.origin-media');
+      const heroIntro = document.querySelector('.origin-intro');
+      if (heroTitle) revealIfVisible(heroTitle, 500);
+      if (heroMedia) revealIfVisible(heroMedia, 1200);
+      if (heroIntro) revealIfVisible(heroIntro, 2000);
+
+      items.forEach(i=>{ if (i.closest('.origin-hero')) return; revealIfVisible(i, 0); });
+
+      const textBlocks = Array.from(document.querySelectorAll('.origin-text'));
+      if (textBlocks.length) {
+        const textObs = new IntersectionObserver((entries, tObserver)=>{
+          entries.forEach(en=>{
+            if (!en.isIntersecting) return;
+            revealParagraphs(en.target);
+            tObserver.unobserve(en.target);
+          });
+        }, {threshold: 0.15});
+        textBlocks.forEach(tb => textObs.observe(tb));
+        textBlocks.forEach(tb => revealIfVisible(tb, 0));
+      }
+
+      function revealParagraphs(parent){
+        if (!parent) return;
+        if (parent.dataset.revealed) return;
+        parent.dataset.revealed = '1';
+
+        const nodes = Array.from(parent.querySelectorAll('p, li, h1, h2, h3, h4'));
+        if (!nodes.length) { parent.classList.add('in-view'); return; }
+
+        let idx = 0;
+        const gap = 0;
+
+        function showNext(){
+          if (idx >= nodes.length) return;
+          const node = nodes[idx++];
+          node.classList.add('p-in');
+
+          let called = false;
+          const onEnd = function(e){
+            if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+            node.removeEventListener('transitionend', onEnd);
+            if (called) return;
+            called = true;
+            clearTimeout(safety);
+            setTimeout(showNext, gap);
+          };
+
+          node.addEventListener('transitionend', onEnd);
+          const safety = setTimeout(()=>{
+            try{ node.removeEventListener('transitionend', onEnd); }catch(e){}
+            if (called) return;
+            called = true;
+            showNext();
+          }, 2500);
+        }
+
+        parent.classList.add('in-view');
+        showNext();
+      }
+
+    })();
+  </script>
+</body>
+</html>
