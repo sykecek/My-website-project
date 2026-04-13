@@ -1,0 +1,770 @@
+/* ZALOŽENO NA PŮVODNÍ VERZI – UPRAVENO PODLE POŽADAVKŮ */
+
+@font-face {
+  font-family: "MomoTrustDisplay";
+  src: url("../fonts/MomoTrustDisplay.woff2") format("woff2"),
+       url("../fonts/MomoTrustDisplay.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* match canvas radial gradient center color (#05051a) for better visual consistency */
+  --bg-color: #05051a;
+  --card-border: #342871;
+  --card-bg: transparent;       /* fully transparent so canvas shows through */
+  --card-hover-bg: transparent; /* hover stays transparent (we keep ::before for highlight) */
+  --text-color: #f6f6ff;
+  --muted-color: #a5a5c5;
+  --accent: #5ad0ff;
+}
+
+/* Nadpis může mít jiný font (např. headline mono), zbytek MomoTrustDisplay */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: var(--text-color);
+  font-family: "MomoTrustDisplay", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.origin-section.image-full .origin-img {
+  height: auto;
+  border-radius: 0; /* remove rounded corners so transparent PNGs don't reveal a different box color */
+  overflow: hidden;
+  background: transparent; /* remove any gradient/color behind the image */
+  box-shadow: none; /* remove box shadow that could show through transparent areas */
+  padding: 0; /* ensure no inner padding that would reveal container background */
+}
+
+/* Use the site's system font for navbars so they match the home navbar */
+.navbar,
+.nav-links,
+.nav-link,
+.instagram-icon {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* canvas je pod obsahem; musí mít z-index >= 0, jinak může být skrytý za backgroundem těla */
+#universe-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  pointer-events: none; /* neblokovat myš a scroll */
+}
+
+/* hlavní obsah stránky (pod navbarem) */
+.universe-main {
+  padding-top: 96px;        /* odstup pod navbar */
+  padding-bottom: 200px;    /* větší rezerva dole */
+  max-width: 1200px;
+  margin: 0 auto 80px auto; /* + 80px pod celým mainem */
+}
+
+/* Hero sekce */
+
+.universe-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+}
+
+/* ensure the hero/title sits above the animated cards and canvas but below the navbar */
+.universe-hero {
+  position: relative;
+  z-index: 5;
+}
+
+/* Origin page specific styles */
+.origin-hero {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  max-width: 980px;
+  margin: 0 auto 2rem auto;
+}
+
+/* make sure origin hero sits above the fixed canvas */
+.origin-hero {
+  position: relative;
+  z-index: 5;
+}
+
+.origin-hero .universe-title {
+  color: var(--text-color);
+  font-family: "MomoTrustDisplay", "Momo Trust Display", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.origin-media {
+  max-width: 1000px;
+  margin: 1.2rem auto 1.2rem auto;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.origin-gif,
+.origin-video {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+/* Smaller hero media variant (used e.g. on galaxies page) */
+.origin-media.origin-media--small {
+  max-width: 920px;
+  border-radius: 22px;
+}
+.origin-media.origin-media--small .origin-gif,
+.origin-media.origin-media--small .origin-video {
+  height: 380px;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* ensure video sits above canvas */
+.origin-media,
+.origin-video {
+  position: relative;
+  z-index: 6;
+}
+
+.origin-intro {
+  color: var(--muted-color);
+  max-width: 800px;
+  /* increase top margin so the intro text sits further below the GIF
+     adjust --origin-gap-top value to tune spacing site-wide */
+  margin: 1.8rem auto 0 auto;
+}
+
+/* Additional spacing control specifically for the media block above the intro
+   (increase if you want even more gap between GIF and intro) */
+.origin-media {
+  margin-bottom: 2.2rem; /* larger gap under the GIF */
+}
+
+.origin-intro .origin-attrib {
+  display: block;
+  margin-top: 0.35rem; /* small gap under paragraph */
+  color: var(--muted-color);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.origin-content .content-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  color: var(--text-color);
+}
+
+/* Placeholder section layouts for origin page */
+.origin-section {
+  max-width: 1100px;
+  margin: 2.2rem auto;
+  display: grid;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+/* image-full: image spans full content width, text flows below it */
+.origin-section.image-full {
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+.origin-section.image-full .origin-img {
+  height: auto; /* allow natural image height */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.origin-section.image-full .origin-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Utility: make a specific image smaller and centered (prevents full-width stretching) */
+.origin-section.image-full .origin-img img.img-narrow {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Even smaller variant (used for the Milky Way image) */
+.origin-section.image-full .origin-img img.img-narrow--sm {
+  width: min(520px, 100%);
+}
+.origin-section.image-full .origin-text {
+  padding-top: 0.8rem;
+}
+
+.origin-section.split {
+  grid-template-columns: 1fr 1fr;
+}
+.origin-section.reverse.split {
+  grid-template-columns: 1fr 1fr;
+}
+.origin-section.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.origin-section.grid-2 {
+  align-items: start; /* ensure both columns start at the same top position */
+}
+
+/* Universe Dark page: stack 2-column sections even on desktop and center media */
+.universe-dark .origin-section.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+.universe-dark .origin-img.origin-img--side {
+  text-align: center;
+}
+
+.universe-dark .origin-img.origin-img--side img {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  max-height: none;
+}
+
+/* Opt-in: vertically center the two columns (used on galaxy subtype pages) */
+.origin-section.grid-2.grid-center {
+  align-items: center;
+}
+.origin-section.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.origin-img {
+  background: linear-gradient(135deg, rgba(90,208,255,0.10), rgba(182,62,219,0.06));
+  border-radius: 16px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Plain media box (used in 2-column sections: text on the left, image on the right) */
+.origin-img.origin-img--side {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.origin-img.origin-img--side img {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.origin-img .figure-caption {
+  width: 100%;
+}
+
+/* Stack of smaller images (used next to the galaxy types list) */
+.origin-img.origin-img-stack {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.origin-img.origin-img-stack .stack-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 14px;
+}
+
+@media (max-width: 900px) {
+  .origin-img.origin-img-stack .stack-img {
+    height: 120px;
+  }
+}
+
+.origin-text {
+  color: var(--text-color);
+  padding: 0 1rem;
+}
+
+/* Paragraph & line spacing for origin article text
+   - Increase `line-height` to control spacing between lines.
+   - Adjust `.origin-text p { margin-bottom }` to change space between paragraphs.
+   Edit these values below to make paragraphs more/less airy. */
+.origin-text {
+  line-height: 1.85; /* space between lines (increase = more roomy) */
+}
+.origin-text p {
+  margin-bottom: 1.4rem; /* space between paragraphs */
+}
+
+.origin-section.text-only, .origin-section.large-text {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.grid-item .caption {
+  text-align: center;
+  color: var(--muted-color);
+  margin-top: 0.6rem;
+}
+
+/* Scroll-in animation (fly-in) */
+.fly-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 520ms cubic-bezier(.2,.9,.2,1), transform 520ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform, opacity;
+}
+.fly-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Show paragraphs inside origin-text as a group when the parent gets .in-view */
+.origin-text p {
+  opacity: 0;
+  transform: translateY(18px);
+  /* slowed transitions so the stagger is clearly visible */
+  transition: opacity 300ms cubic-bezier(.2,.9,.2,1), transform 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Use an explicit class to reveal paragraphs sequentially. JS will add `.p-in` with timeouts. */
+.origin-text p.p-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .origin-section.split,
+  .origin-section.grid-2,
+  .origin-section.grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .origin-img { height: 180px; }
+}
+
+/* Nadpis si případně přepni na mono font, který máš na home screenu */
+.universe-title {
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  font-family: "YourHeadlineMonoFont", "MomoTrustDisplay", system-ui;
+}
+
+.universe-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--muted-color);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* GRID SEKCÍ – VĚTŠÍ KARTY */
+
+.universe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.4rem;
+  padding: 0 1.5rem;
+}
+
+/* KARTA SEKCE – VĚTŠÍ, BORDER JEN NA HOVER */
+
+.universe-card {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 40px;
+  border: 2px solid transparent; /* defaultně neviditelný */
+  background: var(--card-bg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  min-height: 260px;           /* VĚTŠÍ KARTA NA OBRÁZEK */
+  transform: translateY(40px);
+  opacity: 0;
+  animation: cardEnter 0.9s ease-out forwards;
+}
+
+.universe-card-inner {
+  padding: 2.2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+/* Větší prostor na obrázek v kartě */
+.universe-card-image {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.universe-card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* --- First card: make media cover full card width and act as poster -> GIF on hover --- */
+.universe-card.card-delay-1 .universe-card-image {
+  width: 100%;
+  height: 260px; /* default height for large media */
+  padding: 0;
+}
+
+.universe-card.card-delay-1 .universe-card-image .big-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover whole area */
+  display: block;
+}
+
+/* Make second card behave like the first: full-width media that covers the card area */
+.universe-card.card-delay-2 .universe-card-image {
+  width: 100%;
+  height: 260px;
+  padding: 0;
+}
+.universe-card.card-delay-2 .universe-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Make cards 3..9 use the same large media area as cards 1 and 2 */
+.universe-card.card-delay-3 .universe-card-image,
+.universe-card.card-delay-4 .universe-card-image,
+.universe-card.card-delay-5 .universe-card-image,
+.universe-card.card-delay-6 .universe-card-image,
+.universe-card.card-delay-7 .universe-card-image,
+.universe-card.card-delay-8 .universe-card-image,
+.universe-card.card-delay-9 .universe-card-image {
+  width: 100%;
+  height: 260px;
+  padding: 0;
+}
+
+.universe-card.card-delay-3 .universe-card-image img,
+.universe-card.card-delay-4 .universe-card-image img,
+.universe-card.card-delay-5 .universe-card-image img,
+.universe-card.card-delay-6 .universe-card-image img,
+.universe-card.card-delay-7 .universe-card-image img,
+.universe-card.card-delay-8 .universe-card-image img,
+.universe-card.card-delay-9 .universe-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* GIF background for first card: appears on hover */
+.universe-card-image {
+  position: relative;
+}
+
+.universe-card-image img {
+  position: relative;
+  z-index: 1;
+  transition: opacity 220ms ease;
+}
+
+/* Center the in-content question so it starts from the middle and matches title sizing */
+.centered-question {
+  text-align: center;
+  margin: 0.6rem auto;
+}
+
+/* Subtitle under the question/title */
+.origin-subtitle {
+  color: var(--muted-color);
+  margin-top: 0.25rem;
+  margin-bottom: 0.9rem;
+  font-weight: 600;
+}
+
+/* Bulleted list for FAQ items */
+.origin-list {
+  padding-left: 1.25rem;
+  margin-top: 0.6rem;
+}
+.origin-list li {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 300ms cubic-bezier(.2,.9,.2,1), transform 300ms cubic-bezier(.2,.9,.2,1);
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+.origin-list li.p-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Clickable galaxy-type list items */
+.origin-list.galaxy-types .type-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.origin-list.galaxy-types .type-link:hover,
+.origin-list.galaxy-types .type-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Clickable planetary-system-type list items (same behavior as galaxy types) */
+.origin-list.star-system-types .type-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.origin-list.star-system-types .type-link:hover,
+.origin-list.star-system-types .type-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Question title sizing (keeps it visually related to the main title but smaller) */
+.question-title {
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  margin: 0 0 0.6rem 0;
+}
+
+/* Keep reveal performance hints consistent across p and li */
+.origin-text p,
+.origin-text li {
+  will-change: transform, opacity;
+}
+
+/* Hide headings inside origin-text by default so they reveal with the same sequence as paragraphs */
+.origin-text h1,
+.origin-text h2,
+.origin-text h3,
+.origin-text h4 {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 300ms cubic-bezier(.2,.9,.2,1), transform 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Ensure headings inside origin-text reveal when JS adds `.p-in` (same animation as paragraphs) */
+.origin-text h1.p-in,
+.origin-text h2.p-in,
+.origin-text h3.p-in,
+.origin-text h4.p-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms cubic-bezier(.2,.9,.2,1), transform 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Conclusion block styling */
+.conclusion {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.conclusion .conclusion-text {
+  color: var(--text-color);
+  font-style: italic;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 380ms cubic-bezier(.2,.9,.2,1), transform 380ms cubic-bezier(.2,.9,.2,1);
+}
+.conclusion .conclusion-text.p-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* What-before subsection title (same style but slightly smaller) */
+.what-before-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  margin-bottom: 0.6rem;
+}
+
+.short-answer,
+.longer-answer {
+  text-align: center;
+  max-width: 900px;
+  margin: 0.6rem auto;
+  color: var(--text-color);
+}
+
+/* Ensure these paragraphs participate in the reveal chain */
+.short-answer.p-in,
+.longer-answer.p-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Centered figure for cyclicu.png */
+.center-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.center-figure img {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.figure-caption {
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+.universe-card-image .gif-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* JS will set background-image when playing; no default image to avoid duplicates */
+  background-position: center;
+  background-size: cover; /* cover so GIF matches poster object-fit */
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none; /* neblokovat hover/klik */
+}
+
+/* při hoveru první karty přepneme z obrazku na GIF */
+.universe-card.card-delay-1:hover .universe-card-image img {
+  opacity: 0;
+}
+.universe-card.card-delay-1:hover .universe-card-image .gif-bg {
+  opacity: 1;
+}
+
+/* allow JS to toggle playback state via class (more reliable than pure :hover) */
+.universe-card.gif-playing .universe-card-image .gif-bg {
+  opacity: 1;
+}
+
+.universe-card-title {
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Hover efekty */
+
+.universe-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(90, 208, 255, 0.25), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.universe-card:hover::before {
+  opacity: 1;
+}
+
+.universe-card:hover {
+  background: var(--card-hover-bg);
+  border-color: var(--card-border); /* BORDER VIDITELNÝ AŽ NA HOVER */
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65);
+}
+
+/* Vstupní animace – zpoždění pro různé karty */
+
+.card-delay-1 { animation-delay: 0.1s; }
+.card-delay-2 { animation-delay: 0.2s; }
+.card-delay-3 { animation-delay: 0.3s; }
+.card-delay-4 { animation-delay: 0.4s; }
+.card-delay-5 { animation-delay: 0.5s; }
+.card-delay-6 { animation-delay: 0.6s; }
+
+@keyframes cardEnter {
+  from {
+    transform: translateY(40px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .universe-main {
+    padding-top: 72px;
+  }
+
+  .universe-card-inner {
+    padding: 1.8rem 1.4rem 1.6rem;
+  }
+
+  .universe-card-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .universe-card-title {
+    font-size: 1rem;
+  }
+}
+main.universe-main-root {
+  min-height: auto;
+  height: auto;
+  overflow: visible;
+}
+.universe-main {
+  padding-top: 96px;
+  padding-bottom: 260px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page-specific: shape-universe text alignment */
+.shape-page .origin-text {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shape-page .origin-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+}
