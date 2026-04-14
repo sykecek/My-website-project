@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – My Portfolio</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/universe.css" />
+  <link rel="stylesheet" href="../styles/about.css" />
+</head>
+<body>
+
+  <!-- Animated starfield background (same as universe pages) -->
+  <canvas id="universe-bg"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">My Projects</a>
+        <a href="the-universe.html" class="nav-link">The Universe</a>
+      </nav>
+      <a
+        href="https://www.instagram.com/sykycek_"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="instagram-icon"
+        aria-label="Instagram"
+      >
+        <img src="../Obrázky/iglogo.png" alt="Instagram" />
+      </a>
+    </div>
+  </header>
+
+  <main class="about-main">
+
+    <!-- ===== ABOUT ME ===== -->
+    <section class="about-section" id="about-me">
+      <h2 class="about-section-title reveal-up">About Me</h2>
+
+      <div class="about-me-grid">
+        <div class="about-me-avatar reveal-scale reveal-delay-1">
+          🚀
+        </div>
+        <div class="about-me-text reveal-up reveal-delay-2">
+          <p>
+            Hi, I'm <strong>[Your Name]</strong> — a developer and tech enthusiast
+            passionate about building things that exist at the intersection of
+            software, hardware, and design.
+          </p>
+          <p>
+            I'm currently studying at <strong>[Your School / University]</strong>
+            and I love exploring everything from robotics and embedded systems to
+            web development and mobile apps.
+          </p>
+          <p>
+            When I'm not coding I enjoy astronomy, photography, and following
+            the latest space missions — which is probably why this whole portfolio
+            has a space theme. 🌌
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="about-section" id="skills">
+      <h2 class="about-section-title reveal-up">Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal-up reveal-delay-1">
+          <div class="skill-card-title">Languages</div>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Dart (Flutter)</li>
+            <li>JavaScript</li>
+            <li>HTML / CSS</li>
+            <li>C / C++</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up reveal-delay-2">
+          <div class="skill-card-title">Frameworks &amp; Tools</div>
+          <ul class="skill-list">
+            <li>Flutter</li>
+            <li>Three.js</li>
+            <li>Git &amp; GitHub</li>
+            <li>Arduino / ESP32</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up reveal-delay-3">
+          <div class="skill-card-title">Other</div>
+          <ul class="skill-list">
+            <li>Robotics</li>
+            <li>3D Printing</li>
+            <li>Electronics</li>
+            <li>UI Design</li>
+            <li>Photography</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section class="about-section" id="timeline">
+      <h2 class="about-section-title reveal-up">Timeline</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2022</div>
+          <div class="timeline-title">Started coding</div>
+          <div class="timeline-desc">
+            Wrote my first lines of Python and got hooked on programming.
+            Started learning web basics — HTML, CSS, and vanilla JavaScript.
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-title">First hardware project</div>
+          <div class="timeline-desc">
+            Dived into Arduino and built small automation projects.
+            Discovered robotics and decided to combine software with hardware.
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">Robotic Arm + Flutter App</div>
+          <div class="timeline-desc">
+            Designed and built a 3D-printed robotic arm controlled wirelessly
+            via a custom Flutter mobile application.  First full-stack hardware/software project.
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">This portfolio website</div>
+          <div class="timeline-desc">
+            Launched this space-themed portfolio featuring Three.js backgrounds,
+            animated starfields, and a growing knowledge base about the universe.
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Future</div>
+          <div class="timeline-title">What's next…</div>
+          <div class="timeline-desc">
+            More robotics, AI experiments, and projects that push boundaries.
+            Stay tuned — this timeline is still being written. ✨
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATES ===== -->
+    <section class="about-section" id="certificates">
+      <h2 class="about-section-title reveal-up">Certificates</h2>
+
+      <div class="certs-grid">
+
+        <div class="cert-card reveal-scale reveal-delay-1">
+          <div class="cert-icon">🎓</div>
+          <div>
+            <div class="cert-info-title">[Certificate Name]</div>
+            <div class="cert-info-issuer">[Issuing Organisation]</div>
+            <div class="cert-info-year">[Year]</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-scale reveal-delay-2">
+          <div class="cert-icon">🏅</div>
+          <div>
+            <div class="cert-info-title">[Certificate Name]</div>
+            <div class="cert-info-issuer">[Issuing Organisation]</div>
+            <div class="cert-info-year">[Year]</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-scale reveal-delay-3">
+          <div class="cert-icon">🌟</div>
+          <div>
+            <div class="cert-info-title">[Certificate Name]</div>
+            <div class="cert-info-issuer">[Issuing Organisation]</div>
+            <div class="cert-info-year">[Year]</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="about-section" id="contact">
+      <h2 class="about-section-title reveal-up">Contact</h2>
+
+      <div class="contact-grid">
+
+        <a
+          href="https://www.instagram.com/sykycek_"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link reveal-up reveal-delay-1"
+        >
+          <span class="contact-icon">📸</span>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@sykycek_</div>
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/sykecek"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link reveal-up reveal-delay-2"
+        >
+          <span class="contact-icon">💻</span>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/sykecek</div>
+          </div>
+        </a>
+
+        <a
+          href="mailto:your@email.com"
+          class="contact-link reveal-up reveal-delay-3"
+        >
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">your@email.com</div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Starfield background script -->
+  <script src="../scripts/universe.js"></script>
+  <!-- Scroll-reveal animations -->
+  <script src="../scripts/reveal.js"></script>
+</body>
+</html>
