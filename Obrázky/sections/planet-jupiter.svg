@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0b0b1f"/>
+      <stop offset="100%" stop-color="#040414"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffe8c7"/>
+      <stop offset="55%" stop-color="#d7a87a"/>
+      <stop offset="100%" stop-color="#7a4e2e"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="clip">
+      <circle cx="600" cy="410" r="250"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <g filter="url(#softShadow)">
+    <circle cx="600" cy="410" r="250" fill="url(#planet)"/>
+    <g clip-path="url(#clip)" opacity="0.55">
+      <rect x="330" y="250" width="540" height="36" fill="#f4d7b3"/>
+      <rect x="330" y="300" width="540" height="44" fill="#c98f5e"/>
+      <rect x="330" y="360" width="540" height="34" fill="#f4d7b3"/>
+      <rect x="330" y="410" width="540" height="52" fill="#b47b4f"/>
+      <rect x="330" y="480" width="540" height="42" fill="#f4d7b3"/>
+      <rect x="330" y="540" width="540" height="34" fill="#c98f5e"/>
+      <!-- Great Red Spot -->
+      <ellipse cx="735" cy="455" rx="80" ry="46" fill="#b84b3a" opacity="0.9"/>
+      <ellipse cx="735" cy="455" rx="52" ry="30" fill="#e38a6f" opacity="0.6"/>
+    </g>
+  </g>
+
+  <text x="60" y="90" fill="#f6f6ff" font-family="system-ui,Segoe UI,Arial" font-size="42" letter-spacing="6">JUPITER</text>
+  <text x="60" y="135" fill="#a5a5c5" font-family="system-ui,Segoe UI,Arial" font-size="20">stylized illustration (SVG)</text>
+</svg>

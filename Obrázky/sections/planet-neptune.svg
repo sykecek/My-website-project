@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0b0b1f"/>
+      <stop offset="100%" stop-color="#040414"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#8ab7ff"/>
+      <stop offset="55%" stop-color="#2f6bff"/>
+      <stop offset="100%" stop-color="#0b1d73"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="clip">
+      <circle cx="600" cy="410" r="250"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <g filter="url(#softShadow)">
+    <circle cx="600" cy="410" r="250" fill="url(#planet)"/>
+    <g clip-path="url(#clip)" opacity="0.35" fill="#d9e6ff">
+      <path d="M330 355 C430 300, 520 310, 610 290 C720 265, 820 315, 870 355 C800 380, 720 375, 610 400 C500 425, 420 410, 330 395 Z"/>
+      <path d="M330 485 C430 430, 520 440, 610 420 C720 395, 820 445, 870 485 C800 515, 720 505, 610 530 C500 555, 420 540, 330 525 Z"/>
+    </g>
+    <!-- dark spot -->
+    <ellipse cx="710" cy="410" rx="70" ry="46" fill="#06114a" opacity="0.35"/>
+  </g>
+
+  <text x="60" y="90" fill="#f6f6ff" font-family="system-ui,Segoe UI,Arial" font-size="42" letter-spacing="6">NEPTUNE</text>
+  <text x="60" y="135" fill="#a5a5c5" font-family="system-ui,Segoe UI,Arial" font-size="20">stylized illustration (SVG)</text>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0b0b1f"/>
+      <stop offset="100%" stop-color="#040414"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffb07a"/>
+      <stop offset="55%" stop-color="#d06a3a"/>
+      <stop offset="100%" stop-color="#7a2b1d"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <g filter="url(#softShadow)">
+    <circle cx="600" cy="410" r="250" fill="url(#planet)"/>
+    <!-- darker surface patches -->
+    <g opacity="0.28" fill="#4b1f14">
+      <path d="M470 360 C520 330, 600 340, 610 390 C620 450, 520 480, 470 440 C430 410, 430 385, 470 360 Z"/>
+      <path d="M690 430 C740 420, 790 455, 780 510 C770 565, 690 565, 660 520 C630 475, 645 440, 690 430 Z"/>
+    </g>
+    <!-- polar cap -->
+    <g opacity="0.20" fill="#ffffff">
+      <ellipse cx="600" cy="205" rx="120" ry="42"/>
+    </g>
+  </g>
+
+  <text x="60" y="90" fill="#f6f6ff" font-family="system-ui,Segoe UI,Arial" font-size="42" letter-spacing="6">MARS</text>
+  <text x="60" y="135" fill="#a5a5c5" font-family="system-ui,Segoe UI,Arial" font-size="20">stylized illustration (SVG)</text>
+</svg>

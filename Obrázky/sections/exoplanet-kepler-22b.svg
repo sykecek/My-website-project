@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="80%">
+      <stop offset="0%" stop-color="#0b0b1f"/>
+      <stop offset="100%" stop-color="#040414"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#a8ffe6"/>
+      <stop offset="55%" stop-color="#49c7ff"/>
+      <stop offset="100%" stop-color="#0b2b73"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- faint habitable-zone ring -->
+  <ellipse cx="600" cy="430" rx="360" ry="170" fill="none" stroke="#5ad0ff" stroke-width="6" opacity="0.10"/>
+
+  <g filter="url(#softShadow)">
+    <circle cx="600" cy="430" r="250" fill="url(#planet)"/>
+    <g fill="#3ddc84" opacity="0.35">
+      <path d="M520 360 C570 330, 630 340, 650 380 C670 420, 640 450, 590 470 C540 490, 500 470, 495 430 C490 395, 500 375, 520 360 Z"/>
+      <path d="M705 500 C750 480, 790 495, 805 530 C820 565, 790 595, 750 600 C710 604, 680 580, 675 550 C670 525, 685 510, 705 500 Z"/>
+    </g>
+    <g fill="#ffffff" opacity="0.18">
+      <ellipse cx="560" cy="520" rx="150" ry="44"/>
+      <ellipse cx="700" cy="380" rx="130" ry="40"/>
+    </g>
+  </g>
+
+  <text x="60" y="90" fill="#f6f6ff" font-family="system-ui,Segoe UI,Arial" font-size="38" letter-spacing="4">KEPLER-22B</text>
+  <text x="60" y="135" fill="#a5a5c5" font-family="system-ui,Segoe UI,Arial" font-size="20">habitable-zone candidate (stylized SVG)</text>
+</svg>
