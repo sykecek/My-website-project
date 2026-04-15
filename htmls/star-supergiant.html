@@ -1,65 +1,61 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.star-sg" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Supergiants</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Supergiants</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="universe-stars.html" class="nav-link">STARS</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_" target="_blank" rel="noopener noreferrer" class="instagram-icon" aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">SUPERGIANTS</h1>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/supergiant.avif" alt="Supergiant" />
-        </div>
-        <div class="origin-text fly-in">
-          <p><strong>Supergiants</strong> are extremely massive and luminous stars. They can be blue or red, depending on temperature and evolutionary stage.</p>
-          <p>Because they burn fuel very quickly, supergiants live only millions of years (short compared to Sun-like stars). Many end their lives in powerful supernova explosions.</p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Red vs. blue supergiants</h2>
-          <p>As a massive star evolves, it can change dramatically in size and temperature, sometimes moving between blue and red supergiant phases.</p>
-        </div>
-        <div class="origin-img">
-          <img src="../Obrázky/sections/supergiant2.jpg" alt="TRAPPIST-1" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.stars" href="universe-stars.html">STARS</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="star-sg.h1">SUPERGIANTS</h1>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Supergiant" src="../Obrázky/sections/supergiant.avif"/>
+</div>
+<div class="origin-text fly-in">
+<p data-i18n-html="star-sg.p1"><strong>Supergiants</strong> are extremely massive and luminous stars. They can be blue or red, depending on temperature and evolutionary stage.</p>
+<p data-i18n="star-sg.p2">Because they burn fuel very quickly, supergiants live only millions of years (short compared to Sun-like stars). Many end their lives in powerful supernova explosions.</p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="star-sg.h21">Red vs. blue supergiants</h2>
+<p data-i18n="star-sg.p3">As a massive star evolves, it can change dramatically in size and temperature, sometimes moving between blue and red supergiant phases.</p>
+</div>
+<div class="origin-img">
+<img alt="TRAPPIST-1" src="../Obrázky/sections/supergiant2.jpg"/>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));
       if (!items.length) return;

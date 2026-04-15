@@ -1,174 +1,149 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.ustars" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stars</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Stars</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">STARS</h1>
-
-      <div class="origin-media origin-media--small fly-in">
-        <img class="origin-gif" src="../gif/supernova.gif" alt="Star animation" />
-      </div>
-      <div class="figure-caption">Supernova: When the supergiant star dies</div>
-      <p class="origin-intro fly-in">
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="ustars.h1">STARS</h1>
+<div class="origin-media origin-media--small fly-in">
+<img alt="Star animation" class="origin-gif" src="../gif/supernova.gif"/>
+</div>
+<div class="figure-caption" data-i18n="ustars.cap1">Supernova: When the supergiant star dies</div>
+<p class="origin-intro fly-in" data-i18n="ustars.intro">
         Stars are massive, luminous spheres of hot plasma held together by gravity. They shine because nuclear fusion in their cores converts mass into energy, producing light and heat that can travel across space for millions or billions of years.
         Stars are the factories that create most chemical elements: they form hydrogen and helium into heavier elements, and they spread those elements into space when they shed their outer layers or explode at the end of their lives.
       </p>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/star.webp" alt="A bright star" />
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What stars are made of</h2>
-          <p>Most stars are made mostly of <strong>hydrogen</strong> and <strong>helium</strong>, with small amounts of heavier elements (astronomers call these “metals”). Because stars are so hot, matter inside them exists as plasma: atoms are broken into nuclei and free electrons.</p>
-          <p>Gravity tries to compress the star inward, while pressure from the hot gas and the energy from fusion push outward. A stable star is a balance between these two forces (hydrostatic equilibrium).</p>
-
-          <h3 class="question-title">Why stars have different colors</h3>
-          <p>A star’s color is mostly a clue to its <strong>surface temperature</strong>. Hotter stars look blue-white, while cooler stars look orange or red. This is related to how a hot object emits light (roughly like a “blackbody”).</p>
-          <p>Color alone doesn’t tell you everything, though. Two stars can have similar colors but very different sizes and brightness. That’s why astronomers use diagrams like the <strong>Hertzsprung–Russell (H-R) diagram</strong> to compare temperature and luminosity.</p>
-
-          <h3 class="question-title">Light, spectra, and elements</h3>
-          <p>When we spread starlight into a rainbow (a <strong>spectrum</strong>), we see dark absorption lines. Those lines act like fingerprints of elements in the star’s atmosphere—hydrogen, helium, sodium, calcium, and many others. Spectra can also reveal a star’s temperature, surface gravity, rotation, and whether it’s moving toward or away from us (Doppler shift).</p>
-
-          <h3 class="question-title">How many stars are there?</h3>
-          <p>We don’t know an exact number. A common order-of-magnitude estimate for the observable universe is <strong>~10^22 to 10^24 stars</strong> (that’s roughly <strong>10–1000 sextillion</strong>), because there may be hundreds of billions of galaxies, each with billions to trillions of stars.</p>
-
-          <p>In our own Milky Way alone, estimates are commonly on the order of <strong>~100–400 billion</strong> stars. Even within our galaxy, most stars are too faint to see without telescopes.</p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-            <img src="../Obrázky/sections/stars_lifecycle_full.jpg" alt="Stellar evolution paths" />
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Birth, life, and death</h2>
-          <p><strong>Birth:</strong> stars form inside cold molecular clouds. When a dense region collapses, it heats up and becomes a protostar. Once the core gets hot and dense enough, hydrogen fusion starts and the star enters a long stable phase.</p>
-          <p><strong>Life:</strong> most of a star’s life is spent on the <strong>main sequence</strong>, fusing hydrogen into helium. In Sun-like stars this happens mainly through the <strong>proton–proton chain</strong>; in more massive stars it is dominated by the <strong>CNO cycle</strong>. A star’s <strong>mass</strong> controls almost everything: temperature, brightness, and lifetime. Massive stars burn fuel quickly and live fast; small stars burn slowly and can last for an extremely long time.</p>
-          <p><strong>Death:</strong> when the core runs out of fuel, the star changes structure. Sun-like stars expand into <strong>red giants</strong>, then shed their outer layers and leave behind a <strong>white dwarf</strong>. Very massive stars become <strong>supergiants</strong> and can end in powerful supernova explosions.</p>
-
-          <h3 class="question-title">Why mass is the “main control knob”</h3>
-          <p>Mass sets the pressure and temperature in the core. Higher core temperature makes fusion much faster, so big stars are brighter but shorter-lived. Small stars are dim but stable for a long time. This is why the universe contains many long-lived red dwarfs.</p>
-
-          <h3 class="question-title">What happens to the material?</h3>
-          <p>When stars lose mass—through stellar winds, expanding envelopes, or explosions—they enrich surrounding space with heavier elements. Later generations of stars (and planets) form from this “recycled” material. In that sense, many of the atoms in Earth and in our bodies were once inside stars.</p>
-          <h3 class="question-title">Planetary nebulae and stellar nebulae</h3>
-          <p>Planetary nebulae are glowing shells of gas ejected by dying low-mass stars, representing the end of a star's life, whereas stellar nebulae (or stellar nurseries/emission nebulae) are massive clouds of dust and gas where new stars are born. Planetary nebulae are short-lived graveyards, while stellar nebulae are vibrant, long-lasting birthplaces.</p>
-        </div>
-        <div class="origin-img">
-            <img src="../Obrázky/sections/planetary nebulae.webp" alt="Stellar nebula" />
-            <div class="figure-caption">The planetary nebula after a dying star</div>
-        </div>
-        <div class="origin-img">
-            <img src="../Obrázky/sections/planetary-nebulae-1000px.jpg" alt="Stellar nebula" />
-            <div class="figure-caption">Possible forms of planetary nebulae</div>
-        </div>
-        <div class="origin-img">
-            <img src="../Obrázky/sections/stellar nebulae.webp" alt="Stellar nebula" />
-    
-        </div>
-        <div class="figure-caption">This landscape of "mountains" and "valleys" speckled with glittering stars is actually the edge of a nearby, young, star-forming region called NGC 3324 in the Carina Nebula. Captured in infrared light by NASA's James Webb Space Telescope, this image reveals for the first time previously invisible areas of star birth. Credits: NASA, ESA, CSA, and STScI</div>
-        <div class="origin-img">
-            <img src="../Obrázky/sections/nebula1.en.jpg" alt="Stellar nebula" />
-            <div class="figure-caption">These towers of cosmic dust and gas make up part of the Eagle Nebula. These so-called Pillars of Creation are part of an active star-forming region within the nebula. Credits: NASA, ESA and the Hubble Heritage Team (STScI/AURA)</div>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/protostar.png" alt="Stellar evolution paths" />
-          <div class="figure-caption">Structures of dust forming around a protostar (in the central pink line) in nebula L1527 (2022)</div>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Brightness, distance, and why stars twinkle</h2>
-          <p>A star can look bright for two different reasons: it can be truly luminous, or it can be close to us. Astronomers separate these ideas into <strong>luminosity</strong> (true power output) and <strong>apparent brightness</strong> (how bright it looks from Earth).</p>
-          <p>Stars <strong>twinkle</strong> because Earth’s atmosphere is turbulent. As starlight passes through moving layers of air, it is bent in slightly different ways from moment to moment, which makes the star’s brightness and position seem to shimmer. Planets usually twinkle less because they appear as tiny disks rather than point-like sources.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Main star types</h2>
-          <p class="origin-subtitle"><strong>Stars are grouped by mass, temperature, and evolutionary stage.</strong></p>
-
-          <ul class="origin-list star-system-types">
-            <li><a class="type-link" href="star-main-sequence.html"><strong>Main sequence stars</strong></a></li>
-            <li><a class="type-link" href="star-red-dwarf.html"><strong>Red dwarfs</strong></a></li>
-            <li><a class="type-link" href="star-red-giant.html"><strong>Red giants</strong></a></li>
-            <li><a class="type-link" href="star-white-dwarf.html"><strong>White dwarfs</strong></a></li>
-            <li><a class="type-link" href="star-brown-dwarf.html"><strong>Brown dwarfs</strong></a></li>
-            <li><a class="type-link" href="star-supergiant.html"><strong>Supergiants</strong></a></li>
-            <li><a class="type-link" href="star-variable.html"><strong>Variable stars</strong></a></li>
-          </ul>
-
-          <p>These categories overlap: for example, a red dwarf is also a main sequence star, while a red giant is a later evolutionary stage. The main idea is that mass and age drive how a star looks and behaves.</p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/canis.jpg" alt="Red supergiant (illustration of a very large evolved star)" />
-        </div>
-        <div class="figure-caption">VY Canis Majoris and its size in comparison to the Sun system</div>
-        <div class="origin-text fly-in">
-          <h3 class="question-title">VY Canis Majoris</h3>
-          <p><strong>VY Canis Majoris (VY CMa)</strong> is a very luminous, evolved massive star in the constellation Canis Major. It is classified as a <strong>red hypergiant</strong>: a rare phase where a massive star has expanded to an enormous size and is losing mass through powerful winds.</p>
-          <p><strong>Note:</strong> the image here is an illustration of a red supergiant/hypergiant-type star (not necessarily VY CMa itself), used to match the style of the page.</p>
-
-          <h3 class="question-title">How big is it? “How many Suns fit inside?”</h3>
-          <p>Because its atmosphere is extended and dusty, the star’s exact radius is uncertain and depends on how you define the “surface”. But the key idea is scale: if a star’s radius is about <strong>1000× the Sun’s</strong>, its volume is roughly $1000^3 = 10^9$ times bigger.</p>
-          <p>So in a simple “volume” sense, a star that large could fit <strong>on the order of a billion Suns</strong> inside it (as a rough, easy-to-remember comparison). This is an illustration, not a precise measurement.</p>
-
-          <h3 class="question-title">What happens next (supernova)</h3>
-          <p>Stars as massive as VY CMa are expected to end their lives in a <strong>core-collapse supernova</strong>. Before that, they can lose a lot of mass, forming complex shells of gas and dust around them. The explosion enriches space with heavy elements and can leave behind a compact remnant (often a <strong>neutron star</strong> or a <strong>black hole</strong>).</p>
-
-          <h3 class="question-title">Would it affect us?</h3>
-          <p>From Earth, such an event would be an incredible sky show, but the main danger from a supernova comes from being <strong>very close</strong> (roughly within a few tens of light-years). VY CMa is far away compared to that, so it is not considered a direct threat to Earth.</p>
-          <p>Even when it’s not dangerous, massive-star explosions matter for the universe: they help create and spread the elements that later become new stars, planets, and life.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="A bright star" src="../Obrázky/sections/star.webp"/>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ustars.h21">What stars are made of</h2>
+<p data-i18n-html="ustars.p1">Most stars are made mostly of <strong>hydrogen</strong> and <strong>helium</strong>, with small amounts of heavier elements (astronomers call these “metals”). Because stars are so hot, matter inside them exists as plasma: atoms are broken into nuclei and free electrons.</p>
+<p data-i18n="ustars.p2">Gravity tries to compress the star inward, while pressure from the hot gas and the energy from fusion push outward. A stable star is a balance between these two forces (hydrostatic equilibrium).</p>
+<h3 class="question-title" data-i18n="ustars.h31">Why stars have different colors</h3>
+<p data-i18n-html="ustars.p3">A star’s color is mostly a clue to its <strong>surface temperature</strong>. Hotter stars look blue-white, while cooler stars look orange or red. This is related to how a hot object emits light (roughly like a “blackbody”).</p>
+<p data-i18n-html="ustars.p4">Color alone doesn’t tell you everything, though. Two stars can have similar colors but very different sizes and brightness. That’s why astronomers use diagrams like the <strong>Hertzsprung–Russell (H-R) diagram</strong> to compare temperature and luminosity.</p>
+<h3 class="question-title" data-i18n="ustars.h32">Light, spectra, and elements</h3>
+<p data-i18n-html="ustars.p5">When we spread starlight into a rainbow (a <strong>spectrum</strong>), we see dark absorption lines. Those lines act like fingerprints of elements in the star’s atmosphere—hydrogen, helium, sodium, calcium, and many others. Spectra can also reveal a star’s temperature, surface gravity, rotation, and whether it’s moving toward or away from us (Doppler shift).</p>
+<h3 class="question-title" data-i18n="ustars.h33">How many stars are there?</h3>
+<p data-i18n-html="ustars.p6">We don’t know an exact number. A common order-of-magnitude estimate for the observable universe is <strong>~10^22 to 10^24 stars</strong> (that’s roughly <strong>10–1000 sextillion</strong>), because there may be hundreds of billions of galaxies, each with billions to trillions of stars.</p>
+<p data-i18n-html="ustars.p7">In our own Milky Way alone, estimates are commonly on the order of <strong>~100–400 billion</strong> stars. Even within our galaxy, most stars are too faint to see without telescopes.</p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Stellar evolution paths" src="../Obrázky/sections/stars_lifecycle_full.jpg"/>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ustars.h22">Birth, life, and death</h2>
+<p data-i18n-html="ustars.p8"><strong>Birth:</strong> stars form inside cold molecular clouds. When a dense region collapses, it heats up and becomes a protostar. Once the core gets hot and dense enough, hydrogen fusion starts and the star enters a long stable phase.</p>
+<p data-i18n-html="ustars.p9"><strong>Life:</strong> most of a star’s life is spent on the <strong>main sequence</strong>, fusing hydrogen into helium. In Sun-like stars this happens mainly through the <strong>proton–proton chain</strong>; in more massive stars it is dominated by the <strong>CNO cycle</strong>. A star’s <strong>mass</strong> controls almost everything: temperature, brightness, and lifetime. Massive stars burn fuel quickly and live fast; small stars burn slowly and can last for an extremely long time.</p>
+<p data-i18n-html="ustars.p10"><strong>Death:</strong> when the core runs out of fuel, the star changes structure. Sun-like stars expand into <strong>red giants</strong>, then shed their outer layers and leave behind a <strong>white dwarf</strong>. Very massive stars become <strong>supergiants</strong> and can end in powerful supernova explosions.</p>
+<h3 class="question-title" data-i18n="ustars.h34">Why mass is the “main control knob”</h3>
+<p data-i18n="ustars.p11">Mass sets the pressure and temperature in the core. Higher core temperature makes fusion much faster, so big stars are brighter but shorter-lived. Small stars are dim but stable for a long time. This is why the universe contains many long-lived red dwarfs.</p>
+<h3 class="question-title" data-i18n="ustars.h35">What happens to the material?</h3>
+<p data-i18n="ustars.p12">When stars lose mass—through stellar winds, expanding envelopes, or explosions—they enrich surrounding space with heavier elements. Later generations of stars (and planets) form from this “recycled” material. In that sense, many of the atoms in Earth and in our bodies were once inside stars.</p>
+<h3 class="question-title" data-i18n="ustars.h36">Planetary nebulae and stellar nebulae</h3>
+<p data-i18n="ustars.p13">Planetary nebulae are glowing shells of gas ejected by dying low-mass stars, representing the end of a star's life, whereas stellar nebulae (or stellar nurseries/emission nebulae) are massive clouds of dust and gas where new stars are born. Planetary nebulae are short-lived graveyards, while stellar nebulae are vibrant, long-lasting birthplaces.</p>
+</div>
+<div class="origin-img">
+<img alt="Stellar nebula" src="../Obrázky/sections/planetary nebulae.webp"/>
+<div class="figure-caption" data-i18n="ustars.cap2">The planetary nebula after a dying star</div>
+</div>
+<div class="origin-img">
+<img alt="Stellar nebula" src="../Obrázky/sections/planetary-nebulae-1000px.jpg"/>
+<div class="figure-caption" data-i18n="ustars.cap3">Possible forms of planetary nebulae</div>
+</div>
+<div class="origin-img">
+<img alt="Stellar nebula" src="../Obrázky/sections/stellar nebulae.webp"/>
+</div>
+<div class="figure-caption" data-i18n="ustars.cap4">This landscape of "mountains" and "valleys" speckled with glittering stars is actually the edge of a nearby, young, star-forming region called NGC 3324 in the Carina Nebula. Captured in infrared light by NASA's James Webb Space Telescope, this image reveals for the first time previously invisible areas of star birth. Credits: NASA, ESA, CSA, and STScI</div>
+<div class="origin-img">
+<img alt="Stellar nebula" src="../Obrázky/sections/nebula1.en.jpg"/>
+<div class="figure-caption" data-i18n="ustars.cap5">These towers of cosmic dust and gas make up part of the Eagle Nebula. These so-called Pillars of Creation are part of an active star-forming region within the nebula. Credits: NASA, ESA and the Hubble Heritage Team (STScI/AURA)</div>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Stellar evolution paths" src="../Obrázky/sections/protostar.png"/>
+<div class="figure-caption" data-i18n="ustars.cap6">Structures of dust forming around a protostar (in the central pink line) in nebula L1527 (2022)</div>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ustars.h23">Brightness, distance, and why stars twinkle</h2>
+<p data-i18n-html="ustars.p14">A star can look bright for two different reasons: it can be truly luminous, or it can be close to us. Astronomers separate these ideas into <strong>luminosity</strong> (true power output) and <strong>apparent brightness</strong> (how bright it looks from Earth).</p>
+<p data-i18n-html="ustars.p15">Stars <strong>twinkle</strong> because Earth’s atmosphere is turbulent. As starlight passes through moving layers of air, it is bent in slightly different ways from moment to moment, which makes the star’s brightness and position seem to shimmer. Planets usually twinkle less because they appear as tiny disks rather than point-like sources.</p>
+</div>
+</div>
+<div class="origin-section grid-2 fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ustars.h24">Main star types</h2>
+<p class="origin-subtitle" data-i18n-html="ustars.p16"><strong>Stars are grouped by mass, temperature, and evolutionary stage.</strong></p>
+<ul class="origin-list star-system-types">
+<li data-i18n-html="ustars.li1"><a class="type-link" href="star-main-sequence.html"><strong>Main sequence stars</strong></a></li>
+<li data-i18n-html="ustars.li2"><a class="type-link" href="star-red-dwarf.html"><strong>Red dwarfs</strong></a></li>
+<li data-i18n-html="ustars.li3"><a class="type-link" href="star-red-giant.html"><strong>Red giants</strong></a></li>
+<li data-i18n-html="ustars.li4"><a class="type-link" href="star-white-dwarf.html"><strong>White dwarfs</strong></a></li>
+<li data-i18n-html="ustars.li5"><a class="type-link" href="star-brown-dwarf.html"><strong>Brown dwarfs</strong></a></li>
+<li data-i18n-html="ustars.li6"><a class="type-link" href="star-supergiant.html"><strong>Supergiants</strong></a></li>
+<li data-i18n-html="ustars.li7"><a class="type-link" href="star-variable.html"><strong>Variable stars</strong></a></li>
+</ul>
+<p data-i18n="ustars.p17">These categories overlap: for example, a red dwarf is also a main sequence star, while a red giant is a later evolutionary stage. The main idea is that mass and age drive how a star looks and behaves.</p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Red supergiant (illustration of a very large evolved star)" src="../Obrázky/sections/canis.jpg"/>
+</div>
+<div class="figure-caption" data-i18n="ustars.cap7">VY Canis Majoris and its size in comparison to the Sun system</div>
+<div class="origin-text fly-in">
+<h3 class="question-title" data-i18n="ustars.h37">VY Canis Majoris</h3>
+<p data-i18n-html="ustars.p18"><strong>VY Canis Majoris (VY CMa)</strong> is a very luminous, evolved massive star in the constellation Canis Major. It is classified as a <strong>red hypergiant</strong>: a rare phase where a massive star has expanded to an enormous size and is losing mass through powerful winds.</p>
+<p data-i18n-html="ustars.p19"><strong>Note:</strong> the image here is an illustration of a red supergiant/hypergiant-type star (not necessarily VY CMa itself), used to match the style of the page.</p>
+<h3 class="question-title" data-i18n="ustars.h38">How big is it? “How many Suns fit inside?”</h3>
+<p data-i18n-html="ustars.p20">Because its atmosphere is extended and dusty, the star’s exact radius is uncertain and depends on how you define the “surface”. But the key idea is scale: if a star’s radius is about <strong>1000× the Sun’s</strong>, its volume is roughly $1000^3 = 10^9$ times bigger.</p>
+<p data-i18n-html="ustars.p21">So in a simple “volume” sense, a star that large could fit <strong>on the order of a billion Suns</strong> inside it (as a rough, easy-to-remember comparison). This is an illustration, not a precise measurement.</p>
+<h3 class="question-title" data-i18n="ustars.h39">What happens next (supernova)</h3>
+<p data-i18n-html="ustars.p22">Stars as massive as VY CMa are expected to end their lives in a <strong>core-collapse supernova</strong>. Before that, they can lose a lot of mass, forming complex shells of gas and dust around them. The explosion enriches space with heavy elements and can leave behind a compact remnant (often a <strong>neutron star</strong> or a <strong>black hole</strong>).</p>
+<h3 class="question-title" data-i18n="ustars.h310">Would it affect us?</h3>
+<p data-i18n-html="ustars.p23">From Earth, such an event would be an incredible sky show, but the main danger from a supernova comes from being <strong>very close</strong> (roughly within a few tens of light-years). VY CMa is far away compared to that, so it is not considered a direct threat to Earth.</p>
+<p data-i18n="ustars.p24">Even when it’s not dangerous, massive-star explosions matter for the universe: they help create and spread the elements that later become new stars, planets, and life.</p>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     // Force GIF to start from the beginning when the page loads or when revisited
     (function(){
       const img = document.querySelector('.origin-gif');
@@ -185,7 +160,7 @@
       });
     })();
   </script>
-  <script>
+<script>
     // IntersectionObserver + chained reveal
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));

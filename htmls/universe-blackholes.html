@@ -1,240 +1,209 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.ubh" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Black Holes</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Black Holes</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">BLACK HOLES</h1>
-
-      <div class="origin-media origin-media--small fly-in">
-        <img class="origin-gif" src="../gif/bhole.gif" alt="Black hole animation" />
-      </div>
-
-      <p class="origin-intro fly-in">
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="ubh.h1">BLACK HOLES</h1>
+<div class="origin-media origin-media--small fly-in">
+<img alt="Black hole animation" class="origin-gif" src="../gif/bhole.gif"/>
+</div>
+<p class="origin-intro fly-in" data-i18n-html="ubh.intro">
         A <strong>black hole</strong> is not a cosmic vacuum cleaner—it’s a region of spacetime where gravity is so strong that, past a certain boundary, even light can’t escape.
         In other words: black holes are so massive and compact that they <strong>dramatically curve spacetime</strong>, which leads to extreme effects like strong <strong>time dilation</strong> and light bending near them.
         Black holes are predicted by <strong>Einstein’s general relativity</strong> and are now observed indirectly through their effects on nearby matter, stars, and light.
       </p>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/bh1.jpg" alt="Black hole" />
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What is a black hole?</h2>
-          <p>A black hole is defined by an <strong>event horizon</strong>: a one-way boundary. If you cross it, there is no path back out—not because something is “pulling harder than light speed”, but because all future-directed paths (even for light) lead deeper inward.</p>
-
-          <h3 class="question-title">Event horizon, singularity, and “what’s inside”</h3>
-          <p><strong>Event horizon:</strong> the surface where escape becomes impossible. From far away, it looks like a sphere around the black hole.</p>
-          <p><strong>Singularity (classical GR):</strong> a place where curvature becomes infinite in the equations. Most physicists treat this as a sign that the classical theory is incomplete and that quantum gravity must take over at extremely small scales.</p>
-          <p><strong>What’s beyond the horizon?</strong> We can’t receive information from inside, so we cannot directly observe it. General relativity gives a mathematical description of the interior, but what truly happens at the very center is still an open problem in fundamental physics.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Where do black holes appear, and what do they do?</h2>
-          <p>Black holes show up in many environments: in <strong>binary star systems</strong>, in <strong>dense star clusters</strong>, and at the <strong>centers of galaxies</strong>. They influence their surroundings mainly through gravity:</p>
-          <ul class="origin-list">
-            <li><strong>They bend light</strong> (gravitational lensing) and can distort the appearance of background objects.</li>
-            <li><strong>They heat up infalling gas</strong>: an accretion disk can glow brightly in X-rays and UV.</li>
-            <li><strong>They launch jets</strong> in some systems, sending high-energy particles far into interstellar and intergalactic space.</li>
-            <li><strong>They merge</strong> and produce <strong>gravitational waves</strong>—ripples in spacetime that we can now detect.</li>
-          </ul>
-        </div>
-
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/bhshceme.jpg" alt="Milky Way" />
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">How black holes form (types)</h2>
-          <p><strong>Stellar-mass black holes</strong> can form when a very massive star runs out of fuel and its core collapses. Often this happens in a <strong>core-collapse supernova</strong> (a “massive star explosion”), but in some cases the collapse can be so direct that the star produces a weak or failed supernova and falls inward with little light.</p>
-
-          <p>Other formation channels exist:</p>
-          <ul class="origin-list">
-            <li><strong>Black hole mergers:</strong> two compact objects merge and leave a larger remnant.</li>
-            <li><strong>Direct collapse:</strong> very massive gas clouds (especially in the early universe) may collapse into a “seed” black hole without first making normal stars.</li>
-            <li><strong>Supermassive black holes:</strong> likely grow over time via accretion and mergers, starting from smaller seeds.</li>
-            <li><strong>Primordial black holes (hypothetical):</strong> could form from overdensities in the very early universe (not confirmed).</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/bh2.webp" alt="Quasar" />
-          <img src="../Obrázky/sections/Black-Hole-Orbited-by-Cracked-Neutron-Star.jpg" alt="Quasar" />
-          <div class="figure-caption">A black hole devauring a neutron star</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Spin, time, and extreme physics</h2>
-          <p>Real black holes are rarely “still”. Many rotate, and their <strong>spin</strong> changes the geometry of spacetime around them (Kerr black holes). Rotation can drag spacetime itself (frame-dragging) and affects where stable orbits and the inner edge of the accretion disk can exist.</p>
-
-          <h3 class="question-title">Spaghettification (tidal forces)</h3>
-          <p>Near a compact object, gravity changes significantly over short distances. This difference is a <strong>tidal force</strong>. If you fell toward a black hole, your feet would feel a stronger pull than your head, stretching you into a long shape: <strong>spaghettification</strong>.</p>
-          <p>For <strong>stellar-mass</strong> black holes, tidal forces near the horizon can be enormous. For <strong>supermassive</strong> black holes, the horizon is much larger, so you could cross the horizon before tides become lethal (though you still can’t escape afterward).</p>
-
-          <h3 class="question-title">Black holes as particle accelerators</h3>
-          <p>Accretion disks, magnetic fields, and relativistic jets can accelerate particles to extreme energies. In that sense, some active black holes act like natural <strong>particle accelerators</strong>, producing high-energy radiation and cosmic rays.</p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Black holes and general relativity (key equations)</h2>
-          <p>General relativity connects mass-energy to spacetime curvature. In compact form:</p>
-          <p><code>G<sub>μν</sub> = (8πG / c<sup>4</sup>) T<sub>μν</sub></code></p>
-
-          <p><strong>Meaning (in plain words):</strong> the left side describes the geometry/curvature of spacetime; the right side describes energy and momentum of matter and radiation. When the right side is extremely concentrated, spacetime can form an event horizon.</p>
-
-          <p>For a non-rotating black hole, the size scale of the event horizon is set by the <strong>Schwarzschild radius</strong>:</p>
-          <p><code>R<sub>s</sub> = 2GM / c<sup>2</sup></code></p>
-
-          <p>This formula explains why black holes are “compact”: if an object of mass <strong>M</strong> is compressed inside a radius smaller than <strong>R<sub>s</sub></strong>, an event horizon forms. (Rotation changes the detailed geometry, but the mass–size idea is the same.)</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">The black hole at the center of our galaxy</h2>
-          <p>The Milky Way has a supermassive black hole in its center called <strong>Sagittarius A*</strong>. Our Sun (and the whole galaxy disk) orbits the galaxy’s center of mass. The central black hole is a key part of that central region, but the gravity in the inner galaxy also comes from many stars, gas, and dark matter.</p>
-          <p>We infer Sagittarius A* from the fast orbits of stars near the galactic center and from radio/infrared observations of the region. It is currently relatively “quiet” compared to bright quasars, meaning it’s not actively accreting huge amounts of gas.</p>
-        </div>
-
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/sagirius A.jpg" alt="Galactic center illustration" />
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Closest, farthest, biggest, smallest (named examples)</h2>
-          <p>Exact “records” can change as new data arrives (and some nearby finds start as <strong>candidates</strong> before they’re fully confirmed). But these are widely discussed, well-known examples with clear names:</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/a0620.jpg" alt="Binary system" />
-          <div class="figure-caption">Many nearby black holes are found in binary systems by tracking the companion star</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h3 class="question-title">Closest (nearby Milky Way examples)</h3>
-          <ul class="origin-list">
-            <li><strong>Gaia BH1</strong> (candidate/then-studied object): found via the motion of a Sun-like star measured by the Gaia mission.</li>
-            <li><strong>Gaia BH2</strong> and <strong>Gaia BH3</strong> (Gaia-discovered systems): additional named Gaia candidates/objects discussed as relatively nearby black holes.</li>
-            <li><strong>A0620−00</strong> (V616 Mon): a classic nearby black-hole X-ray binary often cited in textbooks and introductions.</li>
-          </ul>
-          <p><strong>Idea:</strong> in “quiet” systems you might not see the black hole itself, but you can see its gravity in how the visible star moves.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/supesupermassive-black-hole-quasar-JO313-1806-artist.png" alt="Distant quasar" />
-          <div class="figure-caption">Very distant black holes are observed as quasars in the early universe</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h3 class="question-title">Farthest (early-universe quasars)</h3>
-          <ul class="origin-list">
-            <li><strong>J0313−1806</strong>: a famous high-redshift quasar with a supermassive black hole in the first billion years after the Big Bang.</li>
-            <li><strong>J1342+0928</strong>: another widely cited extremely distant quasar-era supermassive black hole.</li>
-          </ul>
-          <p>These objects show that supermassive black holes can grow very quickly in the early universe, which is still an active research topic.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/ton618.png" alt="Quasar illustration" />
-          <div class="figure-caption">TON 618 is one of the best-known “ultra-massive” black hole candidates, observed as a quasar</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h3 class="question-title">Biggest (ultra-massive candidates)</h3>
-          <ul class="origin-list">
-            <li><strong>TON 618</strong>: often listed among the most massive black hole candidates (tens of billions of solar masses, depending on measurement method).</li>
-            <li><strong>Phoenix A*</strong> (in the Phoenix Cluster): a famous candidate associated with an extremely massive central black hole in a galaxy cluster.</li>
-          </ul>
-          <p>Mass estimates at the very top end are uncertain because they depend on how we interpret quasar light, gas motions, and the host environment.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/tiny bh.jpg" alt="Accretion in a binary system" />
-          <div class="figure-caption">The lightest confirmed black holes overlap with the heaviest neutron stars—this boundary is still studied</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h3 class="question-title">Smallest (stellar-mass black holes)</h3>
-          <p>The smallest confirmed black holes are only a few times the Sun’s mass. This is close to the maximum possible mass of a neutron star, so classification can be tricky.</p>
-          <ul class="origin-list">
-            <li><strong>GRO J0422+32</strong>: frequently mentioned as a low-mass black hole candidate/measurement case in the literature.</li>
-            <li><strong>A0620−00</strong> again is a well-known stellar-mass example (not necessarily the smallest, but a classic reference system).</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/ton6.webp" alt="Galaxy cluster" />
-          <div class="figure-caption">TON 618 in comparison with our Sun</div>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What if we replaced the Sun with a black hole?</h2>
-          <p>If you replaced the Sun with a black hole of the <strong>same mass</strong> (no extra mass added), the planets’ orbits would remain almost the same, because gravity far away depends mainly on total mass, not on whether it is a star or a black hole.</p>
-          <p>What would change dramatically is <strong>light and heat</strong>: Earth would freeze without sunlight. Also, without the Sun’s solar wind and radiation pressure, the space environment would be different. The situation becomes more violent only if the black hole were actively feeding: an accretion disk could emit intense radiation that would be extremely harmful.</p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in conclusion">
-          <p class="conclusion-text">Black holes connect the biggest scales (galaxies and cosmic evolution) with the smallest (extreme gravity and quantum questions). They are laboratories where general relativity is not just a theory—it’s the main rulebook.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Black hole" src="../Obrázky/sections/bh1.jpg"/>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h21">What is a black hole?</h2>
+<p data-i18n-html="ubh.p1">A black hole is defined by an <strong>event horizon</strong>: a one-way boundary. If you cross it, there is no path back out—not because something is “pulling harder than light speed”, but because all future-directed paths (even for light) lead deeper inward.</p>
+<h3 class="question-title" data-i18n="ubh.h31">Event horizon, singularity, and “what’s inside”</h3>
+<p data-i18n-html="ubh.p2"><strong>Event horizon:</strong> the surface where escape becomes impossible. From far away, it looks like a sphere around the black hole.</p>
+<p data-i18n-html="ubh.p3"><strong>Singularity (classical GR):</strong> a place where curvature becomes infinite in the equations. Most physicists treat this as a sign that the classical theory is incomplete and that quantum gravity must take over at extremely small scales.</p>
+<p data-i18n-html="ubh.p4"><strong>What’s beyond the horizon?</strong> We can’t receive information from inside, so we cannot directly observe it. General relativity gives a mathematical description of the interior, but what truly happens at the very center is still an open problem in fundamental physics.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h22">Where do black holes appear, and what do they do?</h2>
+<p data-i18n-html="ubh.p5">Black holes show up in many environments: in <strong>binary star systems</strong>, in <strong>dense star clusters</strong>, and at the <strong>centers of galaxies</strong>. They influence their surroundings mainly through gravity:</p>
+<ul class="origin-list">
+<li data-i18n-html="ubh.li1"><strong>They bend light</strong> (gravitational lensing) and can distort the appearance of background objects.</li>
+<li data-i18n-html="ubh.li2"><strong>They heat up infalling gas</strong>: an accretion disk can glow brightly in X-rays and UV.</li>
+<li data-i18n-html="ubh.li3"><strong>They launch jets</strong> in some systems, sending high-energy particles far into interstellar and intergalactic space.</li>
+<li data-i18n-html="ubh.li4"><strong>They merge</strong> and produce <strong>gravitational waves</strong>—ripples in spacetime that we can now detect.</li>
+</ul>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="Milky Way" src="../Obrázky/sections/bhshceme.jpg"/>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h23">How black holes form (types)</h2>
+<p data-i18n-html="ubh.p6"><strong>Stellar-mass black holes</strong> can form when a very massive star runs out of fuel and its core collapses. Often this happens in a <strong>core-collapse supernova</strong> (a “massive star explosion”), but in some cases the collapse can be so direct that the star produces a weak or failed supernova and falls inward with little light.</p>
+<p data-i18n="ubh.p7">Other formation channels exist:</p>
+<ul class="origin-list">
+<li data-i18n-html="ubh.li5"><strong>Black hole mergers:</strong> two compact objects merge and leave a larger remnant.</li>
+<li data-i18n-html="ubh.li6"><strong>Direct collapse:</strong> very massive gas clouds (especially in the early universe) may collapse into a “seed” black hole without first making normal stars.</li>
+<li data-i18n-html="ubh.li7"><strong>Supermassive black holes:</strong> likely grow over time via accretion and mergers, starting from smaller seeds.</li>
+<li data-i18n-html="ubh.li8"><strong>Primordial black holes (hypothetical):</strong> could form from overdensities in the very early universe (not confirmed).</li>
+</ul>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Quasar" src="../Obrázky/sections/bh2.webp"/>
+<img alt="Quasar" src="../Obrázky/sections/Black-Hole-Orbited-by-Cracked-Neutron-Star.jpg"/>
+<div class="figure-caption" data-i18n="ubh.cap1">A black hole devauring a neutron star</div>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h24">Spin, time, and extreme physics</h2>
+<p data-i18n-html="ubh.p8">Real black holes are rarely “still”. Many rotate, and their <strong>spin</strong> changes the geometry of spacetime around them (Kerr black holes). Rotation can drag spacetime itself (frame-dragging) and affects where stable orbits and the inner edge of the accretion disk can exist.</p>
+<h3 class="question-title" data-i18n="ubh.h32">Spaghettification (tidal forces)</h3>
+<p data-i18n-html="ubh.p9">Near a compact object, gravity changes significantly over short distances. This difference is a <strong>tidal force</strong>. If you fell toward a black hole, your feet would feel a stronger pull than your head, stretching you into a long shape: <strong>spaghettification</strong>.</p>
+<p data-i18n-html="ubh.p10">For <strong>stellar-mass</strong> black holes, tidal forces near the horizon can be enormous. For <strong>supermassive</strong> black holes, the horizon is much larger, so you could cross the horizon before tides become lethal (though you still can’t escape afterward).</p>
+<h3 class="question-title" data-i18n="ubh.h33">Black holes as particle accelerators</h3>
+<p data-i18n-html="ubh.p11">Accretion disks, magnetic fields, and relativistic jets can accelerate particles to extreme energies. In that sense, some active black holes act like natural <strong>particle accelerators</strong>, producing high-energy radiation and cosmic rays.</p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h25">Black holes and general relativity (key equations)</h2>
+<p data-i18n="ubh.p12">General relativity connects mass-energy to spacetime curvature. In compact form:</p>
+<p data-i18n-html="ubh.p13"><code>G<sub>μν</sub> = (8πG / c<sup>4</sup>) T<sub>μν</sub></code></p>
+<p data-i18n-html="ubh.p14"><strong>Meaning (in plain words):</strong> the left side describes the geometry/curvature of spacetime; the right side describes energy and momentum of matter and radiation. When the right side is extremely concentrated, spacetime can form an event horizon.</p>
+<p data-i18n-html="ubh.p15">For a non-rotating black hole, the size scale of the event horizon is set by the <strong>Schwarzschild radius</strong>:</p>
+<p data-i18n-html="ubh.p16"><code>R<sub>s</sub> = 2GM / c<sup>2</sup></code></p>
+<p data-i18n-html="ubh.p17">This formula explains why black holes are “compact”: if an object of mass <strong>M</strong> is compressed inside a radius smaller than <strong>R<sub>s</sub></strong>, an event horizon forms. (Rotation changes the detailed geometry, but the mass–size idea is the same.)</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h26">The black hole at the center of our galaxy</h2>
+<p data-i18n-html="ubh.p18">The Milky Way has a supermassive black hole in its center called <strong>Sagittarius A*</strong>. Our Sun (and the whole galaxy disk) orbits the galaxy’s center of mass. The central black hole is a key part of that central region, but the gravity in the inner galaxy also comes from many stars, gas, and dark matter.</p>
+<p data-i18n="ubh.p19">We infer Sagittarius A* from the fast orbits of stars near the galactic center and from radio/infrared observations of the region. It is currently relatively “quiet” compared to bright quasars, meaning it’s not actively accreting huge amounts of gas.</p>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="Galactic center illustration" src="../Obrázky/sections/sagirius A.jpg"/>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h27">Closest, farthest, biggest, smallest (named examples)</h2>
+<p data-i18n-html="ubh.p20">Exact “records” can change as new data arrives (and some nearby finds start as <strong>candidates</strong> before they’re fully confirmed). But these are widely discussed, well-known examples with clear names:</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Binary system" src="../Obrázky/sections/a0620.jpg"/>
+<div class="figure-caption" data-i18n="ubh.cap2">Many nearby black holes are found in binary systems by tracking the companion star</div>
+</div>
+<div class="origin-text fly-in">
+<h3 class="question-title" data-i18n="ubh.h34">Closest (nearby Milky Way examples)</h3>
+<ul class="origin-list">
+<li data-i18n-html="ubh.li9"><strong>Gaia BH1</strong> (candidate/then-studied object): found via the motion of a Sun-like star measured by the Gaia mission.</li>
+<li data-i18n-html="ubh.li10"><strong>Gaia BH2</strong> and <strong>Gaia BH3</strong> (Gaia-discovered systems): additional named Gaia candidates/objects discussed as relatively nearby black holes.</li>
+<li data-i18n-html="ubh.li11"><strong>A0620−00</strong> (V616 Mon): a classic nearby black-hole X-ray binary often cited in textbooks and introductions.</li>
+</ul>
+<p data-i18n-html="ubh.p21"><strong>Idea:</strong> in “quiet” systems you might not see the black hole itself, but you can see its gravity in how the visible star moves.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Distant quasar" src="../Obrázky/sections/supesupermassive-black-hole-quasar-JO313-1806-artist.png"/>
+<div class="figure-caption" data-i18n="ubh.cap3">Very distant black holes are observed as quasars in the early universe</div>
+</div>
+<div class="origin-text fly-in">
+<h3 class="question-title" data-i18n="ubh.h35">Farthest (early-universe quasars)</h3>
+<ul class="origin-list">
+<li data-i18n-html="ubh.li12"><strong>J0313−1806</strong>: a famous high-redshift quasar with a supermassive black hole in the first billion years after the Big Bang.</li>
+<li data-i18n-html="ubh.li13"><strong>J1342+0928</strong>: another widely cited extremely distant quasar-era supermassive black hole.</li>
+</ul>
+<p data-i18n="ubh.p22">These objects show that supermassive black holes can grow very quickly in the early universe, which is still an active research topic.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Quasar illustration" src="../Obrázky/sections/ton618.png"/>
+<div class="figure-caption" data-i18n="ubh.cap4">TON 618 is one of the best-known “ultra-massive” black hole candidates, observed as a quasar</div>
+</div>
+<div class="origin-text fly-in">
+<h3 class="question-title" data-i18n="ubh.h36">Biggest (ultra-massive candidates)</h3>
+<ul class="origin-list">
+<li data-i18n-html="ubh.li14"><strong>TON 618</strong>: often listed among the most massive black hole candidates (tens of billions of solar masses, depending on measurement method).</li>
+<li data-i18n-html="ubh.li15"><strong>Phoenix A*</strong> (in the Phoenix Cluster): a famous candidate associated with an extremely massive central black hole in a galaxy cluster.</li>
+</ul>
+<p data-i18n="ubh.p23">Mass estimates at the very top end are uncertain because they depend on how we interpret quasar light, gas motions, and the host environment.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Accretion in a binary system" src="../Obrázky/sections/tiny bh.jpg"/>
+<div class="figure-caption" data-i18n="ubh.cap5">The lightest confirmed black holes overlap with the heaviest neutron stars—this boundary is still studied</div>
+</div>
+<div class="origin-text fly-in">
+<h3 class="question-title" data-i18n="ubh.h37">Smallest (stellar-mass black holes)</h3>
+<p data-i18n="ubh.p24">The smallest confirmed black holes are only a few times the Sun’s mass. This is close to the maximum possible mass of a neutron star, so classification can be tricky.</p>
+<ul class="origin-list">
+<li data-i18n-html="ubh.li16"><strong>GRO J0422+32</strong>: frequently mentioned as a low-mass black hole candidate/measurement case in the literature.</li>
+<li data-i18n-html="ubh.li17"><strong>A0620−00</strong> again is a well-known stellar-mass example (not necessarily the smallest, but a classic reference system).</li>
+</ul>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Galaxy cluster" src="../Obrázky/sections/ton6.webp"/>
+<div class="figure-caption" data-i18n="ubh.cap6">TON 618 in comparison with our Sun</div>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="ubh.h28">What if we replaced the Sun with a black hole?</h2>
+<p data-i18n-html="ubh.p25">If you replaced the Sun with a black hole of the <strong>same mass</strong> (no extra mass added), the planets’ orbits would remain almost the same, because gravity far away depends mainly on total mass, not on whether it is a star or a black hole.</p>
+<p data-i18n-html="ubh.p26">What would change dramatically is <strong>light and heat</strong>: Earth would freeze without sunlight. Also, without the Sun’s solar wind and radiation pressure, the space environment would be different. The situation becomes more violent only if the black hole were actively feeding: an accretion disk could emit intense radiation that would be extremely harmful.</p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in conclusion">
+<p class="conclusion-text" data-i18n="ubh.conclusion">Black holes connect the biggest scales (galaxies and cosmic evolution) with the smallest (extreme gravity and quantum questions). They are laboratories where general relativity is not just a theory—it’s the main rulebook.</p>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     // Force GIF to start from the beginning when the page loads or when revisited
     (function(){
       const img = document.querySelector('.origin-gif');
@@ -251,7 +220,7 @@
       });
     })();
   </script>
-  <script>
+<script>
     // IntersectionObserver + chained reveal
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));

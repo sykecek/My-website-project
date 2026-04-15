@@ -1,70 +1,66 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.sys-debris" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Debris-disk systems</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Debris-disk systems</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="universe-systems.html" class="nav-link">PLANETARY SYSTEMS</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_" target="_blank" rel="noopener noreferrer" class="instagram-icon" aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">DEBRIS-DISK SYSTEMS</h1>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/debris3.jpg" alt="Debris disk" />
-        </div>
-        <div class="figure-caption">Hubble Space Telescope observation of the debris ring around Fomalhaut. The inner edge of the disk may have been shaped by the orbit of Fomalhaut b, at lower right</div>
-        <div class="origin-text fly-in">
-          <p>A debris-disk system is a star system surrounded by a belt of dust and small bodies produced by collisions—similar to our asteroid belt and Kuiper Belt, but sometimes much brighter and easier to detect.</p>
-          <p>Debris disks are important because they trace ongoing collisional activity and reveal where planetesimals (and often planets) reside.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What we learn from them</h2>
-          <ul class="origin-list">
-            <li><strong>Where the belts are:</strong> rings, gaps, and clumps can hint at unseen planets.</li>
-            <li><strong>System age:</strong> dust often declines over time as collisions grind bodies down.</li>
-            <li><strong>Architecture:</strong> multiple belts suggest multiple formation zones.</li>
-          </ul>
-        </div>
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/debris2.jpg" alt="Dust and gas" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.planetary-systems" href="universe-systems.html">PLANETARY SYSTEMS</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="sys-debris.h1">DEBRIS-DISK SYSTEMS</h1>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Debris disk" src="../Obrázky/sections/debris3.jpg"/>
+</div>
+<div class="figure-caption" data-i18n="sys-debris.cap1">Hubble Space Telescope observation of the debris ring around Fomalhaut. The inner edge of the disk may have been shaped by the orbit of Fomalhaut b, at lower right</div>
+<div class="origin-text fly-in">
+<p data-i18n="sys-debris.p1">A debris-disk system is a star system surrounded by a belt of dust and small bodies produced by collisions—similar to our asteroid belt and Kuiper Belt, but sometimes much brighter and easier to detect.</p>
+<p data-i18n="sys-debris.p2">Debris disks are important because they trace ongoing collisional activity and reveal where planetesimals (and often planets) reside.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="sys-debris.h21">What we learn from them</h2>
+<ul class="origin-list">
+<li data-i18n-html="sys-debris.li1"><strong>Where the belts are:</strong> rings, gaps, and clumps can hint at unseen planets.</li>
+<li data-i18n-html="sys-debris.li2"><strong>System age:</strong> dust often declines over time as collisions grind bodies down.</li>
+<li data-i18n-html="sys-debris.li3"><strong>Architecture:</strong> multiple belts suggest multiple formation zones.</li>
+</ul>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="Dust and gas" src="../Obrázky/sections/debris2.jpg"/>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));
       if (!items.length) return;

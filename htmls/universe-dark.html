@@ -1,205 +1,186 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.udark" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dark Matter &amp; Dark Energy</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Dark Matter &amp; Dark Energy</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body class="universe-dark">
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">DARK MATTER &amp; DARK ENERGY</h1>
-
-      <div class="origin-media origin-media--small fly-in">
-        <img class="origin-gif" src="../gif/Rotating_Galaxies.gif" alt="Dark matter animation" />
-        <div class="figure-caption">Right: A rotating spiral galaxy, which we thought would spin like simply beacause of the gravity</div>
-        <div class="figure-caption">Left: The same rotating spiral galaxy, but with a dark matter that provides the extra gravity to keep the outer stars moving fast and round</div>
-      </div>
-
-      <p class="origin-intro fly-in">
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="udark.h1">DARK MATTER &amp; DARK ENERGY</h1>
+<div class="origin-media origin-media--small fly-in">
+<img alt="Dark matter animation" class="origin-gif" src="../gif/Rotating_Galaxies.gif"/>
+<div class="figure-caption" data-i18n="udark.cap1">Right: A rotating spiral galaxy, which we thought would spin like simply beacause of the gravity</div>
+<div class="figure-caption" data-i18n="udark.cap2">Left: The same rotating spiral galaxy, but with a dark matter that provides the extra gravity to keep the outer stars moving fast and round</div>
+</div>
+<p class="origin-intro fly-in" data-i18n-html="udark.intro">
         A surprising fact about the universe: most of it doesn’t shine.
         When astronomers add up the matter we can see (stars, gas, dust) and compare it with what <strong>gravity</strong> says must be there,
         the numbers don’t match.
         Two names cover this mystery: <strong>dark matter</strong> (extra gravity that clumps) and <strong>dark energy</strong> (a smooth component that makes cosmic expansion speed up).
       </p>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Dark matter vs. dark energy (quick difference)</h2>
-          <p>
-            <strong>Dark matter</strong> is the “missing mass” that behaves like matter: it <strong>clumps</strong>, forms halos around galaxies,
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="udark.h21">Dark matter vs. dark energy (quick difference)</h2>
+<p data-i18n-html="udark.p1">
+<strong>Dark matter</strong> is the “missing mass” that behaves like matter: it <strong>clumps</strong>, forms halos around galaxies,
             and pulls things together through gravity.
             It doesn’t need to glow to be real—astronomers infer it from motion and from how it bends light.
           </p>
-          <p>
-            <strong>Dark energy</strong> is almost the opposite: it appears to be <strong>smoothly distributed</strong> and becomes important only on very large scales.
+<p data-i18n-html="udark.p2">
+<strong>Dark energy</strong> is almost the opposite: it appears to be <strong>smoothly distributed</strong> and becomes important only on very large scales.
             Its main signature is that the universe’s expansion is not just continuing—it’s <strong>accelerating</strong>.
           </p>
-          <p>
+<p data-i18n="udark.p3">
             In the standard picture of cosmology, ordinary atoms are only a small slice of the cosmic “budget”, while dark matter and dark energy dominate.
             (The exact percentages depend on the dataset, but the rough story is stable: a few percent normal matter, about a quarter dark matter, and the rest dark energy.)
           </p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/Universe_Pie_Chart.jpeg" alt="Universe composition pie chart" />
-          <div class="figure-caption">The universe is made up of three components: normal or visible matter (5%), dark matter (27%), and dark energy (68%). <strong>NASA's Goddard Space Flight Center</strong></div>
-        </div>
-      </div>
-    
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What is dark matter?</h2>
-          <p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Universe composition pie chart" src="../Obrázky/sections/Universe_Pie_Chart.jpeg"/>
+<div class="figure-caption" data-i18n="udark.cap3">The universe is made up of three components: normal or visible matter (5%), dark matter (27%), and dark energy (68%). <strong>NASA's Goddard Space Flight Center</strong></div>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="udark.h22">What is dark matter?</h2>
+<p data-i18n-html="udark.p4">
             Dark matter is matter we don’t see directly because it doesn’t emit, absorb, or reflect light the way ordinary matter does.
             What we do see is its <strong>gravity</strong>—it acts like extra mass in and around galaxies and galaxy clusters.
             The simplest idea is that it’s made of new particles we haven’t detected in the lab yet.
           </p>
-
-          <h3 class="question-title">What does “missing mass” actually mean?</h3>
-          <p>
+<h3 class="question-title" data-i18n="udark.h31">What does “missing mass” actually mean?</h3>
+<p data-i18n="udark.p5">
             Scientists can estimate how much mass is present in two independent ways:
             (1) by counting light (stars) and measuring gas (for example with radio and X‑ray telescopes), and
             (2) by measuring gravity (how fast objects orbit, or how strongly spacetime bends light).
             When method (2) says “there should be much more mass here” than method (1) can account for, that gap is the dark matter problem.
           </p>
-
-          <h3 class="question-title">How do we know it exists?</h3>
-          <ul class="origin-list">
-            <li><strong>Galaxy rotation curves (Vera Rubin &amp; others):</strong> stars far from the galactic center orbit faster than the visible matter distribution predicts. The simplest fix is a massive, extended halo.</li>
-            <li><strong>Galaxy clusters (Fritz Zwicky’s “missing mass”):</strong> galaxies in clusters move so fast that, using the virial theorem, the cluster should fly apart unless there is far more mass than we see in stars.</li>
-            <li><strong>Gravitational lensing:</strong> clusters and galaxies bend the light of background objects. The measured bending often requires more mass than the luminous matter provides.</li>
-            <li><strong>The Bullet Cluster and similar collisions:</strong> hot gas (seen in X‑rays) gets slowed by pressure, while most of the lensing mass is offset—suggesting most mass behaves like a collisionless component (dark matter).</li>
-            <li><strong>Cosmic microwave background &amp; large‑scale structure:</strong> the pattern of early-universe fluctuations and today’s galaxy distribution fit best when most matter is dark and “cold” (moves slowly, so it can clump early).</li>
-          </ul>
-
-          <h3 class="question-title">What is gravitational lensing (and how do we “do” it)?</h3>
-          <p>
+<h3 class="question-title" data-i18n="udark.h32">How do we know it exists?</h3>
+<ul class="origin-list">
+<li data-i18n-html="udark.li1"><strong>Galaxy rotation curves (Vera Rubin &amp; others):</strong> stars far from the galactic center orbit faster than the visible matter distribution predicts. The simplest fix is a massive, extended halo.</li>
+<li data-i18n-html="udark.li2"><strong>Galaxy clusters (Fritz Zwicky’s “missing mass”):</strong> galaxies in clusters move so fast that, using the virial theorem, the cluster should fly apart unless there is far more mass than we see in stars.</li>
+<li data-i18n-html="udark.li3"><strong>Gravitational lensing:</strong> clusters and galaxies bend the light of background objects. The measured bending often requires more mass than the luminous matter provides.</li>
+<li data-i18n-html="udark.li4"><strong>The Bullet Cluster and similar collisions:</strong> hot gas (seen in X‑rays) gets slowed by pressure, while most of the lensing mass is offset—suggesting most mass behaves like a collisionless component (dark matter).</li>
+<li data-i18n-html="udark.li5"><strong>Cosmic microwave background &amp; large‑scale structure:</strong> the pattern of early-universe fluctuations and today’s galaxy distribution fit best when most matter is dark and “cold” (moves slowly, so it can clump early).</li>
+</ul>
+<h3 class="question-title" data-i18n="udark.h33">What is gravitational lensing (and how do we “do” it)?</h3>
+<p data-i18n="udark.p6">
             In general relativity, mass curves spacetime, and light follows the curved paths. A massive object between us and a distant galaxy therefore works like a lens.
             Astronomers use images of many background galaxies and look for tiny, coherent distortions in their shapes.
           </p>
-          <ul class="origin-list">
-            <li><strong>Strong lensing:</strong> obvious arcs, multiple images, or even Einstein rings. The geometry lets us reconstruct a detailed mass model of the lens.</li>
-            <li><strong>Weak lensing:</strong> each background galaxy is only slightly stretched (“shear”), so scientists average over thousands/millions of galaxies to build a statistical <strong>mass map</strong>.</li>
-            <li><strong>Microlensing:</strong> temporary brightening when a compact object passes in front of a star. This method tested (and strongly limited) many “dark” ordinary-matter candidates in the Milky Way halo.</li>
-          </ul>
-        </div>
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/A_Horseshoe_Einstein_Ring_from_Hubble.JPG" alt="Cosmic web" />
-          <div class="figure-caption">A Horseshoe Einstein Ring from Hubble</div>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What could dark matter be made of?</h2>
-          <p>
+<ul class="origin-list">
+<li data-i18n-html="udark.li6"><strong>Strong lensing:</strong> obvious arcs, multiple images, or even Einstein rings. The geometry lets us reconstruct a detailed mass model of the lens.</li>
+<li data-i18n-html="udark.li7"><strong>Weak lensing:</strong> each background galaxy is only slightly stretched (“shear”), so scientists average over thousands/millions of galaxies to build a statistical <strong>mass map</strong>.</li>
+<li data-i18n-html="udark.li8"><strong>Microlensing:</strong> temporary brightening when a compact object passes in front of a star. This method tested (and strongly limited) many “dark” ordinary-matter candidates in the Milky Way halo.</li>
+</ul>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="Cosmic web" src="../Obrázky/sections/A_Horseshoe_Einstein_Ring_from_Hubble.JPG"/>
+<div class="figure-caption" data-i18n="udark.cap4">A Horseshoe Einstein Ring from Hubble</div>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="udark.h23">What could dark matter be made of?</h2>
+<p data-i18n-html="udark.p7">
             We don’t know yet—and the constraints are part of the story.
             Dark matter must be abundant, long‑lived, and (mostly) <strong>collisionless</strong> so it can pass through itself and ordinary matter without much drag.
             It also has to clump in the right way to match galaxy and cluster observations.
           </p>
-          <ul class="origin-list">
-            <li><strong>WIMPs (hypothetical):</strong> a classic idea—new particles with weak-scale interactions. Searches look for rare scatters in underground detectors, signals from annihilation, or production at colliders.</li>
-            <li><strong>Axions (hypothetical):</strong> ultra-light particles originally proposed to solve a problem in particle physics; in the right range they behave like cold dark matter. Experiments try to convert axions into photons in strong magnetic fields.</li>
-            <li><strong>Sterile neutrinos / dark-sector particles:</strong> models where dark matter has its own interactions, but remains hard to see directly.</li>
-            <li><strong>Not (mostly) ordinary “dark” objects:</strong> things like faint stars or planets (“MACHOs”) were tested via microlensing and can’t make up most of the halo, though small fractions are still possible.</li>
-          </ul>
-          <p>
+<ul class="origin-list">
+<li data-i18n-html="udark.li9"><strong>WIMPs (hypothetical):</strong> a classic idea—new particles with weak-scale interactions. Searches look for rare scatters in underground detectors, signals from annihilation, or production at colliders.</li>
+<li data-i18n-html="udark.li10"><strong>Axions (hypothetical):</strong> ultra-light particles originally proposed to solve a problem in particle physics; in the right range they behave like cold dark matter. Experiments try to convert axions into photons in strong magnetic fields.</li>
+<li data-i18n-html="udark.li11"><strong>Sterile neutrinos / dark-sector particles:</strong> models where dark matter has its own interactions, but remains hard to see directly.</li>
+<li data-i18n-html="udark.li12"><strong>Not (mostly) ordinary “dark” objects:</strong> things like faint stars or planets (“MACHOs”) were tested via microlensing and can’t make up most of the halo, though small fractions are still possible.</li>
+</ul>
+<p data-i18n-html="udark.p8">
             There are also alternative ideas (for example modifying gravity), but they have to match <em>all</em> the evidence at once:
             rotation curves, lensing, cluster collisions, and the early-universe fingerprints in the cosmic microwave background.
           </p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/¨darkenergyconcept.jpg" alt="Early universe" />
-          <div class="figure-caption">Dark energy concept art</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What is dark energy?</h2>
-          <p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Early universe" src="../Obrázky/sections/¨darkenergyconcept.jpg"/>
+<div class="figure-caption" data-i18n="udark.cap5">Dark energy concept art</div>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="udark.h24">What is dark energy?</h2>
+<p data-i18n-html="udark.p9">
             Dark energy is the name for whatever causes the universe’s expansion to <strong>accelerate</strong> at late times.
             The simplest explanation is a <strong>cosmological constant</strong> (often written as $\Lambda$): a constant energy density associated with empty space.
             Another possibility is that it’s dynamical (sometimes called <em>quintessence</em>), meaning it could change slowly over cosmic time.
           </p>
-
-          <h3 class="question-title">How do we know the expansion accelerates?</h3>
-          <ul class="origin-list">
-            <li><strong>Type Ia supernovae (late 1990s):</strong> used as “standard candles”. By comparing their intrinsic brightness to their observed dimness, astronomers build a distance–redshift (Hubble) diagram that points to acceleration.</li>
-            <li><strong>CMB + baryon acoustic oscillations:</strong> the early-universe sound-wave scale acts like a ruler. Measuring it at different epochs reveals the expansion history and supports dark-energy–dominated late times.</li>
-            <li><strong>Growth of structure:</strong> acceleration changes how quickly galaxies and clusters form. Surveys compare the predicted growth to observed clustering and lensing.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">How dark matter and dark energy connect to everything</h2>
-          <p>
+<h3 class="question-title" data-i18n="udark.h34">How do we know the expansion accelerates?</h3>
+<ul class="origin-list">
+<li data-i18n-html="udark.li13"><strong>Type Ia supernovae (late 1990s):</strong> used as “standard candles”. By comparing their intrinsic brightness to their observed dimness, astronomers build a distance–redshift (Hubble) diagram that points to acceleration.</li>
+<li data-i18n-html="udark.li14"><strong>CMB + baryon acoustic oscillations:</strong> the early-universe sound-wave scale acts like a ruler. Measuring it at different epochs reveals the expansion history and supports dark-energy–dominated late times.</li>
+<li data-i18n-html="udark.li15"><strong>Growth of structure:</strong> acceleration changes how quickly galaxies and clusters form. Surveys compare the predicted growth to observed clustering and lensing.</li>
+</ul>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="udark.h25">How dark matter and dark energy connect to everything</h2>
+<p data-i18n="udark.p10">
             Cosmology is partly a timeline.
             Early on, matter (mostly dark matter) dominated: gravity amplified tiny fluctuations into the cosmic web.
             Much later, dark energy began to dominate the large-scale dynamics and the expansion started to accelerate.
           </p>
-          <ul class="origin-list">
-            <li><strong>Galaxies:</strong> halos of dark matter set the gravitational potential; gas falls in, cools, and forms stars inside that scaffold.</li>
-            <li><strong>Clusters:</strong> they are the biggest bound objects, so they’re great laboratories—lensing, X‑ray gas, and galaxy motions all cross-check the mass.</li>
-            <li><strong>Cosmic maps:</strong> weak-lensing surveys literally draw the large-scale distribution of mass, letting us compare “where the mass is” to “where the light is”.</li>
-            <li><strong>Fate of the universe:</strong> the properties of dark energy determine whether acceleration stays constant, increases, or possibly changes in the far future.</li>
-          </ul>
-          <p>
+<ul class="origin-list">
+<li data-i18n-html="udark.li16"><strong>Galaxies:</strong> halos of dark matter set the gravitational potential; gas falls in, cools, and forms stars inside that scaffold.</li>
+<li data-i18n-html="udark.li17"><strong>Clusters:</strong> they are the biggest bound objects, so they’re great laboratories—lensing, X‑ray gas, and galaxy motions all cross-check the mass.</li>
+<li data-i18n-html="udark.li18"><strong>Cosmic maps:</strong> weak-lensing surveys literally draw the large-scale distribution of mass, letting us compare “where the mass is” to “where the light is”.</li>
+<li data-i18n-html="udark.li19"><strong>Fate of the universe:</strong> the properties of dark energy determine whether acceleration stays constant, increases, or possibly changes in the far future.</li>
+</ul>
+<p data-i18n-html="udark.p11">
             On everyday scales, dark energy is far too diffuse to notice.
             Dark matter, meanwhile, is already “here” in the sense that the Milky Way sits inside a dark halo—yet it passes through us without obvious interaction.
             Together, these two components shape both the <strong>structure</strong> of the universe and its <strong>expansion history</strong>.
           </p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in conclusion">
-          <p class="conclusion-text">
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in conclusion">
+<p class="conclusion-text" data-i18n="udark.conclusion">
             Dark matter is the invisible mass behind galaxies, clusters, and the cosmic web.
             Dark energy is the component behind the universe’s late-time accelerated expansion.
             We measure them not by seeing them directly, but by carefully comparing light, motion, and spacetime bending—turning the whole universe into a physics experiment.
           </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     // Force GIF to start from the beginning when the page loads or when revisited
     (function(){
       const img = document.querySelector('.origin-gif');
@@ -216,7 +197,7 @@
       });
     })();
   </script>
-  <script>
+<script>
     // IntersectionObserver + chained reveal
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));

@@ -1,85 +1,73 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.gal-ellip" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Elliptical Galaxies</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Elliptical Galaxies</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="universe-galaxies.html" class="nav-link">GALAXIES</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">ELLIPTICAL GALAXIES</h1>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/elliptical1.jpg" alt="Galaxies in the universe" />
-        </div>
-        <div class="origin-text fly-in">
-          <p>Elliptical galaxies range from small, faint ellipticals to the most massive galaxies known. Unlike spirals, their light distribution is typically smooth and their stellar motions are more random than ordered. Many ellipticals look “redder” because they are dominated by older, cooler stars.</p>
-
-          <p>In the hierarchical picture of galaxy formation, many ellipticals form (or are strongly reshaped) through mergers. Major mergers can disrupt disks, scramble stellar orbits, and create a more spheroidal remnant. The most massive ellipticals often live in galaxy groups and clusters, where interactions and mergers are common over cosmic time.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Typical properties</h2>
-          <ul class="origin-list">
-            <li><strong>Smooth appearance:</strong> little visible structure like arms or dust lanes.</li>
-            <li><strong>Older stars:</strong> less ongoing star formation in many systems.</li>
-            <li><strong>Hot gas:</strong> massive ellipticals can hold very hot, X-ray-emitting gas.</li>
-            <li><strong>Massive black holes:</strong> central supermassive black holes are common.</li>
-          </ul>
-
-          <p>Even if an elliptical has little cold gas, it can still be active in other wavelengths because of hot gas halos and central black hole activity.</p>
-        </div>
-
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/elliptical2.png" alt="Stars" />
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Why they are important</h2>
-          <p>Elliptical galaxies help astronomers study how galaxies grow by merging and how star formation can be shut down. Their old stellar populations preserve clues about the early universe, and their environments (often dense clusters) show how surroundings influence galaxy evolution.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" href="universe-galaxies.html">GALAXIES</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="gal-ellip.h1">ELLIPTICAL GALAXIES</h1>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Galaxies in the universe" src="../Obrázky/sections/elliptical1.jpg"/>
+</div>
+<div class="origin-text fly-in">
+<p data-i18n="gal-ellip.p1">Elliptical galaxies range from small, faint ellipticals to the most massive galaxies known. Unlike spirals, their light distribution is typically smooth and their stellar motions are more random than ordered. Many ellipticals look “redder” because they are dominated by older, cooler stars.</p>
+<p data-i18n="gal-ellip.p2">In the hierarchical picture of galaxy formation, many ellipticals form (or are strongly reshaped) through mergers. Major mergers can disrupt disks, scramble stellar orbits, and create a more spheroidal remnant. The most massive ellipticals often live in galaxy groups and clusters, where interactions and mergers are common over cosmic time.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="gal-ellip.h21">Typical properties</h2>
+<ul class="origin-list">
+<li data-i18n-html="gal-ellip.li1"><strong>Smooth appearance:</strong> little visible structure like arms or dust lanes.</li>
+<li data-i18n-html="gal-ellip.li2"><strong>Older stars:</strong> less ongoing star formation in many systems.</li>
+<li data-i18n-html="gal-ellip.li3"><strong>Hot gas:</strong> massive ellipticals can hold very hot, X-ray-emitting gas.</li>
+<li data-i18n-html="gal-ellip.li4"><strong>Massive black holes:</strong> central supermassive black holes are common.</li>
+</ul>
+<p data-i18n="gal-ellip.p3">Even if an elliptical has little cold gas, it can still be active in other wavelengths because of hot gas halos and central black hole activity.</p>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="Stars" src="../Obrázky/sections/elliptical2.png"/>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="gal-ellip.h22">Why they are important</h2>
+<p data-i18n="gal-ellip.p4">Elliptical galaxies help astronomers study how galaxies grow by merging and how star formation can be shut down. Their old stellar populations preserve clues about the early universe, and their environments (often dense clusters) show how surroundings influence galaxy evolution.</p>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     (function(){
       const img = document.querySelector('.origin-gif');
       if (!img) return;
@@ -91,7 +79,7 @@
       document.addEventListener('visibilitychange', ()=>{ if (document.visibilityState === 'visible') restart(); });
     })();
   </script>
-  <script>
+<script>
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));
       if (!items.length) return;
