@@ -24,15 +24,37 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 /* SVĚTLO */
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+// Dim ambient — simulates faint starlight from all directions.
+// Low enough that the night side of each planet is visibly dark.
+const ambientLight = new THREE.AmbientLight(0x101828, 0.10);
 scene.add(ambientLight);
 
-const dirLight = new THREE.DirectionalLight(0xffffff, 1);
-dirLight.position.set(30, 40, 20);
-scene.add(dirLight);
+// Primary "sun" — warm white, from upper-left relative to the camera.
+// Positioned to the side so rotating planets show a clear shadow terminator.
+const sunLight = new THREE.DirectionalLight(0xfff5e0, 2.8);
+sunLight.position.set(-55, 35, 45);
+sunLight.castShadow = true;
+sunLight.shadow.mapSize.width  = 1024;
+sunLight.shadow.mapSize.height = 1024;
+sunLight.shadow.camera.near = 0.5;
+sunLight.shadow.camera.far  = 500;
+sunLight.shadow.camera.left   = -120;
+sunLight.shadow.camera.right  =  120;
+sunLight.shadow.camera.top    =  120;
+sunLight.shadow.camera.bottom = -120;
+sunLight.shadow.bias = -0.001;
+scene.add(sunLight);
+
+// Fill / rim light — cool blue from the right, low intensity.
+// Keeps the dark side from being pure black and adds the "deep space" tint.
+const fillLight = new THREE.DirectionalLight(0x3a6aaa, 0.40);
+fillLight.position.set(60, -15, 30);
+scene.add(fillLight);
 
 /* TEXTURE LOADER – společný pro hvězdy i planety */
 
@@ -127,6 +149,8 @@ const planet1Material = new THREE.MeshStandardMaterial({
   metalness: 0.0,
 });
 const planet1Mesh = new THREE.Mesh(planet1Geometry, planet1Material);
+planet1Mesh.castShadow = true;
+planet1Mesh.receiveShadow = true;
 scene.add(planet1Mesh);
 planet1Mesh.visible = planet1IsFlying;
 
@@ -176,6 +200,8 @@ const planet2Material = new THREE.MeshStandardMaterial({
   metalness: 0.0,
 });
 const planet2Mesh = new THREE.Mesh(planet2Geometry, planet2Material);
+planet2Mesh.castShadow = true;
+planet2Mesh.receiveShadow = true;
 scene.add(planet2Mesh);
 planet2Mesh.visible = planet2IsFlying;
 
@@ -226,6 +252,8 @@ const planet3Material = new THREE.MeshStandardMaterial({
   metalness: 0.0,
 });
 const planet3Mesh = new THREE.Mesh(planet3Geometry, planet3Material);
+planet3Mesh.castShadow = true;
+planet3Mesh.receiveShadow = true;
 scene.add(planet3Mesh);
 planet3Mesh.visible = planet3IsFlying;
 
@@ -271,6 +299,8 @@ const planet4Material = new THREE.MeshStandardMaterial({
   metalness: 0.0,
 });
 const planet4Mesh = new THREE.Mesh(planet4Geometry, planet4Material);
+planet4Mesh.castShadow = true;
+planet4Mesh.receiveShadow = true;
 planet4Group.add(planet4Mesh);
 
 const glowMaterial4 = new THREE.SpriteMaterial({
@@ -300,6 +330,8 @@ const moonMaterial = new THREE.MeshStandardMaterial({
   metalness: 0.0,
 });
 const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
+moonMesh.castShadow = true;
+moonMesh.receiveShadow = true;
 moonMesh.position.set(moonOrbitDistance, 0, 0);
 moonOrbitPivot.add(moonMesh);
 
