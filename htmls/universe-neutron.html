@@ -1,161 +1,146 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.uneutron" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Neutron Stars</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Neutron Stars</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">NEUTRON STARS</h1>
-
-      <div class="origin-media origin-media--small fly-in">
-        <img class="origin-gif" src="../gif/neutronstarcollision.gif" alt="Neutron star animation" />
-      </div>
-
-      <p class="origin-intro fly-in">
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="uneutron.h1">NEUTRON STARS</h1>
+<div class="origin-media origin-media--small fly-in">
+<img alt="Neutron star animation" class="origin-gif" src="../gif/neutronstarcollision.gif"/>
+</div>
+<p class="origin-intro fly-in" data-i18n-html="uneutron.intro">
         A <strong>neutron star</strong> is the ultra-dense leftover core of a massive star after a <strong>core-collapse supernova</strong>.
         It packs more mass than the Sun into a sphere roughly the size of a city.
         Because of that extreme density, neutron stars have powerful gravity, often spin incredibly fast, and can host some of the strongest magnetic fields in the universe.
       </p>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img class="img-narrow" src="../Obrázky/sections/neu1.jpg" alt="Neutron star illustration" />
-          <div class="figure-caption">Image from ESA</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">What is a neutron star?</h2>
-          <p>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Neutron star illustration" class="img-narrow" src="../Obrázky/sections/neu1.jpg"/>
+<div class="figure-caption" data-i18n="uneutron.cap1">Image from ESA</div>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="uneutron.h21">What is a neutron star?</h2>
+<p data-i18n-html="uneutron.p1">
             In simple terms: it’s a <strong>collapsed stellar core</strong> where matter is squeezed so much that electrons and protons are forced to combine into neutrons.
             The star doesn’t collapse further because quantum physics provides pressure (degeneracy pressure and nuclear interactions) that can resist gravity—up to a limit.
           </p>
-
-          <h3 class="question-title">Pulsars and magnetars</h3>
-          <p>
+<h3 class="question-title" data-i18n="uneutron.h31">Pulsars and magnetars</h3>
+<p data-i18n-html="uneutron.p2">
             Many neutron stars are observed as <strong>pulsars</strong>: rotating neutron stars that emit beams of radiation.
             If those beams sweep across Earth, we detect regular pulses, like a cosmic lighthouse.
           </p>
-          <p>
+<p data-i18n-html="uneutron.p3">
             A smaller group are <strong>magnetars</strong>, with extremely strong magnetic fields that can power intense X-ray and gamma-ray outbursts.
           </p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">How do neutron stars form?</h2>
-          <p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="uneutron.h22">How do neutron stars form?</h2>
+<p data-i18n-html="uneutron.p4">
             When a massive star runs out of fuel, its core can no longer support itself.
             Gravity wins and the core collapses in a fraction of a second.
             The outer layers rebound and explode as a <strong>supernova</strong>, while the core becomes a neutron star.
           </p>
-          <p>
+<p data-i18n-html="uneutron.p5">
             Whether the remnant becomes a neutron star or a black hole depends mainly on the mass of the collapsing core.
             If the core is too massive, collapse continues and an <strong>event horizon</strong> forms.
           </p>
-        </div>
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/neunebula.jpg" alt="Compact remnants" />
-          <div class="figure-caption">Image of the Crab Nebula taken by the Hubble Space Telescope. The wind echo of the Crab Pulsar can be seen on the center-right of the image</div>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Where do we find them, and what do they do?</h2>
-          <p>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="Compact remnants" src="../Obrázky/sections/neunebula.jpg"/>
+<div class="figure-caption" data-i18n="uneutron.cap2">Image of the Crab Nebula taken by the Hubble Space Telescope. The wind echo of the Crab Pulsar can be seen on the center-right of the image</div>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="uneutron.h23">Where do we find them, and what do they do?</h2>
+<p data-i18n="uneutron.p6">
             Neutron stars appear in different environments and affect their surroundings mainly through gravity, radiation, and magnetic fields:
           </p>
-          <ul class="origin-list">
-            <li><strong>Supernova remnants:</strong> the neutron star can sit inside expanding debris.</li>
-            <li><strong>Binary systems:</strong> it can pull gas from a companion star and shine brightly in X-rays.</li>
-            <li><strong>Precision clocks:</strong> pulsars can be so stable that they act like cosmic clocks, useful for testing gravity.</li>
-          </ul>
-          <p>
+<ul class="origin-list">
+<li data-i18n-html="uneutron.li1"><strong>Supernova remnants:</strong> the neutron star can sit inside expanding debris.</li>
+<li data-i18n-html="uneutron.li2"><strong>Binary systems:</strong> it can pull gas from a companion star and shine brightly in X-rays.</li>
+<li data-i18n-html="uneutron.li3"><strong>Precision clocks:</strong> pulsars can be so stable that they act like cosmic clocks, useful for testing gravity.</li>
+</ul>
+<p data-i18n-html="uneutron.p7">
             For the universe, neutron stars help us probe matter at nuclear densities and extreme magnetic fields.
             For us, they’re a key piece in understanding where some <strong>heavy elements</strong> come from and how strong gravity behaves.
           </p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/neucollision.jpg" alt="Neutron star binary" />
-          <div class="figure-caption">Binary neutron stars lose energy via gravitational waves and spiral inward</div>
-        </div>
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Two neutron stars together: what happens?</h2>
-          <p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-img origin-img--side">
+<img alt="Neutron star binary" src="../Obrázky/sections/neucollision.jpg"/>
+<div class="figure-caption" data-i18n="uneutron.cap3">Binary neutron stars lose energy via gravitational waves and spiral inward</div>
+</div>
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="uneutron.h24">Two neutron stars together: what happens?</h2>
+<p data-i18n-html="uneutron.p8">
             In a tight binary, two neutron stars orbit each other and slowly lose energy by emitting <strong>gravitational waves</strong>.
             Over time they spiral closer, then finally <strong>merge</strong>.
           </p>
-          <ul class="origin-list">
-            <li><strong>Gravitational waves:</strong> the cleanest signature of the final inspiral and merger.</li>
-            <li><strong>Kilonova:</strong> glowing ejecta that can form very heavy elements (like gold and platinum) via the r-process.</li>
-            <li><strong>Short gamma-ray burst:</strong> sometimes a narrow relativistic jet forms.</li>
-            <li><strong>Outcome:</strong> a heavier neutron star or a black hole, depending on total mass and rotation.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">The nearest neutron star</h2>
-          <p>
+<ul class="origin-list">
+<li data-i18n-html="uneutron.li4"><strong>Gravitational waves:</strong> the cleanest signature of the final inspiral and merger.</li>
+<li data-i18n-html="uneutron.li5"><strong>Kilonova:</strong> glowing ejecta that can form very heavy elements (like gold and platinum) via the r-process.</li>
+<li data-i18n-html="uneutron.li6"><strong>Short gamma-ray burst:</strong> sometimes a narrow relativistic jet forms.</li>
+<li data-i18n-html="uneutron.li7"><strong>Outcome:</strong> a heavier neutron star or a black hole, depending on total mass and rotation.</li>
+</ul>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="uneutron.h25">The nearest neutron star</h2>
+<p data-i18n-html="uneutron.p9">
             “Nearest” can shift as measurements improve, and some objects start as candidates.
             A frequently cited nearby, well-studied isolated neutron star is <strong>RX J1856.5−3754</strong>, at roughly <strong>a few hundred light-years</strong>.
           </p>
-          <p>
+<p data-i18n="uneutron.p10">
             Even a “nearby” neutron star is still far enough to be harmless.
             Only extremely close, rare events would pose a risk—and we don’t see such threats in our local neighborhood.
           </p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in conclusion">
-          <p class="conclusion-text">
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in conclusion">
+<p class="conclusion-text" data-i18n="uneutron.conclusion">
             Neutron stars connect stellar evolution, extreme gravity, nuclear physics, and the cosmic origin of elements.
             They’re small in size—but huge in what they teach us about the universe.
           </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     // Force GIF to start from the beginning when the page loads or when revisited
     (function(){
       const img = document.querySelector('.origin-gif');
@@ -172,7 +157,7 @@
       });
     })();
   </script>
-  <script>
+<script>
     // IntersectionObserver + chained reveal
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));

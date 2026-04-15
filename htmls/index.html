@@ -1,62 +1,51 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.index" lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <title>Moje osobní stránka – 3D vesmír</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../styles/style.css" />
+<meta charset="utf-8"/>
+<title>Moje osobní stránka – 3D vesmír</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../styles/style.css" rel="stylesheet"/>
 </head>
 <body>
-  <!-- 3D canvas pro Three.js (pozadí) -->
-  <canvas id="bg"></canvas>
-
-  <!-- NAVBAR + OBSAH (2D overlay nad 3D pozadím) -->
-  <header class="navbar">
-    <div class="nav-left">
-      <!-- LOGO (OBRÁZEK) – CESTU A VELIKOST UPRAVÍŠ V CSS (.logo-img) -->
-      <a href="#home" class="logo">
-        <img src="../Obrázky/signature.png" alt="Moje logo" class="logo-img" />
-      </a>
-    </div>
-
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-        <a href="the-universe.html" class="nav-link">The Universe</a>
-      </nav>
-
-      <!-- IG IKONA V RÁMEČKU – OBRÁZEK + HOVER -->
-      <a
-        href="https://www.instagram.com/sykycek_"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="instagram-icon"
-        aria-label="Instagram"
-      >
-        <img src="../Obrázky/iglogo.png" alt="Instagram" />
-      </a>
-    </div>
-  </header>
-
-  <main>
-    <!-- JEDEN FULLSCREEN HERO -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">WELCOME TO MY WEB</h1>
-        <!-- místo subtitle dáváme velké CTA tlačítko vedoucí na THE UNIVERSE -->
-        <div class="hero-cta">
-          <a class="hero-button" href="the-universe.html">Enter THE UNIVERSE</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Zatím prázdné sekce – bez výšky -->
-    <section id="about"></section>
-    <section id="contact"></section>
-  </main>
-
-  <!-- Three.js modul -->
-  <script type="module" src="../scripts/script.js"></script>
+<!-- 3D canvas pro Three.js (pozadí) -->
+<canvas id="bg"></canvas>
+<!-- NAVBAR + OBSAH (2D overlay nad 3D pozadím) -->
+<header class="navbar">
+<div class="nav-left">
+<!-- LOGO (OBRÁZEK) – CESTU A VELIKOST UPRAVÍŠ V CSS (.logo-img) -->
+<a class="logo" href="#home">
+<img alt="Moje logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+<a class="nav-link" href="the-universe.html">The Universe</a>
+</nav>
+<!-- IG IKONA V RÁMEČKU – OBRÁZEK + HOVER -->
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<main>
+<!-- JEDEN FULLSCREEN HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1 class="hero-title" data-i18n="index.h1">WELCOME TO MY WEB</h1>
+<!-- místo subtitle dáváme velké CTA tlačítko vedoucí na THE UNIVERSE -->
+<div class="hero-cta">
+<a class="hero-button" data-i18n="index.btn" href="the-universe.html">Enter THE UNIVERSE</a>
+</div>
+</div>
+</section>
+<!-- Zatím prázdné sekce – bez výšky -->
+<section id="about"></section>
+<section id="contact"></section>
+</main>
+<!-- Three.js modul -->
+<script src="../scripts/i18n.js"></script><script src="../scripts/script.js" type="module"></script>
 </body>
 </html>

@@ -1,218 +1,182 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.origin" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Big Bang</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>The Big Bang</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <!-- same canvas background as the-universe page -->
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">THE BIG BANG</h1>
-
-      <div class="origin-media fly-in">
-        <!-- Use a looping GIF that autoplays from load; cache-busted on load to ensure it starts at frame 0 -->
-        <img class="origin-gif" src="../gif/bigbangtitle.gif" alt="Big Bang animation" />
-      </div>
-
-      <p class="origin-intro fly-in">„The origin, evolution, and nature of the universe have fascinated and confounded humankind for centuries. New ideas and major discoveries made during the 20th century transformed cosmology, the term for the way we conceptualize and study the universe, although much remains unknown.“
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<!-- same canvas background as the-universe page -->
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="origin.h1">THE BIG BANG</h1>
+<div class="origin-media fly-in">
+<!-- Use a looping GIF that autoplays from load; cache-busted on load to ensure it starts at frame 0 -->
+<img alt="Big Bang animation" class="origin-gif" src="../gif/bigbangtitle.gif"/>
+</div>
+<p class="origin-intro fly-in" data-i18n-html="origin.intro">„The origin, evolution, and nature of the universe have fascinated and confounded humankind for centuries. New ideas and major discoveries made during the 20th century transformed cosmology, the term for the way we conceptualize and study the universe, although much remains unknown.“
         <span class="origin-attrib fly-in">NASA</span>
-      </p>
-    </section>
-
-    <!-- Placeholder content sections with varied layouts; each element has .fly-in to animate on scroll -->
-    <section class="origin-content">       
-        <!-- Full-width image + text section -->
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/unhistory.png" alt="history image" />
-        </div>
-        <div class="origin-text fly-in">
-          <p>About 13.8 billion years ago, the universe underwent an extremely rapid expansion known as cosmic inflation, during which space itself expanded faster than the speed of light. Scientists are still unsure what existed before inflation or what powered it, but the energy driving this process may have been part of the very fabric of space-time. Inflation helps explain essential features of today’s universe—its large-scale flatness, uniformity, and the way tiny quantum fluctuations were stretched into the initial density variations that later grew into galaxies and cosmic structures.</p>
-
-          <p>When inflation ended, its driving energy transformed into matter and radiation—marking the beginning of the Big Bang. About one second after this event, the universe was incredibly hot, around 10 billion °C (18 billion °F), forming a dense “primordial soup” of particles and light. In the minutes that followed, during a period called nucleosynthesis, protons and neutrons collided to form the first elements: hydrogen, helium, and trace amounts of lithium and beryllium. After roughly five minutes, most of today’s helium had formed, and the universe had cooled enough for further element formation to stop. However, it remained far too hot for atomic nuclei to capture electrons, leaving the cosmos filled with a dense fog of free electrons that scattered light and made the universe opaque.</p>
-
-          <p>The Big Bang theory describes how the universe expanded from an initial state of extremely high density and temperature. Cosmological models based on this theory successfully explain phenomena such as the abundance of light elements, the cosmic microwave background (CMB) radiation, and the universe’s large-scale structure. The horizon and flatness problems are addressed by cosmic inflation. Precise measurements of the universe’s expansion rate place its age at 13.787 ± 0.02 billion years. Yet no widely accepted physical theory currently describes the earliest instants of the Big Bang.</p>
-
-          <p>As the universe expanded, it cooled, allowing subatomic particles—and eventually atoms—to form. These primordial elements, mostly hydrogen with some helium and trace lithium, later clumped together under gravity with the help of dark matter, forming the first stars and galaxies. Observations of distant supernovae show that the expansion of the universe is accelerating, a discovery attributed to dark energy.</p>
-
-          <p>The concept of an expanding universe was introduced in 1922 by Alexander Friedmann, who derived the equations describing cosmic expansion. Independently, Edwin Hubble observed in 1929 that galaxies are moving away from us at speeds proportional to their distance. In 1931, Georges Lemaître proposed that the universe originated from a “primeval atom,” introducing the modern idea of the Big Bang. The discovery of the CMB in 1964, and subsequent measurements confirming its uniformity, strongly supported the Big Bang model. By the late 1960s, the competing steady-state model had been largely abandoned.</p>
-
-          <p>Despite its success, the Big Bang model still faces open questions, including the matter–antimatter asymmetry, the true nature of dark matter, and the origin of dark energy.</p>
-        </div>
-        </div>
-
-        <!-- New full-width CMB image and descriptive paragraph -->
-        <div class="origin-section image-full fly-in">
-          <div class="origin-img">
-            <img src="../Obrázky/NASASWMAP.png" alt="CMB all-sky image" />
-          </div>
-          <div class="origin-text fly-in">
-            <p>Scientists used nine years of data from NASA’s Wilkinson Microwave Anisotropy Probe to create this detailed, all-sky image of the cosmic microwave background. The image reveals 13.8-billion-year-old temperature fluctuations (shown as different colors) – seeds that grew into the galaxies we see today.</p>
-          </div>
-        </div>
-
-        <!-- Question block + optional grid of FAQ-style items -->
-        <div class="origin-section image-full fly-in">
-          <div class="origin-text">
-            <h2 class="universe-title origin-question fly-in centered-question">Do you rack your brains over these things?</h2>
-          </div>
-        </div>
-
-        <div class="origin-section grid-2 fly-in">
-          <div class="origin-text">
-            <h3 class="question-title">💥Did the Big Bang happen even though time didn’t exist yet?</h3>
-
-            <p class="origin-subtitle"><strong>Yes — time came into existence together with space.</strong></p>
-
-            <ul class="origin-list">
-              <li>The Big Bang is not an explosion in time.</li>
-              <li>It is the zero moment — the birth of time itself.</li>
-              <li>There is no “before,” because time had not yet begun to flow.</li>
-              <li>In other words: “Time began with the first tick of the universe’s clock.” Before that, there was nothing that could measure time — because time itself didn’t exist.</li>
-            </ul>
-          </div>
-
-          <div class="origin-text">
-            <h3 class="question-title">🌀 “Did space suddenly expand after a tiny fraction of a second?”</h3>
-
-            <p class="origin-subtitle"><strong>Yes — this is the inflationary phase.</strong></p>
-
-            <ul class="origin-list">
-              <li>Around 10<sup>-35</sup> seconds after space appeared, cosmic inflation began.</li>
-              <li>In an incredibly brief moment, space expanded far more than during the entire rest of cosmic history.</li>
-              <li>It wasn’t an explosion like dynamite — it was the expansion of space itself, everywhere at once.</li>
-              <li>Think of it as the universe being “super-inflated,” not particles exploding into empty space.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Second FAQ grid: items 3 & 4 (inflation aftermath + particles expanding with space) -->
-        <div class="origin-section grid-2 fly-in">
-          <div class="origin-text">
-            <h3 class="question-title">⚛️ “And particles formed only afterward?”</h3>
-
-            <p class="origin-subtitle"><strong>Correct — matter appeared after inflation.</strong></p>
-
-            <ul class="origin-list">
-              <li>When inflation ended (around 10<sup>-32</sup> seconds), space began to heat up — this period is called reheating.</li>
-              <li>The energy of space transformed into particles: quarks, gluons, electrons…</li>
-              <li>These formed the first elemental soup — the quark–gluon plasma.</li>
-            </ul>
-          </div>
-
-          <div class="origin-text">
-            <h3 class="question-title">🌌 “Once particles formed, did they expand along with space?”</h3>
-
-            <p class="origin-subtitle"><strong>Exactly.</strong></p>
-
-            <ul class="origin-list">
-              <li>The particles didn’t shoot outward — they existed inside the expanding space and stretched with it.</li>
-              <li>Matter formed within a universe that was already rapidly growing.</li>
-              <li>Over time, atoms, stars, and galaxies formed — everything “floats” in a space that keeps growing.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Centered conclusion block (no list) -->
-        <div class="origin-section text-only fly-in">
-          <div class="origin-text conclusion">
-            <h3 class="question-title">🧠 Conclusion</h3>
-            <p class="conclusion-text">“In one moment, space and time came into existence. Immediately after (within a fraction of a second), the universe underwent inflation, a phase where space itself expanded extremely rapidly. Afterward, energy transformed into matter — and that matter has been expanding together with space ever since.”</p>
-          </div>
-        </div>
-
-        <!-- New subsection: What was before the Big Bang? -->
-        <div class="origin-section image-full fly-in">
-          <div class="origin-text">
-            <h2 class="what-before-title universe-title centered-question">What was before the Big Bang?</h2>
-
-            <p class="short-answer"><strong>Short answer:</strong><br>❗ According to modern physics, nothing at all — neither time nor space. The Big Bang was the beginning of time itself.</p>
-
-            <p class="longer-answer"><strong>Longer answer:</strong><br>There are hypotheses about what might have existed “before,” but we currently have no experiments to confirm or reject them.</p>
-          </div>
-        </div>
-
-        <!-- Four-item grid (two columns, two items each) about 'before' hypotheses -->
-        <div class="origin-section grid-2 fly-in">
-          <div class="origin-text">
-            <h3 class="question-title">🧪 Standard cosmology — time begins at the Big Bang</h3>
-            <ul class="origin-list">
-              <li>According to Einstein, time is part of space — a unified spacetime.</li>
-              <li>If space appeared at the Big Bang, time appeared with it.</li>
-              <li>Therefore, asking “before” is not physically meaningful.</li>
-              <li>It’s like asking what is north of the North Pole.</li>
-            </ul>
-
-            <h3 class="question-title">🌀 Cyclic universe / Big Bounce theory</h3>
-            <ul class="origin-list">
-              <li>The universe may repeatedly expand and collapse.</li>
-              <li>Before our Big Bang, a previous universe may have collapsed.</li>
-              <li>After this “big crunch,” a new Big Bang occurred.</li>
-              <li>Some versions say this cycle can continue forever.</li>
-              <li class="origin-subtitle">🔁 Bang → expansion → collapse → bang → ...</li>
-            </ul>
-          </div>
-
-          <div class="origin-text">
-            <h3 class="question-title">🌌 Multiverse / Quantum fluctuation / Vacuum models</h3>
-            <ul class="origin-list">
-              <li>In some models, our universe emerged from a quantum fluctuation in a “vacuum state.”</li>
-              <li>There could be infinitely many universes, each with different physical laws.</li>
-              <li>Our universe is just one bubble among countless others.</li>
-            </ul>
-
-            <h3 class="question-title">🧊 Eternal inflation</h3>
-            <ul class="origin-list">
-              <li>Inflation (rapid expansion of space) may run endlessly.</li>
-              <li>In different regions, it stops at different times, creating new universes.</li>
-              <li>New universes are constantly being born — like bubbles in an infinite foam.</li>
-              <li>Our universe is just one bubble.</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Centered cyclic image and caption -->
-        <div class="origin-section image-full fly-in">
-          <div class="origin-img center-figure">
-            <img src="../Obrázky/cyclicu.png" alt="Cyclic universe diagram" />
-          </div>
-          <div class="origin-text">
-            <p class="figure-caption">Cyclic universe concept</p>
-          </div>
-        </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+</p>
+</section>
+<!-- Placeholder content sections with varied layouts; each element has .fly-in to animate on scroll -->
+<section class="origin-content">
+<!-- Full-width image + text section -->
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="history image" src="../Obrázky/unhistory.png"/>
+</div>
+<div class="origin-text fly-in">
+<p data-i18n="origin.p1">About 13.8 billion years ago, the universe underwent an extremely rapid expansion known as cosmic inflation, during which space itself expanded faster than the speed of light. Scientists are still unsure what existed before inflation or what powered it, but the energy driving this process may have been part of the very fabric of space-time. Inflation helps explain essential features of today’s universe—its large-scale flatness, uniformity, and the way tiny quantum fluctuations were stretched into the initial density variations that later grew into galaxies and cosmic structures.</p>
+<p data-i18n="origin.p2">When inflation ended, its driving energy transformed into matter and radiation—marking the beginning of the Big Bang. About one second after this event, the universe was incredibly hot, around 10 billion °C (18 billion °F), forming a dense “primordial soup” of particles and light. In the minutes that followed, during a period called nucleosynthesis, protons and neutrons collided to form the first elements: hydrogen, helium, and trace amounts of lithium and beryllium. After roughly five minutes, most of today’s helium had formed, and the universe had cooled enough for further element formation to stop. However, it remained far too hot for atomic nuclei to capture electrons, leaving the cosmos filled with a dense fog of free electrons that scattered light and made the universe opaque.</p>
+<p data-i18n="origin.p3">The Big Bang theory describes how the universe expanded from an initial state of extremely high density and temperature. Cosmological models based on this theory successfully explain phenomena such as the abundance of light elements, the cosmic microwave background (CMB) radiation, and the universe’s large-scale structure. The horizon and flatness problems are addressed by cosmic inflation. Precise measurements of the universe’s expansion rate place its age at 13.787 ± 0.02 billion years. Yet no widely accepted physical theory currently describes the earliest instants of the Big Bang.</p>
+<p data-i18n="origin.p4">As the universe expanded, it cooled, allowing subatomic particles—and eventually atoms—to form. These primordial elements, mostly hydrogen with some helium and trace lithium, later clumped together under gravity with the help of dark matter, forming the first stars and galaxies. Observations of distant supernovae show that the expansion of the universe is accelerating, a discovery attributed to dark energy.</p>
+<p data-i18n="origin.p5">The concept of an expanding universe was introduced in 1922 by Alexander Friedmann, who derived the equations describing cosmic expansion. Independently, Edwin Hubble observed in 1929 that galaxies are moving away from us at speeds proportional to their distance. In 1931, Georges Lemaître proposed that the universe originated from a “primeval atom,” introducing the modern idea of the Big Bang. The discovery of the CMB in 1964, and subsequent measurements confirming its uniformity, strongly supported the Big Bang model. By the late 1960s, the competing steady-state model had been largely abandoned.</p>
+<p data-i18n="origin.p6">Despite its success, the Big Bang model still faces open questions, including the matter–antimatter asymmetry, the true nature of dark matter, and the origin of dark energy.</p>
+</div>
+</div>
+<!-- New full-width CMB image and descriptive paragraph -->
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="CMB all-sky image" src="../Obrázky/NASASWMAP.png"/>
+</div>
+<div class="origin-text fly-in">
+<p data-i18n="origin.p7">Scientists used nine years of data from NASA’s Wilkinson Microwave Anisotropy Probe to create this detailed, all-sky image of the cosmic microwave background. The image reveals 13.8-billion-year-old temperature fluctuations (shown as different colors) – seeds that grew into the galaxies we see today.</p>
+</div>
+</div>
+<!-- Question block + optional grid of FAQ-style items -->
+<div class="origin-section image-full fly-in">
+<div class="origin-text">
+<h2 class="universe-title origin-question fly-in centered-question" data-i18n="origin.h21">Do you rack your brains over these things?</h2>
+</div>
+</div>
+<div class="origin-section grid-2 fly-in">
+<div class="origin-text">
+<h3 class="question-title" data-i18n="origin.h31">💥Did the Big Bang happen even though time didn’t exist yet?</h3>
+<p class="origin-subtitle" data-i18n-html="origin.p8"><strong>Yes — time came into existence together with space.</strong></p>
+<ul class="origin-list">
+<li data-i18n="origin.li1">The Big Bang is not an explosion in time.</li>
+<li data-i18n="origin.li2">It is the zero moment — the birth of time itself.</li>
+<li data-i18n="origin.li3">There is no “before,” because time had not yet begun to flow.</li>
+<li data-i18n="origin.li4">In other words: “Time began with the first tick of the universe’s clock.” Before that, there was nothing that could measure time — because time itself didn’t exist.</li>
+</ul>
+</div>
+<div class="origin-text">
+<h3 class="question-title" data-i18n="origin.h32">🌀 “Did space suddenly expand after a tiny fraction of a second?”</h3>
+<p class="origin-subtitle" data-i18n-html="origin.p9"><strong>Yes — this is the inflationary phase.</strong></p>
+<ul class="origin-list">
+<li data-i18n-html="origin.li5">Around 10<sup>-35</sup> seconds after space appeared, cosmic inflation began.</li>
+<li data-i18n="origin.li6">In an incredibly brief moment, space expanded far more than during the entire rest of cosmic history.</li>
+<li data-i18n="origin.li7">It wasn’t an explosion like dynamite — it was the expansion of space itself, everywhere at once.</li>
+<li data-i18n="origin.li8">Think of it as the universe being “super-inflated,” not particles exploding into empty space.</li>
+</ul>
+</div>
+</div>
+<!-- Second FAQ grid: items 3 & 4 (inflation aftermath + particles expanding with space) -->
+<div class="origin-section grid-2 fly-in">
+<div class="origin-text">
+<h3 class="question-title" data-i18n="origin.h33">⚛️ “And particles formed only afterward?”</h3>
+<p class="origin-subtitle" data-i18n-html="origin.p10"><strong>Correct — matter appeared after inflation.</strong></p>
+<ul class="origin-list">
+<li data-i18n-html="origin.li9">When inflation ended (around 10<sup>-32</sup> seconds), space began to heat up — this period is called reheating.</li>
+<li data-i18n="origin.li10">The energy of space transformed into particles: quarks, gluons, electrons…</li>
+<li data-i18n="origin.li11">These formed the first elemental soup — the quark–gluon plasma.</li>
+</ul>
+</div>
+<div class="origin-text">
+<h3 class="question-title" data-i18n="origin.h34">🌌 “Once particles formed, did they expand along with space?”</h3>
+<p class="origin-subtitle" data-i18n-html="origin.p11"><strong>Exactly.</strong></p>
+<ul class="origin-list">
+<li data-i18n="origin.li12">The particles didn’t shoot outward — they existed inside the expanding space and stretched with it.</li>
+<li data-i18n="origin.li13">Matter formed within a universe that was already rapidly growing.</li>
+<li data-i18n="origin.li14">Over time, atoms, stars, and galaxies formed — everything “floats” in a space that keeps growing.</li>
+</ul>
+</div>
+</div>
+<!-- Centered conclusion block (no list) -->
+<div class="origin-section text-only fly-in">
+<div class="origin-text conclusion">
+<h3 class="question-title" data-i18n="origin.h35">🧠 Conclusion</h3>
+<p class="conclusion-text" data-i18n="origin.conclusion">“In one moment, space and time came into existence. Immediately after (within a fraction of a second), the universe underwent inflation, a phase where space itself expanded extremely rapidly. Afterward, energy transformed into matter — and that matter has been expanding together with space ever since.”</p>
+</div>
+</div>
+<!-- New subsection: What was before the Big Bang? -->
+<div class="origin-section image-full fly-in">
+<div class="origin-text">
+<h2 class="what-before-title universe-title centered-question" data-i18n="origin.h22">What was before the Big Bang?</h2>
+<p class="short-answer" data-i18n-html="origin.shortanswer"><strong>Short answer:</strong><br/>❗ According to modern physics, nothing at all — neither time nor space. The Big Bang was the beginning of time itself.</p>
+<p class="longer-answer" data-i18n-html="origin.longeranswer"><strong>Longer answer:</strong><br/>There are hypotheses about what might have existed “before,” but we currently have no experiments to confirm or reject them.</p>
+</div>
+</div>
+<!-- Four-item grid (two columns, two items each) about 'before' hypotheses -->
+<div class="origin-section grid-2 fly-in">
+<div class="origin-text">
+<h3 class="question-title" data-i18n="origin.h36">🧪 Standard cosmology — time begins at the Big Bang</h3>
+<ul class="origin-list">
+<li data-i18n="origin.li15">According to Einstein, time is part of space — a unified spacetime.</li>
+<li data-i18n="origin.li16">If space appeared at the Big Bang, time appeared with it.</li>
+<li data-i18n="origin.li17">Therefore, asking “before” is not physically meaningful.</li>
+<li data-i18n="origin.li18">It’s like asking what is north of the North Pole.</li>
+</ul>
+<h3 class="question-title" data-i18n="origin.h37">🌀 Cyclic universe / Big Bounce theory</h3>
+<ul class="origin-list">
+<li data-i18n="origin.li19">The universe may repeatedly expand and collapse.</li>
+<li data-i18n="origin.li20">Before our Big Bang, a previous universe may have collapsed.</li>
+<li data-i18n="origin.li21">After this “big crunch,” a new Big Bang occurred.</li>
+<li data-i18n="origin.li22">Some versions say this cycle can continue forever.</li>
+<li class="origin-subtitle" data-i18n="origin.li23">🔁 Bang → expansion → collapse → bang → ...</li>
+</ul>
+</div>
+<div class="origin-text">
+<h3 class="question-title" data-i18n="origin.h38">🌌 Multiverse / Quantum fluctuation / Vacuum models</h3>
+<ul class="origin-list">
+<li data-i18n="origin.li24">In some models, our universe emerged from a quantum fluctuation in a “vacuum state.”</li>
+<li data-i18n="origin.li25">There could be infinitely many universes, each with different physical laws.</li>
+<li data-i18n="origin.li26">Our universe is just one bubble among countless others.</li>
+</ul>
+<h3 class="question-title" data-i18n="origin.h39">🧊 Eternal inflation</h3>
+<ul class="origin-list">
+<li data-i18n="origin.li27">Inflation (rapid expansion of space) may run endlessly.</li>
+<li data-i18n="origin.li28">In different regions, it stops at different times, creating new universes.</li>
+<li data-i18n="origin.li29">New universes are constantly being born — like bubbles in an infinite foam.</li>
+<li data-i18n="origin.li30">Our universe is just one bubble.</li>
+</ul>
+</div>
+</div>
+<!-- Centered cyclic image and caption -->
+<div class="origin-section image-full fly-in">
+<div class="origin-img center-figure">
+<img alt="Cyclic universe diagram" src="../Obrázky/cyclicu.png"/>
+</div>
+<div class="origin-text">
+<p class="figure-caption" data-i18n="origin.cap1">Cyclic universe concept</p>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     // Force GIF to start from the beginning when the page loads or when revisited
     (function(){
       const img = document.querySelector('.origin-gif');
@@ -230,7 +194,7 @@
       });
     })();
   </script>
-  <script>
+<script>
     // Enhanced IntersectionObserver: group paragraph animations, reveal items already in view,
     // and stagger the hero (title -> media -> intro) similar to universe cards.
     (function(){

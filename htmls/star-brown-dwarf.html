@@ -1,62 +1,58 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.star-bd" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Brown dwarfs</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Brown dwarfs</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="universe-stars.html" class="nav-link">STARS</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_" target="_blank" rel="noopener noreferrer" class="instagram-icon" aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">BROWN DWARFS</h1>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img src="../Obrázky/sections/browndwarf2.png" alt="Brown dwarf" />
-        </div>
-        <div class="origin-text fly-in">
-          <p><strong>Brown dwarfs</strong> are objects between planets and stars. They form like stars (from collapsing gas) but they don’t have enough mass to sustain long-term hydrogen fusion in their cores.</p>
-          <p>Some brown dwarfs can briefly fuse deuterium or lithium depending on their mass, but they gradually cool and fade over time.</p>
-        </div>
-      </div>
-
-      <div class="origin-section image-full fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Why they’re hard to see</h2>
-          <p>Because brown dwarfs are cool and dim, they’re often found using infrared surveys rather than visible light.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.stars" href="universe-stars.html">STARS</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="star-bd.h1">BROWN DWARFS</h1>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Brown dwarf" src="../Obrázky/sections/browndwarf2.png"/>
+</div>
+<div class="origin-text fly-in">
+<p data-i18n-html="star-bd.p1"><strong>Brown dwarfs</strong> are objects between planets and stars. They form like stars (from collapsing gas) but they don’t have enough mass to sustain long-term hydrogen fusion in their cores.</p>
+<p data-i18n="star-bd.p2">Some brown dwarfs can briefly fuse deuterium or lithium depending on their mass, but they gradually cool and fade over time.</p>
+</div>
+</div>
+<div class="origin-section image-full fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="star-bd.h21">Why they’re hard to see</h2>
+<p data-i18n="star-bd.p3">Because brown dwarfs are cool and dim, they’re often found using infrared surveys rather than visible light.</p>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));
       if (!items.length) return;

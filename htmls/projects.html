@@ -1,141 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html data-i18n-title="title.projects" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Projects – Portfolio</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
-  <link rel="stylesheet" href="../styles/projects.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Projects – Portfolio</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
+<link href="../styles/projects.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- Animated starfield background -->
-  <canvas id="universe-bg"></canvas>
-
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img" />
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-        <a href="the-universe.html" class="nav-link">The Universe</a>
-      </nav>
-      <a
-        href="https://www.instagram.com/sykycek_"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="instagram-icon"
-        aria-label="Instagram"
-      >
-        <img src="../Obrázky/iglogo.png" alt="Instagram" />
-      </a>
-    </div>
-  </header>
-
-  <main class="projects-main">
-
-    <!-- Hero heading -->
-    <div class="projects-hero">
-      <h1 class="projects-title reveal-up">My Projects</h1>
-      <p class="projects-intro reveal-up reveal-delay-1">
+<!-- Animated starfield background -->
+<canvas id="universe-bg"></canvas>
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+<a class="nav-link" href="the-universe.html">The Universe</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<main class="projects-main">
+<!-- Hero heading -->
+<div class="projects-hero">
+<h1 class="projects-title reveal-up" data-i18n="projects.h1">My Projects</h1>
+<p class="projects-intro reveal-up reveal-delay-1" data-i18n="projects.intro">
         A collection of things I've built — from robotics to web experiences.
         More projects are on the way, so check back soon. 🚀
       </p>
-    </div>
-
-    <!-- Project cards -->
-    <div class="projects-grid">
-
-      <!-- ===== PROJECT 1 – Robotic Arm ===== -->
-      <article class="project-card reveal-left" id="robotic-arm">
-        <div class="project-card-banner">🦾</div>
-        <div class="project-card-body">
-          <div class="project-card-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Dart</span>
-            <span class="project-tag">Arduino</span>
-            <span class="project-tag">Bluetooth</span>
-            <span class="project-tag">3D Printing</span>
-          </div>
-          <h2 class="project-card-title">Robotic Arm</h2>
-          <p class="project-card-desc">
+</div>
+<!-- Project cards -->
+<div class="projects-grid">
+<!-- ===== PROJECT 1 – Robotic Arm ===== -->
+<article class="project-card reveal-left" id="robotic-arm">
+<div class="project-card-banner">🦾</div>
+<div class="project-card-body">
+<div class="project-card-tags">
+<span class="project-tag">Flutter</span>
+<span class="project-tag">Dart</span>
+<span class="project-tag">Arduino</span>
+<span class="project-tag">Bluetooth</span>
+<span class="project-tag">3D Printing</span>
+</div>
+<h2 class="project-card-title" data-i18n="projects.card1.title">Robotic Arm</h2>
+<p class="project-card-desc" data-i18n="projects.card1.desc">
             A fully 3D-printed robotic arm with 5 degrees of freedom, controlled
             wirelessly via a custom Flutter mobile application.  The app streams
             real-time servo commands over Bluetooth, enabling smooth and
             precise movement.  Designed from scratch — from the mechanical
             structure to the embedded firmware and the mobile UI.
           </p>
-          <div class="project-card-footer">
-            <a
-              href="https://github.com/sykecek/Projekt"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link primary"
-            >
+<div class="project-card-footer">
+<a class="project-link primary" data-i18n="projects.card1.link1" href="https://github.com/sykecek/Projekt" rel="noopener noreferrer" target="_blank">
               ↗ GitHub
             </a>
-            <a
-              href="#robotic-arm"
-              class="project-link secondary"
-            >
+<a class="project-link secondary" data-i18n="projects.card1.link2" href="#robotic-arm">
               Details (coming soon)
             </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== PROJECT 2 – This Website ===== -->
-      <article class="project-card reveal-right" id="this-website">
-        <div class="project-card-banner">🌌</div>
-        <div class="project-card-body">
-          <div class="project-card-tags">
-            <span class="project-tag">HTML</span>
-            <span class="project-tag">CSS</span>
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">Three.js</span>
-            <span class="project-tag">Canvas 2D</span>
-          </div>
-          <h2 class="project-card-title">This Portfolio Website</h2>
-          <p class="project-card-desc">
+</div>
+</div>
+</article>
+<!-- ===== PROJECT 2 – This Website ===== -->
+<article class="project-card reveal-right" id="this-website">
+<div class="project-card-banner">🌌</div>
+<div class="project-card-body">
+<div class="project-card-tags">
+<span class="project-tag">HTML</span>
+<span class="project-tag">CSS</span>
+<span class="project-tag">JavaScript</span>
+<span class="project-tag">Three.js</span>
+<span class="project-tag">Canvas 2D</span>
+</div>
+<h2 class="project-card-title" data-i18n="projects.card2.title">This Portfolio Website</h2>
+<p class="project-card-desc" data-i18n="projects.card2.desc">
             A space-themed personal portfolio built with vanilla HTML, CSS and
             JavaScript.  Features a Three.js 3D starfield on the home page with
             animated planets, a 2D canvas starfield with shooting stars on
             inner pages, scroll-reveal animations, and an ever-growing knowledge
             base about the universe. It is designed to be visually engaging while some things might be hidden so you need to explore or scroll down to find out.
           </p>
-          <div class="project-card-footer">
-            <a
-              href="https://github.com/sykecek/My-website-project"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link primary"
-            >
+<div class="project-card-footer">
+<a class="project-link primary" data-i18n="projects.card2.link1" href="https://github.com/sykecek/My-website-project" rel="noopener noreferrer" target="_blank">
               ↗ GitHub
             </a>
-            <a
-              href="index.html"
-              class="project-link secondary"
-            >
+<a class="project-link secondary" data-i18n="projects.card2.link2" href="index.html">
               View Live
             </a>
-          </div>
-        </div>
-      </article>
-
-    </div><!-- /projects-grid -->
-
-  </main>
-
-  <!-- Starfield background script -->
-  <script src="../scripts/universe.js"></script>
-  <!-- Scroll-reveal animations -->
-  <script src="../scripts/reveal.js"></script>
+</div>
+</div>
+</article>
+</div><!-- /projects-grid -->
+</main>
+<!-- Starfield background script -->
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<!-- Scroll-reveal animations -->
+<script src="../scripts/reveal.js"></script>
 </body>
 </html>

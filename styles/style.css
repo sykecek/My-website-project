@@ -292,3 +292,18 @@ main {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
+/* ── Language toggle button ──────────────────────────────────────────────── */
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px 10px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.lang-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.7);
+}

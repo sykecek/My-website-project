@@ -1,65 +1,61 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.star-rd" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Red dwarfs</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Red dwarfs</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="universe-stars.html" class="nav-link">STARS</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_" target="_blank" rel="noopener noreferrer" class="instagram-icon" aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-  <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="origin-hero">
-      <h1 class="universe-title fly-in">RED DWARFS</h1>
-    </section>
-
-    <section class="origin-content">
-      <div class="origin-section image-full fly-in">
-        <div class="origin-img">
-          <img class="img-narrow" src="../Obrázky/sections/reddwarf.webp" alt="Red dwarf" />
-        </div>
-        <div class="origin-text fly-in">
-          <p><strong>Red dwarfs</strong> are small, cool, low-mass stars. They are the <strong>most common</strong> type of star in the Milky Way, but they are faint, so they’re hard to see with the naked eye.</p>
-          <p>Because they burn fuel very slowly, red dwarfs can live for an extremely long time—much longer than the current age of the universe.</p>
-        </div>
-      </div>
-
-      <div class="origin-section grid-2 grid-center fly-in">
-        <div class="origin-text fly-in">
-          <h2 class="question-title">Planets around red dwarfs</h2>
-          <p>Many red dwarfs host planets. Their habitable zones are close to the star, but red dwarfs can have strong flares, which may affect planetary atmospheres.</p>
-        </div>
-        <div class="origin-img origin-img--side">
-          <img src="../Obrázky/sections/reddward2.webp" alt="TRAPPIST-1" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.stars" href="universe-stars.html">STARS</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="origin-hero">
+<h1 class="universe-title fly-in" data-i18n="star-rd.h1">RED DWARFS</h1>
+</section>
+<section class="origin-content">
+<div class="origin-section image-full fly-in">
+<div class="origin-img">
+<img alt="Red dwarf" class="img-narrow" src="../Obrázky/sections/reddwarf.webp"/>
+</div>
+<div class="origin-text fly-in">
+<p data-i18n-html="star-rd.p1"><strong>Red dwarfs</strong> are small, cool, low-mass stars. They are the <strong>most common</strong> type of star in the Milky Way, but they are faint, so they’re hard to see with the naked eye.</p>
+<p data-i18n="star-rd.p2">Because they burn fuel very slowly, red dwarfs can live for an extremely long time—much longer than the current age of the universe.</p>
+</div>
+</div>
+<div class="origin-section grid-2 grid-center fly-in">
+<div class="origin-text fly-in">
+<h2 class="question-title" data-i18n="star-rd.h21">Planets around red dwarfs</h2>
+<p data-i18n="star-rd.p3">Many red dwarfs host planets. Their habitable zones are close to the star, but red dwarfs can have strong flares, which may affect planetary atmospheres.</p>
+</div>
+<div class="origin-img origin-img--side">
+<img alt="TRAPPIST-1" src="../Obrázky/sections/reddward2.webp"/>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));
       if (!items.length) return;

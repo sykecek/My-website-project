@@ -1,82 +1,64 @@
 <!DOCTYPE html>
-<html lang="cs">
+
+<html data-i18n-title="title.shape" lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Big Bang</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/universe.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>The Big Bang</title>
+<link href="../styles/style.css" rel="stylesheet"/>
+<link href="../styles/universe.css" rel="stylesheet"/>
 </head>
 <body class="shape-page">
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="../Obrázky/signature.png" alt="Logo" class="logo-img"/>
-      </a>
-    </div>
-    <div class="nav-right">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="the-universe.html" class="nav-link">THE UNIVERSE</a>
-        <a href="projects.html" class="nav-link">My Projects</a>
-      </nav>
-      <a href="https://www.instagram.com/sykycek_"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="instagram-icon"
-         aria-label="Instagram">
-        <img src="../Obrázky/iglogo.png" alt="Instagram"/>
-      </a>
-    </div>
-  </header>
-
-   <canvas id="universe-bg"></canvas>
-
-  <main class="universe-main universe-main-root">
-    <section class="universe-hero">
-      <h1 class="universe-title">THE SHAPE OF THE UNIVERSE</h1>
-    </section>
-    
-    <section class="origin-content">
-      <div class="origin-section text-only fly-in">
-        <div class="origin-text">
-
-          <p>The true shape of the universe is one of the deepest open questions in modern cosmology. Scientists describe the shape of the cosmos in two fundamental ways: geometric curvature (which determines how space bends locally) and topology (which describes how space is connected on the largest scales). These two concepts work together to define whether the universe is infinite or finite, flat or curved, simply connected or folded into exotic repeating structures. Over the last decades, increasingly precise measurements have brought us closer to understanding this cosmic puzzle than ever before.</p>
-
-          <p>A major milestone came with the Planck mission (launched about a decade ago). One of its primary goals was to determine whether the universe is perfectly flat or has a slight curvature. By analyzing tiny temperature variations in the cosmic microwave background (the afterglow of the Big Bang), Planck discovered that the universe appears astonishingly flat, with any possible curvature limited to an error of about 1 part in 500. This means that if the universe is curved at all, its radius of curvature is at least 500 times larger than the radius of the observable universe. Our entire cosmic horizon would then be just a minuscule patch on a vast curved surface far too large for us to detect. This is why (even over enormous distances) straight lines and light beams neither converge nor diverge in empty intergalactic space. If they did, we would immediately know that the universe is positively or negatively curved. Instead, they remain parallel, deviating only in the presence of mass (galaxies, stars, and black holes) which produces localized curvature but does not affect the global shape of the cosmos.</p>
-
-          <div class="center-figure">
-            <img src="../Obrázky/observable.jpg" alt="Planck CMB map" style="max-width:100%;height:auto;display:block;margin:18px auto;" />
-            <div class="figure-caption">Planck mission: temperature anisotropies of the cosmic microwave background</div>
-          </div>
-
-          <p>Understanding curvature is only half the story. The other half lies in topology, the study of how space is globally connected. Even a universe that is perfectly flat can have a rich and surprising topology. One popular possibility is that the universe could be shaped like a 3-dimensional torus (a higher-dimensional analogue of a donut-like space). In such a universe, traveling far enough in one direction could, in principle, bring you back from the opposite side. Light itself could wrap around space, potentially allowing us to see distant galaxies multiple times from different angles or even at different stages of their evolution.</p>
-
-          <div class="center-figure two-up" style="margin:18px 0;">
-            <div style="display:flex;gap:0;justify-content:space-between;align-items:flex-start;flex-wrap:nowrap;width:100%;">
-              <img src="../Obrázky/makedonut.png" alt="Topology illustration A" style="width:50%;height:auto;display:block;" />
-              <img src="../Obrázky/donut.png" alt="Topology illustration B" style="width:25%;height:auto;display:block;" />
-            </div>
-          </div>
-
-          <p>This idea leads to fascinating scenarios. In a small enough toroidal universe, we could theoretically see a galaxy dying in one direction while its much younger version appears from another, because its light would have taken different wrap-around paths to reach us. However, this possibility becomes practically impossible in a universe that expands as rapidly as ours. Space is stretching, and beyond a certain distance (known as the cosmic event horizon) the expansion of the universe outruns the speed of light. This does not violate relativity (objects are not moving through space faster than light; instead, space itself is expanding faster than light can cross). As a result, any photon attempting to circle the universe is effectively carried away faster than it can travel forward. If the universe possesses a toroidal or donut-like topology, it must be so large that no wrap-around signals have had time to reach us (and perhaps never will). This also means that no traveler, no spacecraft, and no signal could ever circumnavigate the universe, because the expansion increases distances faster than anything can move through them.</p>
-
-          <p>Beyond toroidal possibilities, cosmologists explore many other potential topologies. A positively curved universe might have the shape of a 3-sphere (a higher-dimensional analogue of the surface of a globe) where a “straight” path would naturally loop back if expansion did not prevent it. The famous Poincaré dodecahedral space envisions the universe tiled by repeating dodecahedra whose opposite faces connect with a twist (creating a finite cosmos without edges). Hyperbolic topologies arise from negatively curved space and allow intricate multi-connected shapes built from repeating hyperbolic tiles that stretch outward like a cosmic mosaic. More exotic manifolds (such as Klein bottle–like spaces or non-orientable geometries) are mathematically possible, though considered unlikely in physical cosmology. Some speculative theories even propose fractal-like or quasi-periodic topologies, especially in higher-dimensional models (though these remain theoretical curiosities).</p>
-
-          <p>Despite this multitude of possibilities, current observations reveal no repeating patterns in the distribution of galaxies or in the cosmic microwave background that would indicate a small or tightly wrapped universe. Combined with the extremely precise flatness measurement from Planck, the evidence suggests one of two major scenarios: either the universe is truly infinite, extending forever in all directions, or it is finite but extraordinarily large (with a topology so vast that no light has completed a full loop). In either case, the observable universe is only a limited region of a far larger reality.</p>
-
-          <p>What we see today is a cosmos that behaves almost perfectly flat, following the familiar rules of Euclidean geometry across tens of billions of light-years. Straight lines remain parallel, triangles have angles summing to 180 degrees, and light behaves as if traveling through a perfectly flat space (except where mass locally distorts spacetime). Yet the universe may still possess a global shape or connectivity beyond our horizon (subtly curved or intricately folded across unimaginable distances).</p>
-
-          <p>In the end, the shape of the universe remains a profound scientific mystery. Modern measurements tightly constrain what it can be, yet they also reveal how much lies beyond our reach. Whether infinite or finite, curved or flat, simple or multiply connected, the universe continues to challenge our imagination (offering possibilities as vast and mysterious as the cosmos itself).</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <script src="../scripts/universe.js"></script>
-  <script>
+<header class="navbar">
+<div class="nav-left">
+<a class="logo" href="index.html">
+<img alt="Logo" class="logo-img" src="../Obrázky/signature.png"/>
+</a>
+</div>
+<div class="nav-right">
+<nav class="nav-links">
+<a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+<a class="nav-link" data-i18n="nav.about" href="about.html">About</a>
+<a class="nav-link" data-i18n="nav.universe" href="the-universe.html">THE UNIVERSE</a>
+<a class="nav-link" data-i18n="nav.projects" href="projects.html">My Projects</a>
+</nav>
+<button aria-label="Switch language" class="lang-btn" id="lang-btn">🇬🇧</button><a aria-label="Instagram" class="instagram-icon" href="https://www.instagram.com/sykycek_" rel="noopener noreferrer" target="_blank">
+<img alt="Instagram" src="../Obrázky/iglogo.png"/>
+</a>
+</div>
+</header>
+<canvas id="universe-bg"></canvas>
+<main class="universe-main universe-main-root">
+<section class="universe-hero">
+<h1 class="universe-title" data-i18n="shape.h1">THE SHAPE OF THE UNIVERSE</h1>
+</section>
+<section class="origin-content">
+<div class="origin-section text-only fly-in">
+<div class="origin-text">
+<p data-i18n="shape.p1">The true shape of the universe is one of the deepest open questions in modern cosmology. Scientists describe the shape of the cosmos in two fundamental ways: geometric curvature (which determines how space bends locally) and topology (which describes how space is connected on the largest scales). These two concepts work together to define whether the universe is infinite or finite, flat or curved, simply connected or folded into exotic repeating structures. Over the last decades, increasingly precise measurements have brought us closer to understanding this cosmic puzzle than ever before.</p>
+<p data-i18n="shape.p2">A major milestone came with the Planck mission (launched about a decade ago). One of its primary goals was to determine whether the universe is perfectly flat or has a slight curvature. By analyzing tiny temperature variations in the cosmic microwave background (the afterglow of the Big Bang), Planck discovered that the universe appears astonishingly flat, with any possible curvature limited to an error of about 1 part in 500. This means that if the universe is curved at all, its radius of curvature is at least 500 times larger than the radius of the observable universe. Our entire cosmic horizon would then be just a minuscule patch on a vast curved surface far too large for us to detect. This is why (even over enormous distances) straight lines and light beams neither converge nor diverge in empty intergalactic space. If they did, we would immediately know that the universe is positively or negatively curved. Instead, they remain parallel, deviating only in the presence of mass (galaxies, stars, and black holes) which produces localized curvature but does not affect the global shape of the cosmos.</p>
+<div class="center-figure">
+<img alt="Planck CMB map" src="../Obrázky/observable.jpg" style="max-width:100%;height:auto;display:block;margin:18px auto;"/>
+<div class="figure-caption" data-i18n="shape.cap1">Planck mission: temperature anisotropies of the cosmic microwave background</div>
+</div>
+<p data-i18n="shape.p3">Understanding curvature is only half the story. The other half lies in topology, the study of how space is globally connected. Even a universe that is perfectly flat can have a rich and surprising topology. One popular possibility is that the universe could be shaped like a 3-dimensional torus (a higher-dimensional analogue of a donut-like space). In such a universe, traveling far enough in one direction could, in principle, bring you back from the opposite side. Light itself could wrap around space, potentially allowing us to see distant galaxies multiple times from different angles or even at different stages of their evolution.</p>
+<div class="center-figure two-up" style="margin:18px 0;">
+<div style="display:flex;gap:0;justify-content:space-between;align-items:flex-start;flex-wrap:nowrap;width:100%;">
+<img alt="Topology illustration A" src="../Obrázky/makedonut.png" style="width:50%;height:auto;display:block;"/>
+<img alt="Topology illustration B" src="../Obrázky/donut.png" style="width:25%;height:auto;display:block;"/>
+</div>
+</div>
+<p data-i18n="shape.p4">This idea leads to fascinating scenarios. In a small enough toroidal universe, we could theoretically see a galaxy dying in one direction while its much younger version appears from another, because its light would have taken different wrap-around paths to reach us. However, this possibility becomes practically impossible in a universe that expands as rapidly as ours. Space is stretching, and beyond a certain distance (known as the cosmic event horizon) the expansion of the universe outruns the speed of light. This does not violate relativity (objects are not moving through space faster than light; instead, space itself is expanding faster than light can cross). As a result, any photon attempting to circle the universe is effectively carried away faster than it can travel forward. If the universe possesses a toroidal or donut-like topology, it must be so large that no wrap-around signals have had time to reach us (and perhaps never will). This also means that no traveler, no spacecraft, and no signal could ever circumnavigate the universe, because the expansion increases distances faster than anything can move through them.</p>
+<p data-i18n="shape.p5">Beyond toroidal possibilities, cosmologists explore many other potential topologies. A positively curved universe might have the shape of a 3-sphere (a higher-dimensional analogue of the surface of a globe) where a “straight” path would naturally loop back if expansion did not prevent it. The famous Poincaré dodecahedral space envisions the universe tiled by repeating dodecahedra whose opposite faces connect with a twist (creating a finite cosmos without edges). Hyperbolic topologies arise from negatively curved space and allow intricate multi-connected shapes built from repeating hyperbolic tiles that stretch outward like a cosmic mosaic. More exotic manifolds (such as Klein bottle–like spaces or non-orientable geometries) are mathematically possible, though considered unlikely in physical cosmology. Some speculative theories even propose fractal-like or quasi-periodic topologies, especially in higher-dimensional models (though these remain theoretical curiosities).</p>
+<p data-i18n="shape.p6">Despite this multitude of possibilities, current observations reveal no repeating patterns in the distribution of galaxies or in the cosmic microwave background that would indicate a small or tightly wrapped universe. Combined with the extremely precise flatness measurement from Planck, the evidence suggests one of two major scenarios: either the universe is truly infinite, extending forever in all directions, or it is finite but extraordinarily large (with a topology so vast that no light has completed a full loop). In either case, the observable universe is only a limited region of a far larger reality.</p>
+<p data-i18n="shape.p7">What we see today is a cosmos that behaves almost perfectly flat, following the familiar rules of Euclidean geometry across tens of billions of light-years. Straight lines remain parallel, triangles have angles summing to 180 degrees, and light behaves as if traveling through a perfectly flat space (except where mass locally distorts spacetime). Yet the universe may still possess a global shape or connectivity beyond our horizon (subtly curved or intricately folded across unimaginable distances).</p>
+<p data-i18n="shape.p8">In the end, the shape of the universe remains a profound scientific mystery. Modern measurements tightly constrain what it can be, yet they also reveal how much lies beyond our reach. Whether infinite or finite, curved or flat, simple or multiply connected, the universe continues to challenge our imagination (offering possibilities as vast and mysterious as the cosmos itself).</p>
+</div>
+</div>
+</section>
+</main>
+<script src="../scripts/i18n.js"></script><script src="../scripts/universe.js"></script>
+<script>
     // small helper: restart GIFs on visibilitychange if present (keeps behavior consistent)
     (function(){
       const gifs = document.querySelectorAll('.origin-gif');
@@ -85,7 +67,7 @@
       document.addEventListener('visibilitychange', ()=>{ if (document.visibilityState === 'visible') restartAll(); });
     })();
   </script>
-  <script>
+<script>
     // IntersectionObserver + chained reveal (same as universe-origin)
     (function(){
       const items = Array.from(document.querySelectorAll('.fly-in'));
@@ -186,7 +168,5 @@
       }
     })();
   </script>
-  </body>
-  </html>
-
-    
+</body>
+</html>
