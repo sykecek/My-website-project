@@ -1523,7 +1523,7 @@
       if (t[key] !== undefined) document.title = t[key];
     }
     var btn = document.getElementById('lang-btn');
-    if (btn) btn.textContent = lang === 'cs' ? '🇬🇧' : '🇨🇿';
+    if (btn) btn.textContent = lang === 'cs' ? '🇨🇿' : '🇬🇧';
   }
 
   function init() {
