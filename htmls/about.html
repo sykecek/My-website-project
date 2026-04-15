@@ -34,7 +34,7 @@
         class="instagram-icon"
         aria-label="Instagram"
       >
-        <img src="../Obrázky/iglogo.png" alt="Instagram" />
+        <img src="../Obrázky/instagram.png" alt="Instagram" />
       </a>
     </div>
   </header>
@@ -47,21 +47,21 @@
 
       <div class="about-me-grid">
         <div class="about-me-avatar reveal-scale reveal-delay-1">
-          🚀
+          <img src="../Obrázky/avatar.png" alt="Avatar" class="avatar-img" />
         </div>
         <div class="about-me-text reveal-up reveal-delay-2">
           <p>
-            Hi, I'm <strong>[Your Name]</strong> — a developer and tech enthusiast
+            Hi, I'm <strong>Simon Sykora</strong> — a developer and tech enthusiast
             passionate about building things that exist at the intersection of
             software, hardware, and design.
           </p>
           <p>
-            I'm currently studying at <strong>[Your School / University]</strong>
-            and I love exploring everything from robotics and embedded systems to
-            web development and mobile apps.
+            I'm currently studying at <strong>a Technical IT High school in Žďár nad Sázavou</strong>
+            and I love exploring everything from electronics and embedded systems to
+            web and app development and IT applications.
           </p>
           <p>
-            When I'm not coding I enjoy astronomy, photography, and following
+            When I'm not coding I enjoy looking at the night sky, photography, and following
             the latest space missions — which is probably why this whole portfolio
             has a space theme. 🌌
           </p>
@@ -77,7 +77,6 @@
         <div class="skill-card reveal-up reveal-delay-1">
           <div class="skill-card-title">Languages</div>
           <ul class="skill-list">
-            <li>Python</li>
             <li>Dart (Flutter)</li>
             <li>JavaScript</li>
             <li>HTML / CSS</li>
@@ -93,17 +92,20 @@
             <li>Git &amp; GitHub</li>
             <li>Arduino / ESP32</li>
             <li>VS Code</li>
+            <li>Android Studio</li>
           </ul>
         </div>
 
         <div class="skill-card reveal-up reveal-delay-3">
           <div class="skill-card-title">Other</div>
           <ul class="skill-list">
-            <li>Robotics</li>
+            <li>Hobby Robotics</li>
             <li>3D Printing</li>
             <li>Electronics</li>
             <li>UI Design</li>
             <li>Photography</li>
+            <li>Video & Photo Editing</li>
+            <li>Web Design</li>
           </ul>
         </div>
       </div>
@@ -120,7 +122,7 @@
           <div class="timeline-year">2022</div>
           <div class="timeline-title">Started coding</div>
           <div class="timeline-desc">
-            Wrote my first lines of Python and got hooked on programming.
+            Wrote my first lines of C in school and got hooked on programming.
             Started learning web basics — HTML, CSS, and vanilla JavaScript.
           </div>
         </div>
@@ -140,7 +142,7 @@
           <div class="timeline-year">2024</div>
           <div class="timeline-title">Robotic Arm + Flutter App</div>
           <div class="timeline-desc">
-            Designed and built a 3D-printed robotic arm controlled wirelessly
+            Inspired and built a 3D-printed robotic arm controlled wirelessly
             via a custom Flutter mobile application.  First full-stack hardware/software project.
           </div>
         </div>
@@ -150,8 +152,8 @@
           <div class="timeline-year">2025</div>
           <div class="timeline-title">This portfolio website</div>
           <div class="timeline-desc">
-            Launched this space-themed portfolio featuring Three.js backgrounds,
-            animated starfields, and a growing knowledge base about the universe.
+            Started working on this space-themed portfolio featuring Three.js backgrounds,
+            animated starfields, and a basic growing knowledge base about the universe.
           </div>
         </div>
 
@@ -160,11 +162,18 @@
           <div class="timeline-year">Future</div>
           <div class="timeline-title">What's next…</div>
           <div class="timeline-desc">
-            More robotics, AI experiments, and projects that push boundaries.
+            More improvements, AI experiments, and projects that push boundaries.
             Stay tuned — this timeline is still being written. ✨
           </div>
         </div>
 
+      </div>
+
+      <div class="timeline-footer reveal-up">
+        <p class="about-paragraph">
+          You can see all my projects at
+          <a href="projects.html" class="inline-link">My Projects</a>.
+        </p>
       </div>
     </section>
 
@@ -177,30 +186,11 @@
         <div class="cert-card reveal-scale reveal-delay-1">
           <div class="cert-icon">🎓</div>
           <div>
-            <div class="cert-info-title">[Certificate Name]</div>
-            <div class="cert-info-issuer">[Issuing Organisation]</div>
-            <div class="cert-info-year">[Year]</div>
+            <div class="cert-info-title">Cambridge Certificate English Advanced (CAE C1)</div>
+            <div class="cert-info-issuer">Cambridge English</div>
+            <div class="cert-info-year">31 JANUARY 2026</div>
           </div>
         </div>
-
-        <div class="cert-card reveal-scale reveal-delay-2">
-          <div class="cert-icon">🏅</div>
-          <div>
-            <div class="cert-info-title">[Certificate Name]</div>
-            <div class="cert-info-issuer">[Issuing Organisation]</div>
-            <div class="cert-info-year">[Year]</div>
-          </div>
-        </div>
-
-        <div class="cert-card reveal-scale reveal-delay-3">
-          <div class="cert-icon">🌟</div>
-          <div>
-            <div class="cert-info-title">[Certificate Name]</div>
-            <div class="cert-info-issuer">[Issuing Organisation]</div>
-            <div class="cert-info-year">[Year]</div>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -216,7 +206,13 @@
           rel="noopener noreferrer"
           class="contact-link reveal-up reveal-delay-1"
         >
-          <span class="contact-icon">📸</span>
+            <span class="contact-icon" aria-hidden="true">
+              <img
+                src="../Obrázky/instagram.png"
+                alt=""
+                class="contact-icon-img"
+              />
+            </span>
           <div>
             <div class="contact-label">Instagram</div>
             <div class="contact-value">@sykycek_</div>
@@ -229,7 +225,13 @@
           rel="noopener noreferrer"
           class="contact-link reveal-up reveal-delay-2"
         >
-          <span class="contact-icon">💻</span>
+            <span class="contact-icon" aria-hidden="true">
+              <img
+                src="../Obrázky/github.png"
+                alt=""
+                class="contact-icon-img"
+              />
+            </span>
           <div>
             <div class="contact-label">GitHub</div>
             <div class="contact-value">github.com/sykecek</div>
@@ -237,17 +239,50 @@
         </a>
 
         <a
-          href="mailto:your@email.com"
+          href="mailto:simon.sykora8@seznam.cz"
           class="contact-link reveal-up reveal-delay-3"
         >
           <span class="contact-icon">✉️</span>
           <div>
             <div class="contact-label">Email</div>
-            <div class="contact-value">your@email.com</div>
+            <div class="contact-value">simon.sykora8@seznam.cz</div>
           </div>
         </a>
 
+        <a
+          href="https://discord.com/users/655015795717570575"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link reveal-up reveal-delay-3"
+          data-discord-user-id="655015795717570575"
+        >
+          <span class="contact-icon" aria-hidden="true">
+            <img
+              src="../Obrázky/7561-discord-clyde.png"
+              alt=""
+              class="contact-icon-img"
+            />
+          </span>
+          <div>
+            <div class="contact-label">Discord</div>
+            <div class="contact-value">sykmyk</div>
+          </div>
+        </a>
       </div>
+    </section>
+
+    <!-- ===== GAMING ===== -->
+    <section class="about-section" id="gaming">
+      <p class="about-paragraph-gaming reveal-up reveal-delay-1">
+        I'm also a passionate gamer. If you're more interested, you can check out my
+        game completionist collection on
+        <a
+          href="https://backloggd.com/u/Goatedgamerboi/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-link"
+        >Backloggd</a>.
+      </p>
     </section>
 
   </main>
@@ -256,5 +291,50 @@
   <script src="../scripts/universe.js"></script>
   <!-- Scroll-reveal animations -->
   <script src="../scripts/reveal.js"></script>
+
+  <script>
+    (() => {
+      const link = document.querySelector('[data-discord-user-id]');
+      if (!link) return;
+
+      const userId = link.getAttribute('data-discord-user-id');
+      if (!userId) return;
+
+      const webUrl = link.href;
+      const appUrl = `discord://-/users/${userId}`;
+
+      link.addEventListener('click', (event) => {
+        if (
+          event.defaultPrevented ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          event.button !== 0
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const fallbackTimer = window.setTimeout(() => {
+          window.open(webUrl, '_blank', 'noopener,noreferrer');
+        }, 700);
+
+        const cancelFallback = () => {
+          window.clearTimeout(fallbackTimer);
+          document.removeEventListener('visibilitychange', cancelFallback);
+          window.removeEventListener('pagehide', cancelFallback);
+          window.removeEventListener('blur', cancelFallback);
+        };
+
+        document.addEventListener('visibilitychange', cancelFallback, { once: true });
+        window.addEventListener('pagehide', cancelFallback, { once: true });
+        window.addEventListener('blur', cancelFallback, { once: true });
+
+        window.location.href = appUrl;
+      });
+    })();
+  </script>
 </body>
 </html>
