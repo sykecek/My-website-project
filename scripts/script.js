@@ -117,8 +117,8 @@ let planet1RotSpeedY  = 0.0003;
 let planet1RotSpeedX  = 0.0001;
 
 let planet1TimeSinceLastFlight = 0;
-let planet1NextFlightDelay     = 4 + Math.random() * 4; // 4–8 s
-let planet1IsFlying            = true; // startuje hned
+let planet1NextFlightDelay     = 10 + Math.random() * 4; // 10–14 s
+let planet1IsFlying            = false; // startuje později než planeta s měsícem
 
 const planet1Geometry = new THREE.SphereGeometry(planet1Radius, 64, 64);
 const planet1Material = new THREE.MeshStandardMaterial({
@@ -128,6 +128,7 @@ const planet1Material = new THREE.MeshStandardMaterial({
 });
 const planet1Mesh = new THREE.Mesh(planet1Geometry, planet1Material);
 scene.add(planet1Mesh);
+planet1Mesh.visible = planet1IsFlying;
 
 const glowMaterial1 = new THREE.SpriteMaterial({
   map: glowTexture,
@@ -143,8 +144,9 @@ planet1Mesh.add(glowSprite1);
 function resetPlanet1() {
   planet1Mesh.position.set(PLANET1_START_X, PLANET1_Y, PLANET1_Z);
   planet1IsFlying = false;
+  planet1Mesh.visible = false;
   planet1TimeSinceLastFlight = 0;
-  planet1NextFlightDelay = 4 + Math.random() * 4;
+  planet1NextFlightDelay = 10 + Math.random() * 4;
 }
 
 /* =========================================================
@@ -175,6 +177,7 @@ const planet2Material = new THREE.MeshStandardMaterial({
 });
 const planet2Mesh = new THREE.Mesh(planet2Geometry, planet2Material);
 scene.add(planet2Mesh);
+planet2Mesh.visible = planet2IsFlying;
 
 const glowMaterial2 = new THREE.SpriteMaterial({
   map: glowTexture,
@@ -190,6 +193,7 @@ planet2Mesh.add(glowSprite2);
 function resetPlanet2() {
   planet2Mesh.position.set(PLANET2_START_X, PLANET2_Y, PLANET2_Z);
   planet2IsFlying = false;
+  planet2Mesh.visible = false;
   planet2TimeSinceLastFlight = 0;
   planet2NextFlightDelay = 16 + Math.random() * 8;
 }
@@ -223,6 +227,7 @@ const planet3Material = new THREE.MeshStandardMaterial({
 });
 const planet3Mesh = new THREE.Mesh(planet3Geometry, planet3Material);
 scene.add(planet3Mesh);
+planet3Mesh.visible = planet3IsFlying;
 
 const glowMaterial3 = new THREE.SpriteMaterial({
   map: glowTexture,
@@ -238,8 +243,83 @@ planet3Mesh.add(glowSprite3);
 function resetPlanet3() {
   planet3Mesh.position.set(PLANET3_START_X, PLANET3_Y, PLANET3_Z);
   planet3IsFlying = false;
+  planet3Mesh.visible = false;
   planet3TimeSinceLastFlight = 0;
   planet3NextFlightDelay = 80 + Math.random() * 40; // 80–120 s
+}
+
+/* =========================================================
+  PLANETA #4 – zprava doleva, rychlý start + měsíc
+   ========================================================= */
+
+const planet4Texture = textureLoader.load("../Obrázky/celastia.png");
+
+const planet4Radius = 5;
+const PLANET4_START_X = 95;
+const PLANET4_END_X = -110;
+const PLANET4_Y = 14;
+const PLANET4_Z = -28;
+
+const planet4Group = new THREE.Group();
+scene.add(planet4Group);
+planet4Group.visible = false;
+
+const planet4Geometry = new THREE.SphereGeometry(planet4Radius, 64, 64);
+const planet4Material = new THREE.MeshStandardMaterial({
+  map: planet4Texture,
+  roughness: 0.9,
+  metalness: 0.0,
+});
+const planet4Mesh = new THREE.Mesh(planet4Geometry, planet4Material);
+planet4Group.add(planet4Mesh);
+
+const glowMaterial4 = new THREE.SpriteMaterial({
+  map: glowTexture,
+  color: new THREE.Color(0xa8d8ff),
+  transparent: true,
+  opacity: 0.45,
+  depthWrite: false,
+});
+const glowSprite4 = new THREE.Sprite(glowMaterial4);
+glowSprite4.scale.set(planet4Radius * 4.2, planet4Radius * 4.2, 1);
+planet4Mesh.add(glowSprite4);
+
+const moonOrbitPivot = new THREE.Group();
+planet4Group.add(moonOrbitPivot);
+
+const moonRadius = 1.1;
+const moonOrbitDistance = planet4Radius + 10.5;
+const moonTexture = textureLoader.load(
+  encodeURI("../Obrázky/moon equirectangular projection.jpg")
+);
+const moonGeometry = new THREE.SphereGeometry(moonRadius, 32, 32);
+const moonMaterial = new THREE.MeshStandardMaterial({
+  map: moonTexture,
+  color: 0xffffff,
+  roughness: 1.0,
+  metalness: 0.0,
+});
+const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
+moonMesh.position.set(moonOrbitDistance, 0, 0);
+moonOrbitPivot.add(moonMesh);
+
+let planet4Speed = 1.0;
+let planet4RotSpeedY = 0.0012;
+let planet4RotSpeedX = 0.0004;
+let moonOrbitSpeed = 0.001;
+
+let planet4ElapsedSinceLoad = 0;
+let planet4IsFlying = false;
+let planet4HasFlownOnce = false;
+let planet4NextFlightDelay = 0.2;
+
+function resetPlanet4() {
+  planet4Group.position.set(PLANET4_START_X, PLANET4_Y, PLANET4_Z);
+  planet4IsFlying = false;
+  planet4Group.visible = false;
+  planet4ElapsedSinceLoad = 0;
+  moonOrbitPivot.rotation.y = 0;
+  planet4NextFlightDelay = planet4HasFlownOnce ? 10 + Math.random() * 6 : 0.2;
 }
 
 /* ========================================================= */
@@ -247,9 +327,10 @@ function resetPlanet3() {
 const clock = new THREE.Clock();
 
 // počáteční pozice
-planet1Mesh.position.set(PLANET1_START_X, PLANET1_Y, PLANET1_Z);
-planet2Mesh.position.set(PLANET2_START_X, PLANET2_Y, PLANET2_Z);
-planet3Mesh.position.set(PLANET3_START_X, PLANET3_Y, PLANET3_Z);
+resetPlanet1();
+resetPlanet2();
+resetPlanet3();
+resetPlanet4();
 
 function animate() {
   requestAnimationFrame(animate);
@@ -268,6 +349,7 @@ function animate() {
   updatePlanet1(delta, time);
   updatePlanet2(delta, time);
   updatePlanet3(delta, time);
+  updatePlanet4(delta, time);
 
   renderer.render(scene, camera);
 }
@@ -279,6 +361,7 @@ function updatePlanet1(delta, time) {
     planet1TimeSinceLastFlight += delta;
     if (planet1TimeSinceLastFlight >= planet1NextFlightDelay) {
       planet1IsFlying = true;
+      planet1Mesh.visible = true;
       planet1Mesh.position.set(PLANET1_START_X, PLANET1_Y, PLANET1_Z);
     }
     return;
@@ -302,6 +385,7 @@ function updatePlanet2(delta, time) {
     planet2TimeSinceLastFlight += delta;
     if (planet2TimeSinceLastFlight >= planet2NextFlightDelay) {
       planet2IsFlying = true;
+      planet2Mesh.visible = true;
       planet2Mesh.position.set(PLANET2_START_X, PLANET2_Y, PLANET2_Z);
     }
     return;
@@ -325,6 +409,7 @@ function updatePlanet3(delta, time) {
     planet3TimeSinceLastFlight += delta;
     if (planet3TimeSinceLastFlight >= planet3NextFlightDelay) {
       planet3IsFlying = true;
+      planet3Mesh.visible = true;
       planet3Mesh.position.set(PLANET3_START_X, PLANET3_Y, PLANET3_Z);
     }
     return;
@@ -338,6 +423,33 @@ function updatePlanet3(delta, time) {
 
   if (planet3Mesh.position.x < PLANET3_END_X) {
     resetPlanet3();
+  }
+}
+
+/* LOGIKA PLANETY #4 – zprava doleva + měsíc na orbitě */
+
+function updatePlanet4(delta, time) {
+  if (!planet4IsFlying) {
+    planet4ElapsedSinceLoad += delta;
+    if (planet4ElapsedSinceLoad >= planet4NextFlightDelay) {
+      planet4IsFlying = true;
+      planet4HasFlownOnce = true;
+      planet4Group.visible = true;
+      planet4Group.position.set(PLANET4_START_X, PLANET4_Y, PLANET4_Z);
+    }
+    return;
+  }
+
+  planet4Group.position.x -= planet4Speed * delta;
+  planet4Group.position.y = PLANET4_Y + Math.sin(time * 0.3 + 0.8) * 2;
+
+  planet4Mesh.rotation.y += planet4RotSpeedY;
+  planet4Mesh.rotation.x += planet4RotSpeedX;
+
+  moonOrbitPivot.rotation.y += moonOrbitSpeed;
+
+  if (planet4Group.position.x < PLANET4_END_X) {
+    resetPlanet4();
   }
 }
 
